@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GlobalVars</name>
+    <events>
+        <comment>Debug 0=False 1=True</comment>
+        <variable comment="デバッグモード" constant="0" name="DebugMode" sid="404780646983389" static="0" type="number">0</variable>
+        <comment>HEARTMODE</comment>
+        <variable constant="1" name="HEARTMODE_RED" sid="2975789364452609" static="0" type="number">0</variable>
+        <variable constant="1" name="HEARTMODE_BLUE" sid="918160733825647" static="0" type="number">1</variable>
+        <variable constant="1" name="HEARTMODE_WHITE" sid="319576220885146" static="0" type="number">2</variable>
+        <variable constant="1" name="HEARTMODE_ORANGE" sid="673729697951503" static="0" type="number">3</variable>
+        <variable constant="1" name="HEARTMODE_ORANGE2" sid="602824779112506" static="0" type="number">4</variable>
+        <variable constant="1" name="HEARTMODE_SCROLL" sid="348790233841153" static="0" type="number">5</variable>
+        <variable constant="1" name="HEARTMODE_BLUERED" sid="134002518045521" static="0" type="number">6</variable>
+        <variable constant="1" name="HEARTMODE_BLUERED2" sid="392604771027842" static="0" type="number">7</variable>
+        <variable constant="1" name="HEARTMODE_GREEN" sid="789106406188885" static="0" type="number">8</variable>
+        <variable constant="1" name="HEARTMODE_WHITEBLUE" sid="753688339856975" static="0" type="number">9</variable>
+        <variable constant="1" name="HEARTMODE_PURPLE" sid="308865089987520" static="0" type="number">10</variable>
+        <comment>BATTLEMODE</comment>
+        <variable constant="1" name="MODE_NORMAL" sid="7136545053781815" static="0" type="number">0</variable>
+        <variable constant="1" name="MODE_SINGLE" sid="7019692061495417" static="0" type="number">2</variable>
+        <comment>BattleMode Settings</comment>
+        <variable comment="BATTLE MODE (NORMAL OR SINGLE)" constant="0" name="SimulatorMode" sid="2567313271818781" static="0" type="number">0</variable>
+        <variable comment="CSV NAME (SINGLEMODE ONLY)" constant="0" name="SingleAttack" sid="9637412728316299" static="0" type="text"></variable>
+        <comment>PlayerState - Static</comment>
+        <variable comment="PlayerState" constant="0" name="LV" sid="786001582951140" static="0" type="number">1</variable>
+        <variable comment="PlayerState" constant="0" name="PlayerName" sid="149517914535732" static="0" type="text">Player</variable>
+        <variable comment="PlayerState" constant="0" name="HP" sid="4067313995094888" static="0" type="number">20</variable>
+        <variable comment="PlayerState" constant="0" name="MaxHP" sid="2742940924955148" static="0" type="number">20</variable>
+        <variable comment="PlayerState" constant="0" name="KR" sid="2189987320058474" static="0" type="number">0</variable>
+        <variable comment="PlayerState" constant="0" name="PlayerEXP" sid="398192686957118" static="0" type="number">0</variable>
+        <variable comment="PlayerState" constant="0" name="PlayerATK" sid="219925368850728" static="0" type="number">0</variable>
+        <variable comment="PlayerState" constant="0" name="PlayerDEF" sid="653892939448585" static="0" type="number">0</variable>
+        <variable comment="PlayerState" constant="0" name="OLD_______PlayerATK_Set" sid="596841397349010" static="0" type="number">0</variable>
+        <variable comment="PlayerState" constant="0" name="Weapon" sid="931651505964256" static="0" type="text">testMultiTarget</variable>
+        <variable comment="PlayerState" constant="0" name="Armor" sid="106428682516547" static="0" type="text">bandage</variable>
+        <variable comment="PlayerState" constant="0" name="Gold" sid="489475780142649" static="0" type="number">0</variable>
+        <variable comment="PlayerState" constant="0" name="KillCount" sid="423855095977849" static="0" type="number">0</variable>
+        <variable comment="PlayerState" constant="0" name="PlayerMaxHaveItems" sid="186730540826903" static="0" type="number">8</variable>
+        <comment>PlayerState - Temp</comment>
+        <variable comment="KR Timer" constant="0" name="KR_T" sid="8948293770944489" static="0" type="number">0</variable>
+        <variable constant="0" name="KH" sid="257646989237401" static="0" type="number">1</variable>
+        <variable constant="0" name="OLD_______PlayerATK" sid="317314229945632" static="0" type="number">0</variable>
+        <variable constant="0" name="OLD_______PlayerATK_EX" sid="224630508966363" static="0" type="number">0</variable>
+        <variable constant="0" name="OLD_______PlayerATK_Fluctuation" sid="618628135060857" static="0" type="number">0</variable>
+        <variable comment="PlayerState" constant="0" name="PlayerBattleATK" sid="239188439479560" static="0" type="number">0</variable>
+        <variable comment="PlayerState" constant="0" name="PlayerBattleDEF" sid="629130977997177" static="0" type="number">0</variable>
+        <comment>Settings</comment>
+        <variable comment="GameLang" constant="0" name="Language" sid="461926979968182" static="0" type="number">0</variable>
+        <comment>BattleInit</comment>
+        <variable comment="IntroAttack is Enable?" constant="0" name="Intro" sid="668869609568193" static="0" type="number">0</variable>
+        <variable comment="InvincibilityTime" constant="0" name="Invincibility" sid="900443108410621" static="0" type="number">0</variable>
+        <comment>BulletSystem</comment>
+        <variable comment="BulletKarma" constant="0" name="SetKarma" sid="760658718268908" static="0" type="number">6</variable>
+        <variable comment="BulletDamage" constant="0" name="SetDamage" sid="682454402678561" static="0" type="number">1</variable>
+        <comment>GameOverSystem</comment>
+        <variable comment="X-coordinate of the soul at the time of death" constant="0" name="DeathX" sid="542361071188724" static="0" type="number">0</variable>
+        <variable comment="Y-coordinate of the soul at the time of death" constant="0" name="DeathY" sid="686598465130050" static="0" type="number">0</variable>
+        <comment>EnemyState</comment>
+        <variable constant="0" name="EnemyName" sid="110173307771624" static="0" type="text"></variable>
+        <variable constant="0" name="EnemyHP" sid="784520234939499" static="0" type="number">0</variable>
+        <variable constant="0" name="EnemyHpMax" sid="177153659459238" static="0" type="number">0</variable>
+        <variable constant="0" name="EnemyMode" sid="676489504758198" static="0" type="number">0</variable>
+        <variable constant="0" name="EnemyHPBar" sid="873270491877737" static="0" type="number">0</variable>
+        <variable constant="0" name="EnemyATK" sid="788210725480695" static="0" type="number">0</variable>
+        <variable constant="0" name="EnemyDEF" sid="594421519797206" static="0" type="number">0</variable>
+        <comment>CombatZone</comment>
+        <variable constant="0" name="Ctop" sid="937510207174890" static="0" type="number">0</variable>
+        <variable constant="0" name="Ctop2" sid="496792738917818" static="0" type="number">0</variable>
+        <variable constant="0" name="Cbottom" sid="899671053636136" static="0" type="number">0</variable>
+        <variable constant="0" name="Cbottom2" sid="906509709994432" static="0" type="number">0</variable>
+        <variable constant="0" name="Cleft" sid="219987743599789" static="0" type="number">0</variable>
+        <variable constant="0" name="Cleft2" sid="496536478561185" static="0" type="number">0</variable>
+        <variable constant="0" name="Cright" sid="746071548945754" static="0" type="number">0</variable>
+        <variable constant="0" name="Cright2" sid="857525272640784" static="0" type="number">0</variable>
+        <variable constant="0" name="Cwidth" sid="640255276403335" static="0" type="number">0</variable>
+        <variable constant="0" name="Cheight" sid="162116673793236" static="0" type="number">0</variable>
+        <variable constant="0" name="Cx" sid="811791077051237" static="0" type="number">0</variable>
+        <variable constant="0" name="Cy" sid="415355843361950" static="0" type="number">0</variable>
+        <comment>Other?</comment>
+        <variable constant="0" name="ScreenAngle" sid="628409842183710" static="0" type="number">0</variable>
+        <variable constant="0" name="SansYPosMode" sid="807117210943942" static="0" type="number">0</variable>
+        <variable constant="0" name="SansYPos" sid="431399132842755" static="0" type="number">0</variable>
+        <variable constant="0" name="ObjectOutline" sid="648688290959724" static="0" type="number">0</variable>
+        <variable constant="0" name="CenterX" sid="581542943354714" static="0" type="number">0</variable>
+        <variable constant="0" name="CenterY" sid="894730834661031" static="0" type="number">0</variable>
+        <variable constant="0" name="MainColor_R" sid="416217521316328" static="0" type="number">0</variable>
+        <variable constant="0" name="MainColor_G" sid="909838715898839" static="0" type="number">0</variable>
+        <variable constant="0" name="MainColor_B" sid="548302522028448" static="0" type="number">0</variable>
+        <variable constant="0" name="MainColor_R_Hex" sid="174618516875468" static="0" type="text">FF</variable>
+        <variable constant="0" name="MainColor_G_Hex" sid="587042295812229" static="0" type="text">FF</variable>
+        <variable constant="0" name="MainColor_B_Hex" sid="825279503179024" static="0" type="text">FF</variable>
+        <comment>ItemKRSystem&#x0D;&#x0A;0 = Original&#x0D;&#x0A;1 = Diff&#x0D;&#x0A;2 = Clear if max (Legacy Systen)</comment>
+        <variable comment="アイテム使用時のKRの挙動を変更" constant="0" name="ItemKRSystem" sid="906562210497022" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Engine Prev</name>
+    <events>
+        <include>GlobalVars</include>
+        <include>ControlManager</include>
+        <include>FontsLoader</include>
+        <include>Loader</include>
+        <include>ItemManager</include>
+        <include>PhoneManager</include>
+        <include>SaveManager</include>
+        <include>PlayerManager</include>
+        <include>MenusManager</include>
+        <include>WindowManager</include>
+        <include>TypeWriterManager</include>
+        <include>FaderManager</include>
+        <include>Others</include>
+    </events>
+</c2eventsheet>

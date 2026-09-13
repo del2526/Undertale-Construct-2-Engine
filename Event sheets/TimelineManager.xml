@@ -1,0 +1,1058 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TimelineManager</name>
+    <events>
+        <event-group description="" sid="3189756176150723" title="Timeline">
+            <sub-events>
+                <variable constant="0" name="Running" sid="164016619418963" static="1" type="number">0</variable>
+                <variable constant="0" name="Line" sid="2569112556112449" static="1" type="number">0</variable>
+                <variable constant="0" name="T" sid="3521916820909801" static="1" type="number">0</variable>
+                <variable constant="0" name="PanicFunc" sid="7791783949732154" static="1" type="text"></variable>
+                <variable constant="0" name="RunCount" sid="9944525930039961" static="0" type="number">0</variable>
+                <variable constant="0" name="MusicT" sid="740603467157248" static="1" type="number">0</variable>
+                <variable constant="0" name="MusicCCCC" sid="491834623903349" static="1" type="number">0</variable>
+                <event-block sid="2254039641608936">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="7018896547668825" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="642199808654920" type="System">
+                            <param id="0" name="Variable">MusicT</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="988709324287433" type="System">
+                            <param id="0" name="Variable">MusicCCCC</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="378039905341177" type="Function">
+                            <param id="0" name="Name">&quot;TLStop&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8609616850347147">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5647024754506644" type="Function">
+                            <param id="0" name="Name">&quot;TLPanic&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6724933633439941" type="System">
+                            <param id="0" name="Variable">PanicFunc</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6456238910233819">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8413950224106735" type="Function">
+                            <param id="0" name="Name">&quot;TLPlay&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="4043880612596707" type="TLActionList">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="3" name="Clear" sid="199035075897143" type="TLLabels" />
+                        <action id="3" name="Clear" sid="9540461888756735" type="TLVars" />
+                        <action id="0" name="Add key" sid="9571541292875454" type="TLVars">
+                            <param id="0" name="Key">&quot;pi&quot;</param>
+                            <param id="1" name="Value">pi</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="Text" sid="4675986273184942" static="0" type="text"></variable>
+                        <variable constant="0" name="Count" sid="5833990337455875" static="0" type="number">0</variable>
+                        <variable constant="0" name="LineText" sid="994152063316607" static="0" type="text"></variable>
+                        <event-block sid="8237544998541837">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="1308534977382981" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3353486201389278" type="System">
+                                    <param id="0" name="Variable">Text</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="581698294316397" type="System">
+                                    <param id="0" name="Variable">Count</param>
+                                    <param id="1" name="Value">tokencount(Text, newline)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5303835360610502">
+                            <conditions>
+                                <condition id="-10" name="For" sid="342445993445707" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">Count-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="627796758368551" type="System">
+                                    <param id="0" name="Variable">LineText</param>
+                                    <param id="1" name="Value">tokenat(Text, loopindex, newline)</param>
+                                </action>
+                                <action id="5" name="Push" sid="8505514264829205" type="TLActionList">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">LineText</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="Token" sid="490445942954178" static="0" type="text"></variable>
+                                <event-block sid="920552072362848">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="210208386153629" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="875039200175526" type="System">
+                                            <param id="0" name="Variable">Token</param>
+                                            <param id="1" name="Value">tokenat(LineText, 1, &quot;,&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="141218749991008">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="101209715078707" type="System">
+                                            <param id="0" name="First value">left(Token, 1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;:&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="177618613552890" type="System">
+                                            <param id="0" name="Variable">Token</param>
+                                            <param id="1" name="Value">mid(Token, 1, 1000)</param>
+                                        </action>
+                                        <action id="0" name="Add key" sid="708069663300634" type="TLLabels">
+                                            <param id="0" name="Key">Token</param>
+                                            <param id="1" name="Value">loopindex + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="566533122103247">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="7597718902243015" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7659055333811825" type="System">
+                                    <param id="0" name="Variable">T</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="392873617682362" type="System">
+                                    <param id="0" name="Variable">Line</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5891169844501463" type="Function">
+                                    <param id="0" name="Name">&quot;TLLoadLine&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8568195893869202" type="System">
+                                    <param id="0" name="Variable">Running</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3523753034106027">
+                    <conditions>
+                        <condition id="0" name="On function" sid="789131437661894" type="Function">
+                            <param id="0" name="Name">&quot;TLLoadLine&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="4717811273555051" type="TLCurrentLine">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="Text" sid="525151313925726" static="0" type="text"></variable>
+                        <variable constant="0" name="Count" sid="6896941287466014" static="0" type="number">0</variable>
+                        <event-block sid="1732369188360185">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="9447548029177046" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4180730130887175" type="System">
+                                    <param id="0" name="Variable">Text</param>
+                                    <param id="1" name="Value">TLActionList.At(Line-1)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5178414055926216" type="System">
+                                    <param id="0" name="Variable">Count</param>
+                                    <param id="1" name="Value">tokencount(Text, &quot;,&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5176567245084968">
+                            <conditions>
+                                <condition id="-10" name="For" sid="7258904636189051" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">Count-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="Token" sid="5813134866841335" static="0" type="text"></variable>
+                                <event-block sid="3303537346185456">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="2813182794519742" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="7009258822567905" type="System">
+                                            <param id="0" name="Variable">Token</param>
+                                            <param id="1" name="Value">tokenat(Text, loopindex, &quot;,&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3366040942905244">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="731509088534453" type="System">
+                                            <param id="0" name="First value">left(Token, 1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;$&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="4921302976365007" type="TLCurrentLine">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">TLVars.Get(mid(Token, 1, 1000))</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5086362468176923">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3752437806329105" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="8196613844095984" type="TLCurrentLine">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">Token</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5917404993248573">
+                    <conditions>
+                        <condition id="0" name="On function" sid="1920981737032333" type="Function">
+                            <param id="0" name="Name">&quot;TLPause&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5619763145283595" type="System">
+                            <param id="0" name="Variable">Running</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="783604814312328">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9495610461070333" type="Function">
+                            <param id="0" name="Name">&quot;TLResume&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2699570299241564" type="System">
+                            <param id="0" name="Variable">Running</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="942646080486819">
+                    <conditions>
+                        <condition id="0" name="On function" sid="585510407956809" type="Function">
+                            <param id="0" name="Name">&quot;TLIsRunning&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="794982817895681" type="Function">
+                            <param id="0" name="Value">Running</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6217520153021708">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2682162514664712" type="Function">
+                            <param id="0" name="Name">&quot;TLStop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="2265398004123804" type="TLActionList">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="1" name="Set size" sid="505000165545568" type="TLCurrentLine">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8343785129325345" type="System">
+                            <param id="0" name="Variable">Running</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1428685093995084">
+                    <conditions>
+                        <condition id="-23" name="While" sid="8812571371401865" type="System" />
+                        <condition id="-14" name="Compare variable" sid="1551985432453049" type="System">
+                            <param id="0" name="Variable">Running</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="9197285358786317" type="System">
+                            <param id="0" name="Variable">Line</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2555453304329215" type="System">
+                            <param id="0" name="Variable">Line</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">TLActionList.Width</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5768264411078266" type="System">
+                            <param id="0" name="Variable">T</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">float(TLCurrentLine.At(0))</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="441595194418922">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="392973970922509" type="System">
+                                    <param id="0" name="First value">left(TLCurrentLine.At(1), 1)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;:&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9188948149072351" type="Function">
+                                    <param id="0" name="Name">TLCurrentLine.At(1)</param>
+                                    <param id="1" name="Parameter {n}">TLCurrentLine.At(2){###}TLCurrentLine.At(3){###}TLCurrentLine.At(4){###}TLCurrentLine.At(5){###}TLCurrentLine.At(6){###}TLCurrentLine.At(7){###}TLCurrentLine.At(8){###}TLCurrentLine.At(9){###}TLCurrentLine.At(10){###}TLCurrentLine.At(11){###}TLCurrentLine.At(12){###}TLCurrentLine.At(13){###}TLCurrentLine.At(14){###}TLCurrentLine.At(15){###}TLCurrentLine.At(16){###}TLCurrentLine.At(17){###}TLCurrentLine.At(18){###}TLCurrentLine.At(19){###}TLCurrentLine.At(20){###}TLCurrentLine.At(21){###}TLCurrentLine.At(22){###}TLCurrentLine.At(23)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="581606449152757">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="741242382187124" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="98827945093618" type="System">
+                                    <param id="0" name="Variable">T</param>
+                                    <param id="1" name="Value">float(TLCurrentLine.At(0))</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="4809426407326967" type="System">
+                                    <param id="0" name="Variable">Line</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5150327441178377" type="Function">
+                                    <param id="0" name="Name">&quot;TLLoadLine&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Add to" sid="446047117817566" type="System">
+                                    <param id="0" name="Variable">RunCount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6180992534581793">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="351977259641541" type="System">
+                                    <param id="0" name="Variable">RunCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1000</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6141834556483224" type="System">
+                                    <param id="0" name="Variable">Running</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2179763921201474" type="Function">
+                                    <param id="0" name="Name">PanicFunc</param>
+                                    <param id="1" name="Parameter {n}">&quot;Infinite loop detected line &quot; &amp; Line</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="749837678858433">
+                    <conditions>
+                        <condition id="0" name="On function" sid="231087407312651" type="Function">
+                            <param id="0" name="Name">&quot;TLMusicSet&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="494958861128148" type="System">
+                            <param id="0" name="Variable">MusicT</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2435027366513959">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5334997326638602" type="System">
+                            <param id="0" name="Variable">Running</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="4105200815127006" type="System">
+                            <param id="0" name="Variable">T</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="637093573002133">
+                    <conditions>
+                        <condition id="5" name="Is tag playing" sid="897882594774023" type="Audio">
+                            <param id="0" name="Tag">&quot;Music_R&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="382221363093996" type="System">
+                            <param id="0" name="Variable">MusicCCCC</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="921427920059466" type="System">
+                            <param id="0" name="Variable">MusicT</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="737931657824633">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="378703927881189" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="663558977100642" type="System">
+                                    <param id="0" name="Variable">MusicT</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="509750802996745">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="885132973708550" type="System">
+                            <param id="0" name="First value">abs(Audio.PlaybackTime(&quot;Music_R&quot;)-musicT)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">1/60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="23" name="Seek to" sid="960119121937734" type="Audio">
+                            <param id="0" name="Tag">&quot;Music_R&quot;</param>
+                            <param id="1" name="Position">MusicT</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="885105661678210" type="System">
+                            <param id="0" name="Variable">MusicCCCC</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="7183042865477134" title="TimelineCPU">
+                    <sub-events>
+                        <event-block sid="500829441157449">
+                            <conditions>
+                                <condition id="0" name="On function" sid="831114089274881" type="Function">
+                                    <param id="0" name="Name">&quot;SET&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="194179009798181" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="481957017734485">
+                            <conditions>
+                                <condition id="0" name="On function" sid="118305387219908" type="Function">
+                                    <param id="0" name="Name">&quot;ADD&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="635747979228990" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">float(Function.Param(1)) + float(Function.Param(2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="443431079718999">
+                            <conditions>
+                                <condition id="0" name="On function" sid="333860935391159" type="Function">
+                                    <param id="0" name="Name">&quot;SUB&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="567827448970504" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">float(Function.Param(1)) - float(Function.Param(2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="920550797616100">
+                            <conditions>
+                                <condition id="0" name="On function" sid="941617643049813" type="Function">
+                                    <param id="0" name="Name">&quot;MUL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="677277615174443" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">float(Function.Param(1)) * float(Function.Param(2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="734756016272735">
+                            <conditions>
+                                <condition id="0" name="On function" sid="818119604135407" type="Function">
+                                    <param id="0" name="Name">&quot;DIV&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="266224663992909" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">float(Function.Param(1)) / float(Function.Param(2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="175521695117264">
+                            <conditions>
+                                <condition id="0" name="On function" sid="435480512922660" type="Function">
+                                    <param id="0" name="Name">&quot;MOD&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="226529028947772" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">float(Function.Param(1)) % float(Function.Param(2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="157556112647411">
+                            <conditions>
+                                <condition id="0" name="On function" sid="725573316075612" type="Function">
+                                    <param id="0" name="Name">&quot;FLOOR&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="502011054320090" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">floor(float(Function.Param(1)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="954531714610402">
+                            <conditions>
+                                <condition id="0" name="On function" sid="352450934570285" type="Function">
+                                    <param id="0" name="Name">&quot;DEG&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="401519184357483" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">float(Function.Param(1)) * 180 / pi</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="900058664284549">
+                            <conditions>
+                                <condition id="0" name="On function" sid="696830042772628" type="Function">
+                                    <param id="0" name="Name">&quot;RAD&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="414157523456544" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">float(Function.Param(1)) * pi / 180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="654923799873644">
+                            <conditions>
+                                <condition id="0" name="On function" sid="984558693906439" type="Function">
+                                    <param id="0" name="Name">&quot;SIN&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="377243028972756" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">sin(float(Function.Param(1)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="270010161398649">
+                            <conditions>
+                                <condition id="0" name="On function" sid="381651935920506" type="Function">
+                                    <param id="0" name="Name">&quot;COS&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="735951908704266" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">cos(float(Function.Param(1)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="278056984356441">
+                            <conditions>
+                                <condition id="0" name="On function" sid="297740757194383" type="Function">
+                                    <param id="0" name="Name">&quot;ANGLE&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="807980832890303" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">angle(float(Function.Param(1)), float(Function.Param(2)), float(Function.Param(3)), float(Function.Param(4)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="976288656196033">
+                            <conditions>
+                                <condition id="0" name="On function" sid="940110128902623" type="Function">
+                                    <param id="0" name="Name">&quot;RND&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="781816396658174" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">floor(random(int(Function.Param(1))))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="659814047011404">
+                            <conditions>
+                                <condition id="0" name="On function" sid="772879391119620" type="Function">
+                                    <param id="0" name="Name">&quot;RND2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="397013553919239" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">floor(random(int(Function.Param(1)),int(Function.Param(2))))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="250437755340620">
+                            <conditions>
+                                <condition id="0" name="On function" sid="489965407398074" type="Function">
+                                    <param id="0" name="Name">&quot;CHOOSE&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="489430258950795" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">floor(choose(int(Function.Param(1)),int(Function.Param(2))))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="357925625677784">
+                            <conditions>
+                                <condition id="0" name="On function" sid="701749251760332" type="Function">
+                                    <param id="0" name="Name">&quot;CHOOSE2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="358057972726599" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">floor(choose(int(Function.Param(1)),int(Function.Param(2)),int(Function.Param(3)),int(Function.Param(4))))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="801477257641292">
+                            <conditions>
+                                <condition id="0" name="On function" sid="451617000399489" type="Function">
+                                    <param id="0" name="Name">&quot;BoneWidth&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="638732476874423">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="138515464740655" type="BoneF">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">int(Function.Param(1))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="222685445227706" type="TLVars">
+                                            <param id="0" name="Key">Function.Param(0)</param>
+                                            <param id="1" name="Value">BoneF.Width</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="216996440231282">
+                            <conditions>
+                                <condition id="0" name="On function" sid="771524955450473" type="Function">
+                                    <param id="0" name="Name">&quot;BoneX&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="658670445556464">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="191516625400084" type="BoneF">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">int(Function.Param(1))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="607832510258615" type="TLVars">
+                                            <param id="0" name="Key">Function.Param(0)</param>
+                                            <param id="1" name="Value">BoneF.X</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="707266757487307">
+                            <conditions>
+                                <condition id="0" name="On function" sid="151362093738774" type="Function">
+                                    <param id="0" name="Name">&quot;BoneY&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="270664877323475">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="837032163774786" type="BoneF">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">int(Function.Param(1))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="101569705866142" type="TLVars">
+                                            <param id="0" name="Key">Function.Param(0)</param>
+                                            <param id="1" name="Value">BoneF.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="964096084081250">
+                            <conditions>
+                                <condition id="0" name="On function" sid="430028511663510" type="Function">
+                                    <param id="0" name="Name">&quot;BoneAngle&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="784496799420403">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="121847058861321" type="BoneF">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">int(Function.Param(1))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="685768738472896" type="TLVars">
+                                            <param id="0" name="Key">Function.Param(0)</param>
+                                            <param id="1" name="Value">BoneF.Angle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="819385102321577">
+                            <conditions>
+                                <condition id="0" name="On function" sid="870244430929709" type="Function">
+                                    <param id="0" name="Name">&quot;BoneSpd&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="233091265886135">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="757183670604337" type="BoneF">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">int(Function.Param(1))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="454744000543773" type="TLVars">
+                                            <param id="0" name="Key">Function.Param(0)</param>
+                                            <param id="1" name="Value">BoneF.Speed</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="170189232136346">
+                            <conditions>
+                                <condition id="0" name="On function" sid="108153983814982" type="Function">
+                                    <param id="0" name="Name">&quot;JMPABS&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="567335441669700">
+                                    <conditions>
+                                        <condition id="-35" name="Test regex" sid="304000083213787" type="System">
+                                            <param id="0" name="String">Function.Param(0)</param>
+                                            <param id="1" name="Regex">&quot;^[0-9]+$&quot;</param>
+                                            <param id="2" name="Flags">&quot;gi&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="706589767377710" type="System">
+                                            <param id="0" name="Variable">Line</param>
+                                            <param id="1" name="Value">int(Function.Param(0))-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="229394220372664">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="697003019090748" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="249990198858806">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="657429405444047" type="TLLabels">
+                                                    <param id="0" name="Key">Function.Param(0)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="508663293010595" type="System">
+                                                    <param id="0" name="Variable">Line</param>
+                                                    <param id="1" name="Value">TLLabels.Get(Function.Param(0))-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="888115189648814">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="586393755021189" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="796466015444909" type="System">
+                                                    <param id="0" name="Variable">Running</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="348075364930476" type="Function">
+                                                    <param id="0" name="Name">PanicFunc</param>
+                                                    <param id="1" name="Parameter {n}">&quot;Label &quot; &amp; Function.Param(0) &amp; &quot; does not exist line &quot; &amp; Line</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="297528956301868">
+                            <conditions>
+                                <condition id="0" name="On function" sid="517831618405335" type="Function">
+                                    <param id="0" name="Name">&quot;JMPREL&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="711862391034615" type="System">
+                                    <param id="0" name="Variable">Line</param>
+                                    <param id="1" name="Value">int(Function.Param(0))-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="188209460439471">
+                            <conditions>
+                                <condition id="0" name="On function" sid="690350787987409" type="Function">
+                                    <param id="0" name="Name">&quot;JMPZ&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="123222516477807" type="System">
+                                    <param id="0" name="First value">float(Function.Param(1))</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="730929614635082" type="Function">
+                                    <param id="0" name="Name">&quot;JMPABS&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="307497082764302">
+                            <conditions>
+                                <condition id="0" name="On function" sid="925866160497603" type="Function">
+                                    <param id="0" name="Name">&quot;JMPNZ&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="463972239861298" type="System">
+                                    <param id="0" name="First value">float(Function.Param(1))</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="703448340849263" type="Function">
+                                    <param id="0" name="Name">&quot;JMPABS&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="976540292308189">
+                            <conditions>
+                                <condition id="0" name="On function" sid="678920513081304" type="Function">
+                                    <param id="0" name="Name">&quot;JMPE&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="133653260974285" type="System">
+                                    <param id="0" name="First value">float(Function.Param(1))</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">float(Function.Param(2))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="559969142456084" type="Function">
+                                    <param id="0" name="Name">&quot;JMPABS&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="744434211468961">
+                            <conditions>
+                                <condition id="0" name="On function" sid="153784159166150" type="Function">
+                                    <param id="0" name="Name">&quot;JMPNE&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="568555029756267" type="System">
+                                    <param id="0" name="First value">float(Function.Param(1))</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">float(Function.Param(2))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="315885213838553" type="Function">
+                                    <param id="0" name="Name">&quot;JMPABS&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="212717720438463">
+                            <conditions>
+                                <condition id="0" name="On function" sid="243012988969555" type="Function">
+                                    <param id="0" name="Name">&quot;JMPL&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="182944901115649" type="System">
+                                    <param id="0" name="First value">float(Function.Param(1))</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">float(Function.Param(2))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="687264939629495" type="Function">
+                                    <param id="0" name="Name">&quot;JMPABS&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="718524357042996">
+                            <conditions>
+                                <condition id="0" name="On function" sid="212942579732274" type="Function">
+                                    <param id="0" name="Name">&quot;JMPNL&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="580852110189191" type="System">
+                                    <param id="0" name="First value">float(Function.Param(1))</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">float(Function.Param(2))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="354776417311354" type="Function">
+                                    <param id="0" name="Name">&quot;JMPABS&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="352651531857663">
+                            <conditions>
+                                <condition id="0" name="On function" sid="247232300846789" type="Function">
+                                    <param id="0" name="Name">&quot;JMPG&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="744611361458835" type="System">
+                                    <param id="0" name="First value">float(Function.Param(1))</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">float(Function.Param(2))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="455338598120868" type="Function">
+                                    <param id="0" name="Name">&quot;JMPABS&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="551651625087159">
+                            <conditions>
+                                <condition id="0" name="On function" sid="483077215306316" type="Function">
+                                    <param id="0" name="Name">&quot;JMPNG&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="915987863600843" type="System">
+                                    <param id="0" name="First value">float(Function.Param(1))</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">float(Function.Param(2))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="699044802833996" type="Function">
+                                    <param id="0" name="Name">&quot;JMPABS&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="448501202385449">
+                            <conditions>
+                                <condition id="0" name="On function" sid="743284432059498" type="Function">
+                                    <param id="0" name="Name">&quot;GetHeartPos&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="186485431856077" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(0)</param>
+                                    <param id="1" name="Value">PlayerHeart.X</param>
+                                </action>
+                                <action id="0" name="Add key" sid="110604576858137" type="TLVars">
+                                    <param id="0" name="Key">Function.Param(1)</param>
+                                    <param id="1" name="Value">PlayerHeart.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="942066185957470">
+                            <conditions>
+                                <condition id="0" name="On function" sid="277564773765467" type="Function">
+                                    <param id="0" name="Name">&quot;Debug&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="313109330497809" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

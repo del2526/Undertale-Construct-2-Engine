@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ControlManager</name>
+    <events>
+        <event-block sid="358058370124801">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="551897268850160" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="165057768155988" type="VPad">
+                    <param id="0" name="Instance variable">Up</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="357455726861866" type="VPad">
+                    <param id="0" name="Instance variable">Down</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="754256542546368" type="VPad">
+                    <param id="0" name="Instance variable">Left</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="769499539939680" type="VPad">
+                    <param id="0" name="Instance variable">Right</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="788827973308656" type="VPad">
+                    <param id="0" name="Instance variable">Confirm</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="619196614408262" type="VPad">
+                    <param id="0" name="Instance variable">Cancel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="934618476867131" type="VPad">
+                    <param id="0" name="Instance variable">Menu</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="277521452192601">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="423296433209570" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="581705123966956" type="VPad">
+                    <param id="0" name="Instance variable">LastUp</param>
+                    <param id="1" name="Value">VPad.Up</param>
+                </action>
+                <action id="-10" name="Set value" sid="738334938362659" type="VPad">
+                    <param id="0" name="Instance variable">LastDown</param>
+                    <param id="1" name="Value">VPad.Down</param>
+                </action>
+                <action id="-10" name="Set value" sid="836297252208881" type="VPad">
+                    <param id="0" name="Instance variable">LastLeft</param>
+                    <param id="1" name="Value">VPad.Left</param>
+                </action>
+                <action id="-10" name="Set value" sid="169453853764806" type="VPad">
+                    <param id="0" name="Instance variable">LastRight</param>
+                    <param id="1" name="Value">VPad.Right</param>
+                </action>
+                <action id="-10" name="Set value" sid="764896782094914" type="VPad">
+                    <param id="0" name="Instance variable">LastConfirm</param>
+                    <param id="1" name="Value">VPad.Confirm</param>
+                </action>
+                <action id="-10" name="Set value" sid="157510214890073" type="VPad">
+                    <param id="0" name="Instance variable">LastCancel</param>
+                    <param id="1" name="Value">VPad.Cancel</param>
+                </action>
+                <action id="-10" name="Set value" sid="675335697747172" type="VPad">
+                    <param id="0" name="Instance variable">LastMenu</param>
+                    <param id="1" name="Value">VPad.Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="228006481710660">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="152170481074047" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="485459616506480" type="VPad">
+                    <param id="0" name="Instance variable">Up</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="164488826493665" type="VPad">
+                    <param id="0" name="Instance variable">Down</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="406920616020894" type="VPad">
+                    <param id="0" name="Instance variable">Left</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="515792822395229" type="VPad">
+                    <param id="0" name="Instance variable">Right</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="798231433321608" type="VPad">
+                    <param id="0" name="Instance variable">Confirm</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="351711835776184" type="VPad">
+                    <param id="0" name="Instance variable">Cancel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="193191138983749" type="VPad">
+                    <param id="0" name="Instance variable">Menu</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="176818603521462" title="Gamepad">
+            <sub-events>
+                <variable constant="1" name="DEADZONE" sid="422537975622821" static="0" type="number">25</variable>
+                <variable constant="0" name="ID" sid="908261893392826" static="1" type="number">0</variable>
+                <event-block any="1" sid="307044717921482">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="945803034907980" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">-DEADZONE</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="275377225886232" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Button">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="160783951223741" type="VPad">
+                            <param id="0" name="Instance variable">Up</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="885739831242272">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="997065235374021" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">DEADZONE</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="964978546011666" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Button">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="850929096187871" type="VPad">
+                            <param id="0" name="Instance variable">Down</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="966784269413265">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="859341535990434" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">-DEADZONE</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="267083679736054" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Button">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="838488891994102" type="VPad">
+                            <param id="0" name="Instance variable">Left</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="557342087295672">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="556577910928154" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">DEADZONE</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="462629794100607" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Button">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="571381472035782" type="VPad">
+                            <param id="0" name="Instance variable">Right</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="706390934141945">
+                    <conditions>
+                        <condition id="3" name="Is button down" sid="749992781719640" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="772420384809169" type="VPad">
+                            <param id="0" name="Instance variable">Confirm</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="694632926443532">
+                    <conditions>
+                        <condition id="3" name="Is button down" sid="935652576350487" type="Gamepad">
+                            <param id="0" name="Gamepad">ID</param>
+                            <param id="1" name="Button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="920828399371981" type="VPad">
+                            <param id="0" name="Instance variable">Cancel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="967967420112965" title="Keyboard">
+            <sub-events>
+                <event-block any="1" sid="707673113468965">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="153731370689192" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="153326652105045" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="859301479504154" type="VPad">
+                            <param id="0" name="Instance variable">Up</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="664124147406978">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="530994833857399" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="990537156378484" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="653541276344049" type="VPad">
+                            <param id="0" name="Instance variable">Down</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="578685582912977">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="632015951391261" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="896972740273810" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="732577978698942" type="VPad">
+                            <param id="0" name="Instance variable">Left</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="312457463791622">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="692011413598324" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="757315049748348" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="583208880582282" type="VPad">
+                            <param id="0" name="Instance variable">Right</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="312563575552266">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="753401829727489" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="768778940282449" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="203015385917900" type="VPad">
+                            <param id="0" name="Instance variable">Confirm</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="806523829618182">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="602524809173133" type="Keyboard">
+                            <param id="0" name="Key">88</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="745861456095107" type="Keyboard">
+                            <param id="0" name="Key">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="592369802858509" type="VPad">
+                            <param id="0" name="Instance variable">Cancel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="231471920654516">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="375465077923894" type="Keyboard">
+                            <param id="0" name="Key">67</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="468086907419760" type="Keyboard">
+                            <param id="0" name="Key">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="600144328025841" type="VPad">
+                            <param id="0" name="Instance variable">Menu</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

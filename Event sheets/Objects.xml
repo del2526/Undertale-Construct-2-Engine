@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Objects</name>
+    <events>
+        <comment>オブジェクトシーンに誤って飛んでしまった時用</comment>
+        <event-block sid="863216300523352">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="590548645467404" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="859080610913177" type="System">
+                    <param id="0" name="Layout">Loader</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

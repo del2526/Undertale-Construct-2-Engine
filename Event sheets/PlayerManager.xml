@@ -1,0 +1,1163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlayerManager</name>
+    <events>
+        <comment>プレイヤーのステータスとアイテム類の初期化</comment>
+        <event-block sid="311301943936471">
+            <conditions>
+                <condition id="0" name="On function" sid="702940927550876" type="Function">
+                    <param id="0" name="Name">&quot;PlayerInitStatus&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="148654796652285" type="System">
+                    <param id="0" name="Variable">PlayerName</param>
+                    <param id="1" name="Value">&quot;Player&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="582851388878656" type="System">
+                    <param id="0" name="Variable">PlayerEXP</param>
+                    <param id="1" name="Value">50000</param>
+                </action>
+                <action id="-9" name="Set value" sid="765290870069243" type="System">
+                    <param id="0" name="Variable">Gold</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="633457750081987" type="System">
+                    <param id="0" name="Variable">KillCount</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="735364428034474" type="System">
+                    <param id="0" name="Variable">Weapon</param>
+                    <param id="1" name="Value">&quot;stick&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="625367537938196" type="System">
+                    <param id="0" name="Variable">Armor</param>
+                    <param id="1" name="Value">&quot;bandage&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="570032897825348" type="Function">
+                    <param id="0" name="Name">&quot;PlayerLVCheck&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="113421061836589" type="Function">
+                    <param id="0" name="Name">&quot;UpdateStatus&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="879340169805415" type="Function">
+                    <param id="0" name="Name">&quot;ItemClear&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="716269842302096" type="Function">
+                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;pie&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="506208395409581" type="Function">
+                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;snowpiece&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="801454607098652" type="Function">
+                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;noodles&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="991949261564960" type="Function">
+                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;steak&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="865429306807624" type="Function">
+                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;lhero&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="123242147800247" type="Function">
+                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;realknife&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="200246159847415" type="Function">
+                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;rocket&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="540765268554144" type="Function">
+                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;punchcard&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="693775688630791" type="Function">
+                    <param id="0" name="Name">&quot;PhoneClear&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="790366660287452" type="Function">
+                    <param id="0" name="Name">&quot;PhoneAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;toriel&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="335029738677135" type="Function">
+                    <param id="0" name="Name">&quot;PhoneAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;test1&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="868796500857379" type="Function">
+                    <param id="0" name="Name">&quot;PhoneAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;box1&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="287215919151881" type="Function">
+                    <param id="0" name="Name">&quot;PhoneAdd&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;box2&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="213271058219694" type="Function">
+                    <param id="0" name="Name">&quot;DBoxClear&quot;</param>
+                    <param id="1" name="Parameter {n}">0</param>
+                </action>
+                <action id="0" name="Call function" sid="490621533729083" type="Function">
+                    <param id="0" name="Name">&quot;DBoxClear&quot;</param>
+                    <param id="1" name="Parameter {n}">1</param>
+                </action>
+                <action id="0" name="Call function" sid="903353948262348" type="Function">
+                    <param id="0" name="Name">&quot;DBoxAddItem&quot;</param>
+                    <param id="1" name="Parameter {n}">0{###}&quot;toughglove&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="425960626809204" type="System">
+                    <param id="0" name="Variable">HP</param>
+                    <param id="1" name="Value">MaxHP</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="365736661893607">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="938306660099732" type="System" />
+                <condition id="7" name="Compare size" sid="498892506710064" type="PlayerEXPTable">
+                    <param id="0" name="Axis">0</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Push" sid="798161633382139" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">10</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="372834609894086" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">30</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="972712934035026" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">70</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="916019199451279" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">120</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="640290682986259" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">200</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="778529165262476" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">300</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="836701235463820" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">500</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="127315157591038" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">800</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="276010060185306" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">1200</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="234683275920664" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">1700</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="149988963116421" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">2500</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="261895278011989" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">3500</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="786444205939093" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">5000</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="964954042883743" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">7000</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="567538666169768" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">10000</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="167151751314971" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">15000</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="974953939669906" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">25000</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="604479889978497" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">50000</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="5" name="Push" sid="907230006258665" type="PlayerEXPTable">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">99999</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>LVCheck&#x0D;&#x0A;LVが更新されれば、1を返します</comment>
+        <event-block sid="122614645213277">
+            <conditions>
+                <condition id="0" name="On function" sid="162287389988554" type="Function">
+                    <param id="0" name="Name">&quot;PlayerLVCheck&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="PreviousLV" sid="321619529800566" static="0" type="number">0</variable>
+                <event-block sid="487796225928426">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="793196547833377" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="235572561734019" type="System">
+                            <param id="0" name="Variable">PreviousLV</param>
+                            <param id="1" name="Value">LV</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="801501823783428">
+                    <conditions>
+                        <condition id="-10" name="For" sid="268798712462370" type="System">
+                            <param id="0" name="Name">&quot;i&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">PlayerEXPTable.Width + 1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="895545184372348">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="611136978037467" type="System">
+                                    <param id="0" name="First value">loopindex(&quot;i&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">PlayerEXPTable.Width + 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="217103484934067" type="System">
+                                    <param id="0" name="Variable">LV</param>
+                                    <param id="1" name="Value">loopindex(&quot;i&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="904235623586293">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="468978897164229" type="System" />
+                                <condition id="0" name="Compare at X" sid="432984657601536" type="PlayerEXPTable">
+                                    <param id="0" name="X">loopindex(&quot;i&quot;) - 1</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">PlayerEXP</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="755412595795013" type="System">
+                                    <param id="0" name="Variable">LV</param>
+                                    <param id="1" name="Value">loopindex(&quot;i&quot;)</param>
+                                </action>
+                                <action id="-24" name="Stop loop" sid="100155195592775" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="558741531813316">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="419120734101129" type="System">
+                            <param id="0" name="Variable">PreviousLV</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">LV</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="207228618496365" type="Function">
+                            <param id="0" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="221547110179045">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="457189755614009" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="630859495289649" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>LVからステータスを更新</comment>
+        <event-block sid="959881787980181">
+            <conditions>
+                <condition id="0" name="On function" sid="516862526457278" type="Function">
+                    <param id="0" name="Name">&quot;UpdateStatus&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="524555306213351" type="System">
+                    <param id="0" name="Variable">MaxHP</param>
+                    <param id="1" name="Value">16 + (LV * 4)</param>
+                </action>
+                <action id="-9" name="Set value" sid="812087962383624" type="System">
+                    <param id="0" name="Variable">PlayerATK</param>
+                    <param id="1" name="Value">(LV - 1) * 2</param>
+                </action>
+                <action id="-9" name="Set value" sid="500949179808025" type="System">
+                    <param id="0" name="Variable">PlayerDEF</param>
+                    <param id="1" name="Value">ceil(LV / 4) - 1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="639237962535764">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="329368705601917" type="System">
+                            <param id="0" name="Variable">LV</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="512919718899650" type="System">
+                            <param id="0" name="Variable">MaxHP</param>
+                            <param id="1" name="Value">99</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="790724651234239" type="System">
+                            <param id="0" name="Variable">PlayerATK</param>
+                            <param id="1" name="Value">99</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="396378456044819" type="System">
+                            <param id="0" name="Variable">PlayerDEF</param>
+                            <param id="1" name="Value">99</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>次の必要EXP数</comment>
+        <event-block sid="336424087326723">
+            <conditions>
+                <condition id="0" name="On function" sid="119224556367840" type="Function">
+                    <param id="0" name="Name">&quot;GetNextNeedEXP&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="597230547516245" type="Function">
+                    <param id="0" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <variable constant="0" name="CurValue" sid="561057701431612" static="0" type="number">0</variable>
+                <event-block sid="678362693110474">
+                    <conditions>
+                        <condition id="-10" name="For" sid="937974444100370" type="System">
+                            <param id="0" name="Name">&quot;i&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">PlayerEXPTable.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="109014772639770" type="System">
+                            <param id="0" name="Variable">CurValue</param>
+                            <param id="1" name="Value">PlayerEXPTable.At(loopindex(&quot;i&quot;) - 1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="413953267547649">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="782822245560078" type="System">
+                                    <param id="0" name="Variable">PlayerEXP</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">CurValue</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="574658351352052" type="Function">
+                                    <param id="0" name="Value">CurValue - PlayerEXP</param>
+                                </action>
+                                <action id="-24" name="Stop loop" sid="390014260510983" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>エンカウント開始&#x0D;&#x0A;Param0: EnemyID (unfinished)&#x0D;&#x0A;[Param1]: SkipAnimation (0 = noSkip, 1 = excSkip, 2 = allSkip)&#x0D;&#x0A;[Param2]: HeartTargetX&#x0D;&#x0A;[Param3]: HeartTargetY&#x0D;&#x0A;[Param4]: HeartStartX&#x0D;&#x0A;[Param5]: HeartStartY</comment>
+        <event-block sid="398281334287149">
+            <conditions>
+                <condition id="0" name="On function" sid="578921685713376" type="Function">
+                    <param id="0" name="Name">&quot;StartEncount&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="586376489755744" type="Area_SystemVars">
+                    <param id="0" name="Instance variable">ReturnAreaName</param>
+                    <param id="1" name="Value">LayoutName</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="473267881518120">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="569852114926366" type="System">
+                            <param id="0" name="First value">Player.Count</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="402279176667032" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">ReturnPlayerX</param>
+                            <param id="1" name="Value">Player.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="864843584779774" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">ReturnPlayerY</param>
+                            <param id="1" name="Value">Player.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="482474087787043">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="969165571266637" type="System">
+                            <param id="0" name="First value">Function.Param(1)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="138048457888283" type="System">
+                            <param id="0" name="Variable">SimulatorMode</param>
+                            <param id="1" name="Value">MODE_NORMAL</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="576430357921888" type="System">
+                            <param id="0" name="Layout">BattleScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="268544544838200">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="651497609366930" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="CreateX" sid="976223518399867" static="0" type="number">0</variable>
+                        <variable constant="0" name="CreateY" sid="367723743307393" static="0" type="number">0</variable>
+                        <variable constant="0" name="TargetX" sid="163803479013439" static="0" type="number">0</variable>
+                        <variable constant="0" name="TargetY" sid="481712593856485" static="0" type="number">0</variable>
+                        <comment>Create</comment>
+                        <event-block sid="561722506347544">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="382281569068694" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="234281774208835" type="System">
+                                    <param id="0" name="Variable">CreateX</param>
+                                    <param id="1" name="Value">Function.Param(4)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="479954473810383" type="System">
+                                    <param id="0" name="Variable">CreateY</param>
+                                    <param id="1" name="Value">Function.Param(5)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="330215939584579">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="192353595123770" type="System" />
+                                <condition id="-8" name="Compare two values" sid="675534796320598" type="System">
+                                    <param id="0" name="First value">Player.Count</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="951021237616048" type="System">
+                                    <param id="0" name="Variable">CreateX</param>
+                                    <param id="1" name="Value">Player.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="393094900716655" type="System">
+                                    <param id="0" name="Variable">CreateY</param>
+                                    <param id="1" name="Value">Player.Y - 16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Target</comment>
+                        <event-block sid="481054104748542">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="532059515905154" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="849063698232991" type="System">
+                                    <param id="0" name="Variable">TargetX</param>
+                                    <param id="1" name="Value">Function.Param(2) = &quot;auto&quot; ? 49 : Function.Param(2)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="808888876209428" type="System">
+                                    <param id="0" name="Variable">TargetY</param>
+                                    <param id="1" name="Value">Function.Param(3) = &quot;auto&quot; ? 455 : Function.Param(3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="450984559464456">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="816723501539707" type="System" />
+                                <condition id="-8" name="Compare two values" sid="652094364338371" type="System">
+                                    <param id="0" name="First value">Player.Count</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="155257329541745" type="System">
+                                    <param id="0" name="Variable">TargetX</param>
+                                    <param id="1" name="Value">scrollx + (49 - 320)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="866978752417452" type="System">
+                                    <param id="0" name="Variable">TargetY</param>
+                                    <param id="1" name="Value">scrolly + (455 - 240)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="200486328893442" type="Area_SystemVars">
+                                    <param id="0" name="Instance variable">PlayerMove</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="640797530917139" type="Area_SystemVars">
+                                    <param id="0" name="Instance variable">EventsEnable</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="360626531324265">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="960107162964188" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="989651334276553" type="Function">
+                                    <param id="0" name="Name">&quot;CreateEncountHeart&quot;</param>
+                                    <param id="1" name="Parameter {n}">CreateX{###}CreateY{###}TargetX{###}TargetY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>直す</comment>
+                        <event-block sid="578808236839245">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="793136604954437" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="396937896151057" type="System">
+                                    <param id="0" name="Object to create">EncountExc</param>
+                                    <param id="1" name="Layer">&quot;Fader&quot;</param>
+                                    <param id="2" name="X">BORDER_LEFTTOP_X + CreateX - (scrollx - GAME_WIDTH / 2)</param>
+                                    <param id="3" name="Y">BORDER_LEFTTOP_Y + CreateY - (scrolly - GAME_HEIGHT / 2) - 46</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="182808024570941" type="EncountExc">
+                                    <param id="0" name="Instance variable">StartX</param>
+                                    <param id="1" name="Value">CreateX</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="528985207260312" type="EncountExc">
+                                    <param id="0" name="Instance variable">StartY</param>
+                                    <param id="1" name="Value">CreateY</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="110889837157751" type="EncountExc">
+                                    <param id="0" name="Instance variable">TargetX</param>
+                                    <param id="1" name="Value">TargetX</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="326740806594243" type="EncountExc">
+                                    <param id="0" name="Instance variable">TargetY</param>
+                                    <param id="1" name="Value">TargetY</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="571524428188945" type="EncountExc">
+                                    <param id="0" name="Animation">&quot;Smile&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="238965358781413" type="Audio">
+                                    <param id="0" name="Audio file">Warning</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>エンカウント用</comment>
+        <event-block sid="196314810899284">
+            <conditions>
+                <condition id="0" name="On function" sid="956157641008218" type="Function">
+                    <param id="0" name="Name">&quot;CreateEncountHeart&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="CreateX" sid="521954956905959" static="0" type="number">0</variable>
+                <variable constant="0" name="CreateY" sid="740032280452236" static="0" type="number">0</variable>
+                <variable constant="0" name="TargetX" sid="926961402484517" static="0" type="number">0</variable>
+                <variable constant="0" name="TargetY" sid="248431710812536" static="0" type="number">0</variable>
+                <event-block sid="506011582720996">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="996315925146990" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="453176008023985" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">ReturnPlayerX</param>
+                            <param id="1" name="Value">Player.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="566587040213875" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">ReturnPlayerY</param>
+                            <param id="1" name="Value">Player.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="764552895920265" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">ReturnScrollX</param>
+                            <param id="1" name="Value">scrollx</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="679621234852442" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">ReturnScrollY</param>
+                            <param id="1" name="Value">scrolly</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="917685015130632" type="Player" />
+                        <action id="-13" name="Set boolean" sid="424211052109105" type="Player">
+                            <param id="0" name="Instance variable">isDepthTarget</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="442716325536856" type="Player">
+                            <param id="0" name="Layer">&quot;Fader&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="834204765371121" type="Player">
+                            <param id="0" name="X">BORDER_LEFTTOP_X + Player.X - (scrollx - GAME_WIDTH / 2)</param>
+                            <param id="1" name="Y">BORDER_LEFTTOP_Y + Player.Y - (scrolly - GAME_HEIGHT / 2)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="236942809820791" type="System">
+                            <param id="0" name="Variable">CreateX</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="527772015731801" type="System">
+                            <param id="0" name="Variable">CreateY</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="773952773714370" type="System">
+                            <param id="0" name="Variable">TargetX</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="874532548014900" type="System">
+                            <param id="0" name="Variable">TargetY</param>
+                            <param id="1" name="Value">Function.Param(3)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="551600944659817" type="System">
+                            <param id="0" name="Object to create">EncountHeart</param>
+                            <param id="1" name="Layer">&quot;Fader&quot;</param>
+                            <param id="2" name="X">BORDER_LEFTTOP_X + CreateX - (scrollx - GAME_WIDTH / 2)</param>
+                            <param id="3" name="Y">BORDER_LEFTTOP_Y + CreateY - (scrolly - GAME_HEIGHT / 2)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="861980334311080" type="EncountHeart">
+                            <param id="0" name="Instance variable">StartX</param>
+                            <param id="1" name="Value">BORDER_LEFTTOP_X + CreateX - (scrollx - GAME_WIDTH / 2)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="484219685705605" type="EncountHeart">
+                            <param id="0" name="Instance variable">StartY</param>
+                            <param id="1" name="Value">BORDER_LEFTTOP_Y + CreateY - (scrolly - GAME_HEIGHT / 2)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="653337979749867" type="EncountHeart">
+                            <param id="0" name="Instance variable">TargetX</param>
+                            <param id="1" name="Value">BORDER_LEFTTOP_X + TargetX - (scrollx - GAME_WIDTH / 2)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="728462684558881" type="EncountHeart">
+                            <param id="0" name="Instance variable">TargetY</param>
+                            <param id="1" name="Value">BORDER_LEFTTOP_Y + TargetY - (scrolly - GAME_HEIGHT / 2)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="871897685989579" type="ScreenFader">
+                            <param id="0" name="Instance variable">Process</param>
+                            <param id="1" name="Value">Self.Duration</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="158161763937905" type="ScreenFader">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action disabled="1" id="0" name="Play" sid="635568045667886" type="Audio">
+                            <param id="0" name="Audio file">Flash</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="603107480352645" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">CreateX</param>
+                        </action>
+                        <action id="14" name="Log" sid="805732374289874" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">CreateY</param>
+                        </action>
+                        <action id="14" name="Log" sid="215268002800587" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">TargetX</param>
+                        </action>
+                        <action id="14" name="Log" sid="213874069857927" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">TargetY</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="189103446285773">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="474896070034133" type="Player">
+                                    <param id="0" name="Instance variable">FacingDir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PLAYER_FACINGDIR_DOWN</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="505668103199222" type="Area_SystemVars">
+                                    <param id="0" name="Instance variable">ReturnFacing</param>
+                                    <param id="1" name="Value">&quot;Down&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="205639373986500">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="863651657461099" type="Player">
+                                    <param id="0" name="Instance variable">FacingDir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PLAYER_FACINGDIR_UP</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="181631041176604" type="Area_SystemVars">
+                                    <param id="0" name="Instance variable">ReturnFacing</param>
+                                    <param id="1" name="Value">&quot;Up&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="224712478494757">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="891248945966419" type="Player">
+                                    <param id="0" name="Instance variable">FacingDir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PLAYER_FACINGDIR_LEFT</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="372230567333354" type="Area_SystemVars">
+                                    <param id="0" name="Instance variable">ReturnFacing</param>
+                                    <param id="1" name="Value">&quot;Left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="427455592628208">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="365576561075687" type="Player">
+                                    <param id="0" name="Instance variable">FacingDir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">PLAYER_FACINGDIR_RIGHT</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="880763908352625" type="Area_SystemVars">
+                                    <param id="0" name="Instance variable">ReturnFacing</param>
+                                    <param id="1" name="Value">&quot;Right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="331162908807381">
+            <conditions>
+                <condition id="-11" name="For Each" sid="554785259071575" type="System">
+                    <param id="0" name="Object">EncountExc</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="772254595429065" type="EncountExc">
+                    <param id="0" name="Instance variable">Process</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="925412406939199">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="206125072264821" type="EncountExc">
+                            <param id="0" name="Instance variable">Process</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="746053579455570" type="EncountExc" />
+                        <action id="0" name="Call function" sid="327440045355960" type="Function">
+                            <param id="0" name="Name">&quot;CreateEncountHeart&quot;</param>
+                            <param id="1" name="Parameter {n}">EncountExc.StartX{###}EncountExc.StartY{###}EncountExc.TargetX{###}EncountExc.TargetY</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="472025168601870">
+            <conditions>
+                <condition id="-11" name="For Each" sid="976534042187993" type="System">
+                    <param id="0" name="Object">EncountHeart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="776865671280945" type="EncountHeart">
+                    <param id="0" name="Instance variable">Process</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="776741835503926">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="184806857904605" type="EncountHeart">
+                            <param id="0" name="Instance variable">Step</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="614505421341485">
+                            <conditions>
+                                <condition id="-23" name="While" sid="930187381138326" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="996843139768597" type="EncountHeart">
+                                    <param id="0" name="Instance variable">Process</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2 / 30 * Self.Step</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="394915484484841">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="523931294933618" type="EncountHeart">
+                                            <param id="0" name="Instance variable">Step</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="230133190066309" type="Audio">
+                                            <param id="0" name="Audio file">BattleFall</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="929756513222232" type="EncountHeart">
+                                            <param id="0" name="Instance variable">Process</param>
+                                            <param id="1" name="Value">2 / 30 * 5</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="746681781387517" type="Player">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="946356741107062">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="939067209219775" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="689291815070277">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="990511325451454" type="System">
+                                                    <param id="0" name="First value">EncountHeart.Step % 2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Play" sid="567247225340202" type="Audio">
+                                                    <param id="0" name="Audio file">Flash</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="771602016218930" type="EncountHeart">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="929189660700427">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="110921763403529" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="633305549804392" type="EncountHeart">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="653043795976930">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="159801874242324" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="218428924101356" type="EncountHeart">
+                                            <param id="0" name="Instance variable">Step</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="505692631373784">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="334322762298067" type="EncountHeart">
+                            <param id="0" name="Instance variable">Step</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="312149715262351">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="770044332702433" type="EncountHeart">
+                                    <param id="0" name="Instance variable">Process</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">15 / 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="869218211322255" type="EncountHeart">
+                                    <param id="0" name="X">Self.TargetX</param>
+                                    <param id="1" name="Y">Self.TargetY</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="976330321243838" type="EncountHeart">
+                                    <param id="0" name="Instance variable">Step</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="833616890684479" type="EncountHeart">
+                                    <param id="0" name="Instance variable">Process</param>
+                                    <param id="1" name="Value">15 / 30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="710883029788285">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="202803333119337" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="952012566407399" type="EncountHeart">
+                                    <param id="0" name="X">Self.StartX + (Self.TargetX - Self.StartX) * Self.Process / (15 / 30)</param>
+                                    <param id="1" name="Y">Self.StartY + (Self.TargetY - Self.StartY) * Self.Process / (15 / 30)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="515024828704469">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="283527634685270" type="EncountHeart">
+                            <param id="0" name="Instance variable">Step</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="828715714851917" type="EncountHeart">
+                            <param id="0" name="Opacity">100 * (1 - Self.Process / (3 / 30))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="618133208782419">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="362289173406886" type="EncountHeart">
+                                    <param id="0" name="Instance variable">Process</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3 / 30</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="556321928470653" type="Area_SystemVars">
+                                    <param id="0" name="Instance variable">NextSummonID</param>
+                                    <param id="1" name="Value">-2</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="756960500585554" type="EncountHeart" />
+                                <action id="-9" name="Set value" sid="326390005324683" type="System">
+                                    <param id="0" name="Variable">SimulatorMode</param>
+                                    <param id="1" name="Value">MODE_NORMAL</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="659225367720316" type="System">
+                                    <param id="0" name="Layout">BattleScreen</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="583544518281099">
+            <conditions>
+                <condition id="-18" name="On created" sid="664003850731298" type="EncountHeart" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="600567936443341" type="EncountHeart">
+                    <param id="0" name="Instance variable">StartX</param>
+                    <param id="1" name="Value">Self.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="118283848310617" type="EncountHeart">
+                    <param id="0" name="Instance variable">StartY</param>
+                    <param id="1" name="Value">Self.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="299599246985641">
+            <conditions>
+                <condition id="0" name="On function" sid="848803212750236" type="Function">
+                    <param id="0" name="Name">&quot;PlayerGetTotalATK&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="695977337093412" type="Function">
+                    <param id="0" name="Value">(PlayerATK + 10) + Function.Call(&quot;PlayerGetWeaponATK&quot;) + PlayerBattleATK</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="624394030653287">
+            <conditions>
+                <condition id="0" name="On function" sid="493399813823315" type="Function">
+                    <param id="0" name="Name">&quot;PlayerGetTotalDEF&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="933156481432135" type="Function">
+                    <param id="0" name="Value">(PlayerDEF + 10) + Function.Call(&quot;PlayerGetWeaponDEF&quot;) + PlayerBattleDEF</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="598197911127277">
+            <conditions>
+                <condition id="0" name="On function" sid="557876688198012" type="Function">
+                    <param id="0" name="Name">&quot;PlayerGetWeaponATK&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable comment="装備品合計攻撃力" constant="0" name="TotalEquipATK" sid="195596097151679" static="0" type="number">0</variable>
+                <event-block sid="343881873485838">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="744989464899052" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="590106632048460" type="System">
+                            <param id="0" name="Variable">TotalEquipATK</param>
+                            <param id="1" name="Value">ItemDB.Value(0, Weapon, &quot;Action&quot;, &quot;ATK&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>武器に攻撃力上昇効果が付いている場合</comment>
+                <event-block sid="474804469206564">
+                    <conditions>
+                        <condition id="60" inverted="1" name="Is undefined" sid="538730156587104" type="ItemDB">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">Armor{###}&quot;Action&quot;{###}&quot;ATK&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="219730086095137" type="System">
+                            <param id="0" name="Variable">TotalEquipATK</param>
+                            <param id="1" name="Value">ItemDB.Value(0, Armor, &quot;Action&quot;, &quot;ATK&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="803293383764928">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="868851454857202" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="936980679800452" type="Function">
+                            <param id="0" name="Value">TotalEquipATK</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="655966266326767">
+            <conditions>
+                <condition id="0" name="On function" sid="470340017510271" type="Function">
+                    <param id="0" name="Name">&quot;PlayerGetArmorDEF&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable comment="装備品合計防御値" constant="0" name="TotalEquipDEF" sid="854927820386798" static="0" type="number">0</variable>
+                <event-block sid="719950289132890">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="487354605054923" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="390716419535121" type="System">
+                            <param id="0" name="Variable">TotalEquipDEF</param>
+                            <param id="1" name="Value">ItemDB.Value(0, Armor, &quot;Action&quot;, &quot;DEF&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>防具に防御値上昇効果が付いている場合</comment>
+                <event-block sid="791042759400470">
+                    <conditions>
+                        <condition id="60" inverted="1" name="Is undefined" sid="557999987062318" type="ItemDB">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}">Weapon{###}&quot;Action&quot;{###}&quot;DEF&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="528626942530688" type="System">
+                            <param id="0" name="Variable">TotalEquipDEF</param>
+                            <param id="1" name="Value">ItemDB.Value(0, Weapon, &quot;Action&quot;, &quot;DEF&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993682779902390">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="930587978356257" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="285825034646471" type="Function">
+                            <param id="0" name="Value">TotalEquipDEF</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

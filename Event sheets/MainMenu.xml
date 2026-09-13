@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMenu</name>
+    <events>
+        <include>Engine Prev</include>
+        <event-block any="1" sid="485628688875215">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="797818226210879" type="System" />
+                <condition id="0" name="On function" sid="593392342940439" type="Function">
+                    <param id="0" name="Name">&quot;LoadFinished&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="205430596408255">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="450986104264008" type="System">
+                            <param id="0" name="First value">AttackList.KeyCount</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">AttackLoader.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="102056247950785" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuStart&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="718262017741716" title="MainMenu">
+            <sub-events>
+                <event-block sid="730295634467518">
+                    <conditions>
+                        <condition id="0" name="On function" sid="186614967053340" type="Function">
+                            <param id="0" name="Name">&quot;MainMenuStart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="399299612280898" type="MainMenuLogo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="631639299703791" type="Function">
+                            <param id="0" name="Name">&quot;TextSelector&quot;</param>
+                            <param id="1" name="Parameter {n}">5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="297767219771199" type="Function">
+                            <param id="0" name="Name">&quot;TextSelectorCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Background&quot;{###}250{###}300{###}300{###}100{###}0{###}&quot;START&quot;{###}2{###}&quot;GameStart&quot;{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="101511629327019" type="Function">
+                            <param id="0" name="Name">&quot;TextSelectorCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Background&quot;{###}250{###}320{###}300{###}100{###}1{###}&quot;ATTACK TEST&quot;{###}2{###}&quot;GameAttackTest&quot;{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="950793845021977" type="Function">
+                            <param id="0" name="Name">&quot;TextSelectorCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Background&quot;{###}250{###}340{###}300{###}100{###}2{###}&quot;OVERWORLD&quot;{###}2{###}&quot;GameOW&quot;{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="165835673203122" type="Function">
+                            <param id="0" name="Name">&quot;TextSelectorCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Background&quot;{###}250{###}360{###}300{###}100{###}3{###}&quot;SETTINGS&quot;{###}2{###}&quot;GameSettings&quot;{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="416926690697745" type="Function">
+                            <param id="0" name="Name">&quot;TextSelectorCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Background&quot;{###}250{###}380{###}300{###}100{###}4{###}&quot;RESET DATA&quot;{###}2{###}&quot;GameDataReset&quot;{###}1{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="762982564088053" type="Function">
+                            <param id="0" name="Name">&quot;TextSelectorCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Background&quot;{###}250{###}400{###}300{###}100{###}5{###}&quot;QUIT&quot;{###}2{###}&quot;GameQuit&quot;{###}1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="989106987585762" type="System">
+                            <param id="0" name="Object to create">StatFont</param>
+                            <param id="1" name="Layer">&quot;Background&quot;</param>
+                            <param id="2" name="X">10</param>
+                            <param id="3" name="Y">450</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="702420993326797" type="StatFont">
+                            <param id="0" name="Width">500</param>
+                            <param id="1" name="Height">500</param>
+                        </action>
+                        <action id="0" name="Set text" sid="320315921130052" type="StatFont">
+                            <param id="0" name="Text">&quot;UNDERTALE ENGINE BY DEL&quot;&amp;newline&amp;&quot;V&quot;&amp;projectversion&amp;&quot; 2026.7.19 BETA BUILD&quot;</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="755811974172760" type="StatFont">
+                            <param id="0" name="Effect">&quot;Tint2&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="361726606647799" type="StatFont">
+                            <param id="0" name="Effect">&quot;Tint2&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="172936166718989" type="StatFont">
+                            <param id="0" name="Effect">&quot;Tint2&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">30</param>
+                        </action>
+                        <action id="0" name="Call function" sid="533879612802889" type="Function">
+                            <param id="0" name="Name">&quot;FadeStop&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="944957355333963" type="ScreenFader">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="325606084487450" type="Area_SystemVars" />
+                        <action id="-3" name="Create object" sid="475923773143770" type="System">
+                            <param id="0" name="Object to create">Area_SystemVars</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="579904793706561" type="Area_UserVars" />
+                        <action id="-3" name="Create object" sid="331715014002480" type="System">
+                            <param id="0" name="Object to create">Area_UserVars</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="499645179014211" type="Function">
+                            <param id="0" name="Name">&quot;PlayerInitStatus&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="987992927128762">
+                            <conditions>
+                                <condition id="-15" name="Is group active" sid="709663696301349" type="System">
+                                    <param id="0" name="Group name">&quot;Detect&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="149948923138625" type="Audio">
+                                    <param id="0" name="Audio file">TitleSound</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="702526336200628">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="362463652305615" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="317299631178924" type="Function">
+                                    <param id="0" name="Name">&quot;FadeScreen&quot;</param>
+                                    <param id="1" name="Parameter {n}">100{###}0{###}0.3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="266765218279282">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="866606936054924" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="139330882975350" type="System">
+                                    <param id="0" name="Group name">&quot;Detect&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="176912553190767">
+                    <conditions>
+                        <condition id="0" name="On function" sid="773580315082445" type="Function">
+                            <param id="0" name="Name">&quot;GameStart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="450849323497580" type="Function">
+                            <param id="0" name="Name">&quot;FadeScreen&quot;</param>
+                            <param id="1" name="Parameter {n}">0{###}100{###}0.25</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="362628640861637" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="0" name="Call function" sid="353170009431859" type="Function">
+                            <param id="0" name="Name">&quot;StartEncount&quot;</param>
+                            <param id="1" name="Parameter {n}">0{###}1{###}&quot;auto&quot;{###}&quot;auto&quot;{###}125+160{###}random(250, 310)+30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="600667476721785">
+                    <conditions>
+                        <condition id="0" name="On function" sid="690312887586431" type="Function">
+                            <param id="0" name="Name">&quot;GameAttackTest&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="955228240138279" type="System">
+                            <param id="0" name="Layout">SingleAttack</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="151781907558892">
+                    <conditions>
+                        <condition id="0" name="On function" sid="323398270962664" type="Function">
+                            <param id="0" name="Name">&quot;GameOW&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="674555540299352" type="Function">
+                            <param id="0" name="Name">&quot;FadeScreen&quot;</param>
+                            <param id="1" name="Parameter {n}">0{###}100{###}0.25</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="658231700546903" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="0" name="Call function" sid="268480041117971" type="Function">
+                            <param id="0" name="Name">&quot;FadeStop&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="713513729947695" type="Function">
+                            <param id="0" name="Name">&quot;LoadData&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="729144118409554">
+                    <conditions>
+                        <condition id="0" name="On function" sid="114371648109410" type="Function">
+                            <param id="0" name="Name">&quot;OnDataLoadComplete&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="690140650665773" type="ScreenFader">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>セーブデータがない場合</comment>
+                        <event-block sid="366553729013784">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="857123373258774" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="937429221099806" type="System">
+                                    <param id="0" name="Layout">Last Corridor</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="739425176957209">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="341982991708238" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="521702148345337" type="System">
+                                    <param id="0" name="Layout">Area_SystemVars.NextRoomName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="233385254884797">
+                    <conditions>
+                        <condition id="0" name="On function" sid="422505583421952" type="Function">
+                            <param id="0" name="Name">&quot;GameSettings&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="422509128889491" type="Function">
+                            <param id="0" name="Name">&quot;FadeScreen&quot;</param>
+                            <param id="1" name="Parameter {n}">0{###}100{###}0.25</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="401024997057658" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="992499803890924" type="System">
+                            <param id="0" name="Layout">Settings</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="457539687170959">
+                    <conditions>
+                        <condition id="0" name="On function" sid="516048190491016" type="Function">
+                            <param id="0" name="Name">&quot;GameDataReset&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="792558102712495" type="Audio">
+                            <param id="0" name="Audio file">HeartShatter</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="2" name="Remove item" sid="879990188254229" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SaveData&quot; &amp; Area_SystemVars.SaveSlot</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="736349380726006">
+                    <conditions>
+                        <condition id="0" name="On function" sid="621061127763480" type="Function">
+                            <param id="0" name="Name">&quot;GameQuit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="554685363687828" type="Function">
+                            <param id="0" name="Name">&quot;FadeScreen&quot;</param>
+                            <param id="1" name="Parameter {n}">0{###}100{###}0.25</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="857660555590066" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="14" name="Close application" sid="952094028733082" type="C2EX" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="This is the group to use if you do not want the title sound to be played. (DON&apos;T DELETE)" sid="841643860114727" title="Detect" />
+        <include>Engine After</include>
+    </events>
+</c2eventsheet>

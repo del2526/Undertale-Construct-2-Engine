@@ -1,0 +1,226 @@
+{
+    "pie" : {
+        "Name" : {
+            "OverWorld" : "item.pie.name.ow",
+            "Battle" : "item.pie.name.battle",
+            "Boss" : "item.pie.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.pie.use",
+            "Desc" : "item.pie.desc"
+        },
+        "Action" : {
+            "Point" : 99,
+            "Sell" : 180
+        },
+        "Type" : "Heal"
+    },
+
+    "noodles" : {
+        "Name" : {
+            "OverWorld" : "item.noodles.name.ow",
+            "Battle" : "item.noodles.name.battle",
+            "Boss" : "item.noodles.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.noodles.use",
+            "Desc" : "item.noodles.desc"
+        },
+        "Action" : {
+            "Point" : 90,
+            "Sell" : 180
+        },
+        "Type" : "Heal"
+    },
+
+    "steak" : {
+        "Name" : {
+            "OverWorld" : "item.steak.name.ow",
+            "Battle" : "item.steak.name.battle",
+            "Boss" : "item.steak.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.steak.use",
+            "Desc" : "item.steak.desc"
+        },
+        "Action" : {
+            "Point" : 60,
+            "Sell" : 180
+        },
+        "Type" : "Heal"
+    },
+
+    "lhero" : {
+        "Name" : {
+            "OverWorld" : "item.lhero.name.ow",
+            "Battle" : "item.lhero.name.battle",
+            "Boss" : "item.lhero.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.lhero.use",
+            "Desc" : "item.lhero.desc"
+        },
+        "Action" : {
+            "Point" : 40,
+            "Sell" : 180,
+            "HealSoundSchedule" : [
+                {
+                    "Audio" : "Swallow",
+                    "Delay" : 0
+                },
+                {
+                    "Audio" : "LegendHero",
+                    "Delay60Frame" : 20
+                }
+            ],
+            "Func" : "ItemLHeroPowerUp"
+        },
+        "Type" : "Heal"
+    },
+    "snowpiece" : {
+        "Name" : {
+            "OverWorld" : "item.snowpiece.name.ow",
+            "Battle" : "item.snowpiece.name.battle",
+            "Boss" : "item.snowpiece.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.snowpiece.use",
+            "Desc" : "item.snowpiece.desc"
+        },
+        "Action" : {
+            "Point" : 45,
+            "Sell" : 180
+        },
+        "Type" : "Heal"
+    },
+    "stick" : {
+        "Name" : {
+            "OverWorld" : "item.stick.name.ow",
+            "Battle" : "item.stick.name.battle",
+            "Boss" : "item.stick.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.stick.use",
+            "Desc" : "item.stick.desc"
+        },
+        "Action" : {
+            "ATK" : 0,
+            "FightType" : "Knife",
+            "Sell" : 150,
+            "Func" : "ItemStickThrow"
+        },
+        "Type" : "Function"
+    },
+    "bandage" : {
+        "Name" : {
+            "OverWorld" : "item.bandage.name.ow",
+            "Battle" : "item.bandage.name.battle",
+            "Boss" : "item.bandage.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.bandage.use",
+            "Desc" : "item.bandage.desc"
+        },
+        "Action" : {
+            "DEF" : 0,
+            "Sell" : 150,
+            "HealSoundSchedule" : [
+                {
+                    "Audio" : "PlayerHeal"
+                }
+            ]
+        },
+        "Type" : "Heal"
+    },
+    "toughglove" : {
+        "Name" : {
+            "OverWorld" : "item.toughglove.name.ow",
+            "Battle" : "item.toughglove.name.battle",
+            "Boss" : "item.toughglove.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.toughglove.use",
+            "Desc" : "item.toughglove.desc"
+        },
+        "Action" : {
+            "ATK" : 5,
+            "FightType" : "Punch",
+            "Sell" : 99999
+        },
+        "Type" : "Weapon"
+    },
+    "realknife" : {
+        "Name" : {
+            "OverWorld" : "item.realknife.name.ow",
+            "Battle" : "item.realknife.name.battle",
+            "Boss" : "item.realknife.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.realknife.use",
+            "Desc" : "item.realknife.desc"
+        },
+        "Action" : {
+            "ATK" : 99,
+            "FightType" : "Knife",
+            "Sell" : 180
+        },
+        "Type" : "Weapon"
+    },
+    "rocket" : {
+        "Name" : {
+            "OverWorld" : "item.rocket.name.ow",
+            "Battle" : "item.rocket.name.battle",
+            "Boss" : "item.rocket.name.boss"
+        },
+        "Message" : {
+            "Use" : "item.rocket.use",
+            "Desc" : "item.rocket.desc"
+        },
+        "Action" : {
+            "DEF" : 99,
+            "Sell" : 180
+        },
+        "Type" : "Armor"
+    },
+    "punchcard" : {
+        "Name" : {
+            "OverWorld" : "item.punchcard.name.ow",
+            "Battle" : "item.punchcard.name.battle",
+            "Boss" : "item.punchcard.name.boss"
+        },
+        "Message" : {
+            "Desc" : "item.punchcard.desc"
+        },
+        "Action" : {
+            "Func" : "ItemPunchcardUse",
+            "Sell" : 15
+        },
+        "Type" : "Function"
+    },
+    "testMultiTarget" : {
+        "Name" : {
+            "OverWorld" : "testMultiTarget",
+            "Battle" : "testMultiTarget",
+            "Boss" : "testMultiTarget"
+        },
+        "Message" : {
+            "Use" : "Use Message",
+            "Desc" : "Item Desc"
+        },
+        "Action" : {
+            "ATK" : 99,
+            "FightType" : "MultiTarget",
+			"FightSetting" : {
+				"Speed" : 1,
+				"Count" : 3,
+				"Timing" : [
+					-50,
+					[0, 25, 50],
+					[100, 125, 150]
+				],
+				"Which" : 0
+			}
+        },
+        "Type" : "Weapon"
+    }
+}

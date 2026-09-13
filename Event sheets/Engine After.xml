@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Engine After</name>
+    <events>
+        <event-block sid="724334319301349">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="618280238707953" type="System" />
+            </conditions>
+            <actions>
+                <action id="-23" name="Set layer angle" sid="980221056630157" type="System">
+                    <param id="0" name="Layer">&quot;Background&quot;</param>
+                    <param id="1" name="Angle">ScreenAngle</param>
+                </action>
+                <action id="-23" name="Set layer angle" sid="251322201675465" type="System">
+                    <param id="0" name="Layer">&quot;Enemies&quot;</param>
+                    <param id="1" name="Angle">ScreenAngle</param>
+                </action>
+                <action id="-23" name="Set layer angle" sid="695167698794608" type="System">
+                    <param id="0" name="Layer">&quot;HUD&quot;</param>
+                    <param id="1" name="Angle">ScreenAngle</param>
+                </action>
+                <action id="-23" name="Set layer angle" sid="878109385487166" type="System">
+                    <param id="0" name="Layer">&quot;CombatZone&quot;</param>
+                    <param id="1" name="Angle">ScreenAngle</param>
+                </action>
+                <action id="-23" name="Set layer angle" sid="811300266816487" type="System">
+                    <param id="0" name="Layer">&quot;CombatZoneClipped&quot;</param>
+                    <param id="1" name="Angle">ScreenAngle</param>
+                </action>
+                <action id="-23" name="Set layer angle" sid="583501488203329" type="System">
+                    <param id="0" name="Layer">&quot;Board&quot;</param>
+                    <param id="1" name="Angle">ScreenAngle</param>
+                </action>
+                <action id="-23" name="Set layer angle" sid="523837281185604" type="System">
+                    <param id="0" name="Layer">&quot;Overlay&quot;</param>
+                    <param id="1" name="Angle">ScreenAngle</param>
+                </action>
+                <action id="-23" name="Set layer angle" sid="297936021229494" type="System">
+                    <param id="0" name="Layer">&quot;Fade&quot;</param>
+                    <param id="1" name="Angle">ScreenAngle</param>
+                </action>
+                <action id="-23" name="Set layer angle" sid="586235080848658" type="System">
+                    <param id="0" name="Layer">&quot;Touch&quot;</param>
+                    <param id="1" name="Angle">ScreenAngle</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

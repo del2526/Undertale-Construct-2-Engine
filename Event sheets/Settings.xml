@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Settings</name>
+    <events>
+        <include>Engine Prev</include>
+        <variable constant="0" name="Setting_MaxFPS" sid="708286444737226" static="0" type="number">0</variable>
+        <variable constant="0" name="Setting_Language" sid="821538386897043" static="0" type="number">0</variable>
+        <variable constant="0" name="Setting_Border" sid="686596249069919" static="0" type="number">0</variable>
+        <variable constant="0" name="Setting_EnableShaders" sid="967458629310711" static="0" type="number">1</variable>
+        <variable constant="0" name="Setting_FPSDisplay" sid="504110306847049" static="0" type="number">0</variable>
+        <event-group description="" sid="550584202905904" title="Settings">
+            <sub-events>
+                <variable constant="0" name="DrawY" sid="291831461641776" static="1" type="number">0</variable>
+                <variable constant="0" name="Count" sid="446931493441967" static="1" type="number">0</variable>
+                <event-block any="1" sid="989808750849703">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="607406823718782" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="235007514107334" type="System">
+                            <param id="0" name="Variable">DrawY</param>
+                            <param id="1" name="Value">150</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="483653562793666" type="System">
+                            <param id="0" name="Variable">Count</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="560035752804793" type="Function">
+                            <param id="0" name="Name">&quot;FadeScreen&quot;</param>
+                            <param id="1" name="Parameter {n}">100{###}0{###}0.3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="246485122151815" type="System">
+                            <param id="0" name="Object to create">EnemyFont</param>
+                            <param id="1" name="Layer">&quot;Background&quot;</param>
+                            <param id="2" name="X">-5</param>
+                            <param id="3" name="Y">-10</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="607408646181895" type="EnemyFont">
+                            <param id="0" name="Width">400</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                        <action id="0" name="Set text" sid="827594316122054" type="EnemyFont">
+                            <param id="0" name="Text">&quot;SETTINGS&quot;</param>
+                        </action>
+                        <action id="2" name="Set scale" sid="855313272141984" type="EnemyFont">
+                            <param id="0" name="Scale">4</param>
+                        </action>
+                        <action id="0" name="Call function" sid="712299909368668" type="Function">
+                            <param id="0" name="Name">&quot;SettingMenuCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">Language = 0 ? &quot;FPS Limit: &quot; : &quot;FPS制限: &quot;{###}3{###}Setting_MaxFPS</param>
+                        </action>
+                        <action id="0" name="Call function" sid="835980167431565" type="Function">
+                            <param id="0" name="Name">&quot;SettingMenuCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">Language = 0 ? &quot;Language: &quot; : &quot;言語: &quot;{###}2{###}Setting_Language</param>
+                        </action>
+                        <action id="0" name="Call function" sid="318019863412868" type="Function">
+                            <param id="0" name="Name">&quot;SettingMenuCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">Language = 0 ? &quot;Border: &quot; : &quot;ボーダー: &quot;{###}3{###}Setting_Border</param>
+                        </action>
+                        <action id="0" name="Call function" sid="277524078123505" type="Function">
+                            <param id="0" name="Name">&quot;SettingMenuCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">Language = 0 ? &quot;FPS Display: &quot; : &quot;FPS表示: &quot;{###}2{###}Setting_FPSDisplay</param>
+                        </action>
+                        <action id="0" name="Call function" sid="139768275898475" type="Function">
+                            <param id="0" name="Name">&quot;SettingMenuCreate&quot;</param>
+                            <param id="1" name="Parameter {n}">Language = 0 ? &quot;Effects: &quot; : &quot;エフェクト: &quot;{###}2{###}Setting_EnableShaders</param>
+                        </action>
+                        <action id="0" name="Call function" sid="671188364395782" type="Function">
+                            <param id="0" name="Name">&quot;SettingBackCreate&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="ShiftX" sid="468801469246715" static="0" type="number">0</variable>
+                <event-block sid="872022916181511">
+                    <conditions>
+                        <condition id="0" name="On function" sid="647594925445283" type="Function">
+                            <param id="0" name="Name">&quot;SettingMenuCreate&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="569065445836118">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="319221145533965" type="System">
+                                    <param id="0" name="Variable">Language</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="490293141413402" type="System">
+                                    <param id="0" name="Object to create">DefaultFont</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="161050974416571" type="DefaultFont">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="918923937552279" type="System">
+                                    <param id="0" name="Variable">ShiftX</param>
+                                    <param id="1" name="Value">DefaultFont.TextWidth</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="455531166264505" type="DefaultFont" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="602257182309009">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="402638436923839" type="System" />
+                                <condition id="-14" name="Compare variable" sid="691020543049068" type="System">
+                                    <param id="0" name="Variable">Language</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="829682398259628" type="System">
+                                    <param id="0" name="Object to create">JP_DefaultFont</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="367523839870300" type="JP_DefaultFont">
+                                    <param id="0" name="Text">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="424122388795818" type="System">
+                                    <param id="0" name="Variable">ShiftX</param>
+                                    <param id="1" name="Value">JP_DefaultFont.TextWidth</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="616116446706248" type="JP_DefaultFont" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="222555780947270">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="811727780624029" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="919730487663427" type="Function">
+                                    <param id="0" name="Name">&quot;TextSelectorCreate2&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Background&quot;{###}150{###}DrawY{###}300{###}100{###}Count{###}Function.Param(0){###}2{###}&quot;&quot;{###}0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="404031722660816" type="Function">
+                                    <param id="0" name="Name">&quot;SettingString&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Background&quot;{###}150 + ShiftX * 2.5{###}DrawY{###}300{###}100{###}Count{###}&quot;&quot;{###}2{###}Function.Param(1) - 1{###}Function.Param(2)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="756045781396138" type="System">
+                                    <param id="0" name="Variable">DrawY</param>
+                                    <param id="1" name="Value">50</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="375780243631175" type="System">
+                                    <param id="0" name="Variable">Count</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="633857257202750">
+                    <conditions>
+                        <condition id="0" name="On function" sid="380904449043584" type="Function">
+                            <param id="0" name="Name">&quot;SettingBackCreate&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="107803353712817" type="Function">
+                            <param id="0" name="Name">&quot;TextSelectorCreate2&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Background&quot;{###}150{###}400{###}300{###}100{###}5{###}Language = 0 ? &quot;Back&quot; : &quot;戻る&quot;{###}2{###}&quot;ReturnMenu&quot;{###}0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="633333125545437" type="Function">
+                            <param id="0" name="Name">&quot;TextSelector&quot;</param>
+                            <param id="1" name="Parameter {n}">Count</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="847320480470764" type="System">
+                            <param id="0" name="Variable">Count</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="713155505423260">
+                    <conditions>
+                        <condition id="0" name="On function" sid="680844007621283" type="Function">
+                            <param id="0" name="Name">&quot;ReturnMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="942584853382494">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="560590226356213" type="RPGText">
+                                    <param id="0" name="Instance variable">Settings</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="195296127046668" type="RPGText">
+                                    <param id="0" name="Instance variable">Settings</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="971649352064006">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="616407246422201" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="147861757571290" type="Function">
+                                    <param id="0" name="Name">&quot;FadeScreen&quot;</param>
+                                    <param id="1" name="Parameter {n}">0{###}100{###}0.25</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="655486826315613" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="0" name="Call function" sid="583071422091767" type="Function">
+                                    <param id="0" name="Name">&quot;ApplySettings&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="396967104403022" type="System">
+                                    <param id="0" name="Group name">&quot;Detect&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="108127460338267" type="System">
+                                    <param id="0" name="Layout">MainMenu</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="846688537009965" type="ScreenFader" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="285910664538731">
+                    <conditions>
+                        <condition id="0" name="On function" sid="495107848333259" type="Function">
+                            <param id="0" name="Name">&quot;ApplySettings&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="528486618182681" type="Function">
+                            <param id="0" name="Name">Setting_Border = 0 ? &quot;BorderDisable&quot; : Setting_Border = 1 ? &quot;AdvBorderEnable&quot; : &quot;BorderEnable&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="959665776016495" type="System">
+                            <param id="0" name="Variable">Language</param>
+                            <param id="1" name="Value">Setting_Language</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="437121292090382" title="Setting_System">
+                    <sub-events>
+                        <comment>its not an optimal code, probably a bad code&#x0D;&#x0A;don&apos;t refer to it too much</comment>
+                        <event-block sid="391999141297173">
+                            <conditions>
+                                <condition id="0" name="On function" sid="215334537547442" type="Function">
+                                    <param id="0" name="Name">&quot;SettingString&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="711866623710601">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="830144799263528" type="System">
+                                            <param id="0" name="Variable">Language</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="766449976835988" type="System">
+                                            <param id="0" name="Object to create">DefaultFont</param>
+                                            <param id="1" name="Layer">Function.Param(0)</param>
+                                            <param id="2" name="X">int(Function.Param(1))</param>
+                                            <param id="3" name="Y">int(Function.Param(2))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="277074357669881" type="DefaultFont">
+                                            <param id="0" name="Instance variable">Settings</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="786781489833272" type="DefaultFont">
+                                            <param id="0" name="Width">int(Function.Param(3))</param>
+                                            <param id="1" name="Height">int(Function.Param(4))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="240514524009679" type="DefaultFont">
+                                            <param id="0" name="Instance variable">SettingID</param>
+                                            <param id="1" name="Value">int(Function.Param(5))</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="611282238865192" type="DefaultFont">
+                                            <param id="0" name="Text">Function.Param(6)</param>
+                                        </action>
+                                        <action id="2" name="Set scale" sid="158428092429139" type="DefaultFont">
+                                            <param id="0" name="Scale">Function.Param(7)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="867591146433699" type="DefaultFont">
+                                            <param id="0" name="Instance variable">MaxSettingID</param>
+                                            <param id="1" name="Value">int(Function.Param(8))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="338300780705616" type="DefaultFont">
+                                            <param id="0" name="Instance variable">SettingValues</param>
+                                            <param id="1" name="Value">Function.Param(9)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="482539433078236">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="983708987748008" type="System">
+                                            <param id="0" name="Variable">Language</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="109566606135697" type="System">
+                                            <param id="0" name="Object to create">JP_DefaultFont</param>
+                                            <param id="1" name="Layer">Function.Param(0)</param>
+                                            <param id="2" name="X">int(Function.Param(1))</param>
+                                            <param id="3" name="Y">int(Function.Param(2))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="821196550729797" type="JP_DefaultFont">
+                                            <param id="0" name="Instance variable">Settings</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="245237992816743" type="JP_DefaultFont">
+                                            <param id="0" name="Width">int(Function.Param(3))</param>
+                                            <param id="1" name="Height">int(Function.Param(4))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="923219905813244" type="JP_DefaultFont">
+                                            <param id="0" name="Instance variable">SettingID</param>
+                                            <param id="1" name="Value">int(Function.Param(5))</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="478101272249065" type="JP_DefaultFont">
+                                            <param id="0" name="Text">Function.Param(6)</param>
+                                        </action>
+                                        <action id="2" name="Set scale" sid="728385657154282" type="JP_DefaultFont">
+                                            <param id="0" name="Scale">Function.Param(7)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="282625855430851" type="JP_DefaultFont">
+                                            <param id="0" name="Instance variable">MaxSettingID</param>
+                                            <param id="1" name="Value">int(Function.Param(8))</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="241195736723564" type="JP_DefaultFont">
+                                            <param id="0" name="Instance variable">SettingValues</param>
+                                            <param id="1" name="Value">Function.Param(9)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="772205287801255">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="789653297319695" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="597575064044094" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="218189360584330" type="Function">
+                                            <param id="0" name="Name">&quot;ChangeSettingValue&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Value Cursor System</comment>
+                        <event-block sid="500061723281191">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="221932402273990" type="RPGText">
+                                    <param id="0" name="Instance variable">Settings</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="772456811317609" type="RPGText">
+                                    <param id="0" name="Instance variable">SettingID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">MenuSelector.SelectingID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="679000818902392">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="332995736336644" type="VPad">
+                                            <param id="0" name="Instance variable">Right</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">VPad.LastRight</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="367981241717091" type="Audio">
+                                            <param id="0" name="Audio file">MenuSelect</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="188840189255563">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="147224380851760" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">self.MaxSettingID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="861027417933905" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="322410870653412" type="Function">
+                                                    <param id="0" name="Name">&quot;ChangeSettingValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="577385579390782">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="569597720087716" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="381220085417508" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="216619202865112" type="Function">
+                                                    <param id="0" name="Name">&quot;ChangeSettingValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="997814723927484">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="798604511557647" type="VPad">
+                                            <param id="0" name="Instance variable">Left</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">VPad.LastLeft</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="665758597060571" type="Audio">
+                                            <param id="0" name="Audio file">MenuSelect</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="168851064298767">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="503080683002815" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="118254205060622" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Value">self.MaxSettingID</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="884848553397645" type="Function">
+                                                    <param id="0" name="Name">&quot;ChangeSettingValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="928325695130635">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="978511604563750" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="254063784532106" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="192439080634204" type="Function">
+                                                    <param id="0" name="Name">&quot;ChangeSettingValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Change Value </comment>
+                        <event-block sid="712296428396407">
+                            <conditions>
+                                <condition id="0" name="On function" sid="108735443468317" type="Function">
+                                    <param id="0" name="Name">&quot;ChangeSettingValue&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="401677735890280" type="RPGText">
+                                    <param id="0" name="Instance variable">Settings</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="555724411873956">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="672216918022818" type="RPGText">
+                                            <param id="0" name="Instance variable">SettingID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="713351152492642" type="System">
+                                            <param id="0" name="Variable">Setting_MaxFPS</param>
+                                            <param id="1" name="Value">RPGText.SettingValues</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="199240762392449">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="216838442582287" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="546648835065463" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;Unlimited&quot; : &quot;無制限&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="370802467752764">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="305847235205899" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="258659687415217" type="RPGText">
+                                                    <param id="0" name="Text">&quot;60&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="581706808323635">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="123929480661569" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="752809629003843" type="RPGText">
+                                                    <param id="0" name="Text">&quot;30&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="980065417166731">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="472811038235924" type="RPGText">
+                                            <param id="0" name="Instance variable">SettingID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="502083334019204" type="System">
+                                            <param id="0" name="Variable">Setting_Language</param>
+                                            <param id="1" name="Value">RPGText.SettingValues</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="162594081376290">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="632272099826026" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="526125659323008" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;English&quot; : &quot;英語&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="569192934748555">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="369996289012981" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="584198041607439" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;Japanese&quot; : &quot;日本語&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="439524880412015">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="790788629260668" type="RPGText">
+                                            <param id="0" name="Instance variable">SettingID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="493943489290537" type="System">
+                                            <param id="0" name="Variable">Setting_Border</param>
+                                            <param id="1" name="Value">RPGText.SettingValues</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="734493822360558">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="377614840071847" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="749932378427519" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;Disable&quot; : &quot;無効&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="995788603682001">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="961353138388881" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="772795313186609" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;Advanced&quot; : &quot;高&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="622344313526218">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="506371078336691" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="262451720346539" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;Classic&quot; : &quot;低&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="970466084527596">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="245094978608666" type="RPGText">
+                                            <param id="0" name="Instance variable">SettingID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="209630131420830" type="System">
+                                            <param id="0" name="Variable">Setting_FPSDisplay</param>
+                                            <param id="1" name="Value">RPGText.SettingValues</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="512357159465327">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="662730537764856" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="368425139949457" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;Disable&quot; : &quot;無効&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="103732876546264">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="368424512592467" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="490250929932693" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;Enable&quot; : &quot;有効&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="792398065747549">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="160606528540088" type="RPGText">
+                                            <param id="0" name="Instance variable">SettingID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="459554758073174" type="System">
+                                            <param id="0" name="Variable">Setting_EnableShaders</param>
+                                            <param id="1" name="Value">RPGText.SettingValues</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="232546505150602">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="577129333874049" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="642415325521495" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;Disable&quot; : &quot;無効&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="635567136320514">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="502607909055465" type="RPGText">
+                                                    <param id="0" name="Instance variable">SettingValues</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="254289105041098" type="RPGText">
+                                                    <param id="0" name="Text">Language = 0 ? &quot;Enable&quot; : &quot;有効&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

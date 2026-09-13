@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LastCorridorEvent</name>
+    <events>
+        <include>AreaEvent</include>
+        <comment>================&#x0D;&#x0A;Warp&#x0D;&#x0A;================</comment>
+        <event-block sid="350335022100979">
+            <conditions>
+                <condition id="0" name="On function" sid="570607649376268" type="Function">
+                    <param id="0" name="Name">&quot;Area_LastCorridor_LeftDoor&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="841955183567088" type="Function">
+                    <param id="0" name="Name">&quot;Area_GotoReady&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Last Corridor&quot;{###}1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="341030910179024">
+            <conditions>
+                <condition id="0" name="On function" sid="848201541646655" type="Function">
+                    <param id="0" name="Name">&quot;Area_LastCorridor_RightDoor&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="425772164660598" type="Function">
+                    <param id="0" name="Name">&quot;Area_GotoReady&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Last Corridor&quot;{###}0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>================&#x0D;&#x0A;SansEncount&#x0D;&#x0A;================</comment>
+        <event-block sid="351277363921999">
+            <conditions>
+                <condition id="0" name="On function" sid="383242917264427" type="Function">
+                    <param id="0" name="Name">&quot;Area_LastCorridor_TriggerSans&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="627298929223580">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="121253902290859" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightStep</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="294062707510113" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">PlayerMove</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="983484972666615" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">EventsEnable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="368021614578701" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">PlayerScroll</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="496359802349722" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightStep</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>スクロール前</comment>
+        <event-block sid="293475883116809">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="752255220377594" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightStep</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="182001684049246" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightProcess</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="626045204325914">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="711411497322837" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightProcess</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="954178991136182" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightProcess</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="550784580404530" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightStep</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>スクロール</comment>
+        <event-block sid="926829936654910">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="756250845418564" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightStep</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Scroll to X" sid="228314343228142" type="System">
+                    <param id="0" name="X">scrollx + dt * 60</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="479380042992883">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="542639010649789" type="System">
+                            <param id="0" name="First value">scrollx</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">Player.X + 200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="592564782416468" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightStep</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Scroll to X" sid="799711391450738" type="System">
+                            <param id="0" name="X">Player.X + 200</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>スクロール後</comment>
+        <event-block sid="304715678542925">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="378688217696493" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightStep</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="693216462302013" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightProcess</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="947497398431702">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="850012619546474" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightProcess</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="361547317990240" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightProcess</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="215053493505983" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightStep</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>テキスト</comment>
+        <event-block sid="241469139385913">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="490335983478159" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightStep</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="182933969168383" type="Function">
+                    <param id="0" name="Name">&quot;Dialogue&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;* brbrbr&lt;pause&gt;&lt;clear&gt;&lt;face Sans_Normal&gt;&lt;font &quot;&amp;TW_FONT_DEFAULT&amp;&quot;&gt;* yayaya&lt;pause&gt;&lt;clear&gt;* just&lt;pause&gt;&lt;clear&gt;&lt;face&gt;* aaaaaa&quot;{###}&quot;Area_LastCorridor_StartEncount&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="696528898316322" type="Area_SystemVars">
+                    <param id="0" name="Instance variable">PlayerScroll</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-11" name="Add to" sid="382012193369354" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightStep</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>戦闘開始</comment>
+        <event-block sid="806553336288049">
+            <conditions>
+                <condition id="0" name="On function" sid="908589805022780" type="Function">
+                    <param id="0" name="Name">&quot;Area_LastCorridor_StartEncount&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="415151417340004" type="Function">
+                    <param id="0" name="Name">&quot;StartEncount&quot;</param>
+                    <param id="1" name="Parameter {n}">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="568203537560831" type="Area_SystemVars">
+                    <param id="0" name="Instance variable">ReturnFunc</param>
+                    <param id="1" name="Value">&quot;Area_LastCorridor_End&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>戦闘終了時</comment>
+        <event-block sid="732060800492181">
+            <conditions>
+                <condition id="0" name="On function" sid="811930463609585" type="Function">
+                    <param id="0" name="Name">&quot;Area_LastCorridor_End&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="712138202873800" type="Area_SystemVars">
+                    <param id="0" name="Instance variable">PlayerMove</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="325385416246852" type="Area_SystemVars">
+                    <param id="0" name="Instance variable">EventsEnable</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="365412186225877" type="Area_SystemVars">
+                    <param id="0" name="Instance variable">PlayerScroll</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="774437436845490" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightStep</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>スクロール前</comment>
+        <event-block sid="221760142241749">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="531805179655175" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightStep</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="443163594169032" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightProcess</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="253037106246276">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="979761541419331" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightProcess</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="157630279181059" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightProcess</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="118151707921898" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightStep</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>スクロール</comment>
+        <event-block sid="250313618914507">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="858220146738113" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightStep</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Scroll to X" sid="491587712235165" type="System">
+                    <param id="0" name="X">scrollx - dt * 60</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>終了</comment>
+                <event-block sid="372906734299580">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="982343662683858" type="System">
+                            <param id="0" name="First value">scrollx</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">Player.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Scroll to X" sid="916843437606432" type="System">
+                            <param id="0" name="X">Player.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="427370411058416" type="Area_UserVars">
+                            <param id="0" name="Instance variable">SansFightStep</param>
+                            <param id="1" name="Value">99</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="150655926808930" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">PlayerMove</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="194796755089645" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">EventsEnable</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="483187116588883" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">PlayerScroll</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <include>AreaAfterEvent</include>
+        <event-block sid="436091522325231">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="452497311110363" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="741351195560169" type="Function">
+                    <param id="0" name="Name">&quot;PlayerInitStatus&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

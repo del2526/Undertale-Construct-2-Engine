@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SingleAttack</name>
+    <events>
+        <include>Engine Prev</include>
+        <event-block any="1" sid="231831143698103">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="381286266606896" type="System" />
+                <condition id="0" name="On function" sid="215302126573650" type="Function">
+                    <param id="0" name="Name">&quot;LoadFinished&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="371492718718280" type="Function">
+                    <param id="0" name="Name">&quot;SingleMA&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Set opacity" sid="876200211047195" type="ScreenFader">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="303278253417076">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="218300354320498" type="System">
+                            <param id="0" name="First value">AttackList.KeyCount</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">AttackLoader.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="946873652868196" type="System">
+                            <param id="0" name="Object to create">PlayerHeart</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="784146809511370" type="PlayerHeart">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="949616052287046" type="PlayerHeart">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="693842826635710" type="PlayerHeart">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="288907073292349" type="PlayerHeart">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="247613363494544" type="PlayerHeart">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="519535107619752">
+            <conditions>
+                <condition id="0" name="On function" sid="212527174477421" type="Function">
+                    <param id="0" name="Name">&quot;SingleMA&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="790518837644996" type="PlayerHeart">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="852403199483601" type="System">
+                    <param id="0" name="Variable">SimulatorMode</param>
+                    <param id="1" name="Value">MODE_SINGLE</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="201972637405962">
+                    <conditions>
+                        <condition id="-10" name="For" sid="551529500586434" type="System">
+                            <param id="0" name="Name">&quot;&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">AttackLoader.Width-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="836308769099711" type="Function">
+                            <param id="0" name="Name">&quot;CreateMenuItem&quot;</param>
+                            <param id="1" name="Parameter {n}">0{###}192{###}96 + loopindex*32{###}loopindex{###}AttackLoader.At(loopindex){###}&quot;MenuSingleAttack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="931329784161480">
+            <conditions>
+                <condition id="0" name="On function" sid="877538990107459" type="Function">
+                    <param id="0" name="Name">&quot;MenuSingleAttack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="736028049272609" type="System">
+                    <param id="0" name="Variable">SingleAttack</param>
+                    <param id="1" name="Value">AttackLoader.At(MenuStack.At(MenuStack.Width-2))</param>
+                </action>
+                <action id="-9" name="Set value" sid="144622663358052" type="System">
+                    <param id="0" name="Variable">SimulatorMode</param>
+                    <param id="1" name="Value">MODE_SINGLE</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="350533798185003" type="System">
+                    <param id="0" name="Layout">BattleScreen</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="419164379838359">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="900014152029348" type="PlayerHeart" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="736973026278914" type="Function">
+                    <param id="0" name="Name">&quot;RunMenu&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="182496204717994">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="628846376761320" type="MenuItem">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">MenuStack.Back</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="871086946237192" type="PlayerHeart">
+                            <param id="0" name="X">MenuItem.X + 8</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="594702085118149" type="PlayerHeart">
+                            <param id="0" name="Y">MenuItem.Y + 12</param>
+                        </action>
+                        <action id="-6" name="Scroll to Y" sid="874165771222294" type="System">
+                            <param id="0" name="Y">MenuItem.Y - 16</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

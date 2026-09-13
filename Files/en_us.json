@@ -1,0 +1,143 @@
+{
+    "battle.sans.dialog.box.turn0" : "* Text",
+    "battle.sans.dialog.box.turn1" : "* <rand 0123456789> 0123456789",
+    "battle.sans.dialog.box.turn2" : "* Menu <anim 2><color red>text.",
+    "battle.sans.dialog.box.turn3" : "* <anim 3>This engine is based...^1<anim 0>&* Because <C red><anim 2>yes.^1<color white>&* <anim 1>What do you think?",
+
+
+    "battle.sans.enemyspeech.intro1" : "this test message<pause><clear><font 2><voice PapyrusSpeak>NORMAL FONT<pause><clear><font 3><voice BattleText2>NORMAL FONT",
+    "battle.sans.enemyspeech.intro2" : "Serious&Intro&Text.",
+    "battle.sans.enemyspeech.introend" : "Intro End Text.",
+    "battle.sans.enemyspeech.turn.1" : "turn1_text<pause><clear>turn1_text2",
+    "battle.sans.enemyspeech.turn.2" : "turn2_text",
+    "battle.sans.enemyspeech.turn.3" : "turn3_text",
+    "battle.sans.enemyspeech.turn.4" : "turn4_text",
+    "battle.sans.enemyspeech.turn.5" : "turn5_text",
+    "battle.sans.enemyspeech.turn.6" : "turn6_text",
+    "battle.sans.enemyspeech.turn.7" : "turn7_text",
+    "battle.sans.enemyspeech.turn.8" : "turn8_text",
+    "battle.sans.enemyspeech.turn.9" : "turn9_text",
+    "battle.sans.enemyspeech.turn.10" : "turn10_text",
+    "battle.sans.enemyspeech.turn.11" : "turn11_text",
+    "battle.sans.enemyspeech.turn.12" : "turn12_text",
+    "battle.sans.enemyspeech.turn.13" : "turn13_text",
+    "battle.sans.enemyspeech.turn.14" : "turn14_text",
+    "battle.sans.enemyspeech.turn.15" : "turn15_text",
+    "battle.sans.enemyspeech.turn.16" : "turn16_text",
+
+
+    "text.asterisk" : "*",
+
+
+    "battle.dialog.act.check" : "* Check",
+    "battle.dialog.act.acttest" : "* Act test",
+    "battle.dialog.mercy.spare" : "* Spare",
+    "battle.dialog.mercy.flee" : "* Flee",
+
+    "battle.dialog.act.check.template" : "* % % ATK % DEF&",
+
+    "battle.sans.dialog.act.check.phase1" : "* The easiest enemy.^1&* Can only deal 1 damage.",
+    "battle.sans.dialog.act.check.phase2" : "{battle.sans.dialog.check.phase1}<pause><clear>* Can't keep dodging forever.^1&* Keep attacking.",
+
+    "battle.sans.dialog.act.acttest" : "* Custom Act Test.^1&<font 1><voice SansSpeak>* <anim 3>er er er",
+    
+    
+    "area.player.item.drop.default" : "* The % was&  thrown away.",
+    "area.player.item.drop.special.0" : "* You bid a quiet farewell&  to the %.",
+    "area.player.item.drop.special.1" : "* You put the %&  on the ground and gave it a&  little pat.",
+    "area.player.item.drop.special.2" : "* You threw the %&  on the ground like the piece&  of trash it is.",
+    "area.player.item.drop.special.3" : "* You abandoned the &  %.",
+
+    "area.player.phone.toriel.name" : "Toriel's Phone",
+    "area.player.phone.toriel.message" : "* Dialing...<pause><clear>* ...<pause><clear>* But nobody came.",
+    "area.player.phone.box1.name" : "Dimensional Box A",
+    "area.player.phone.box2.name" : "Dimensional Box B",
+
+
+    "area.player.dbox.end" : "Press [X] to Finish",
+    "area.player.dbox.inv" : "Press [X] to Finish",
+    "area.player.dbox.box" : "Press [X] to Finish",
+
+
+    "item.default.use.ateheal" : "* You ate the %.",
+    "item.default.use.hpheal" : "* You recovered % HP!",
+    "item.default.use.hpmax" : "* Your HP was maxed out.",
+    "item.default.use.weapon" : "* You equipped the %.",
+    "item.default.use.armor" : "* You equipped the %.",
+
+    "item.default.desc.heal" : "* \"%\" - Heals % HP&",
+    "item.default.desc.heal.all" : "* \"%\" - All HP&",
+    "item.default.desc.weapon" : "* \"%\" - Weapon AT %&",
+    "item.default.desc.armor" : "* \"%\" - Armor DF %&",
+
+    "item.pie.name.ow" : "Butterscotch Pie",
+    "item.pie.name.battle" : "ButtsPie",
+    "item.pie.name.boss" : "Pie",
+    "item.pie.desc" : "{item.default.desc.heal.all `%`}* Butterscotch-cinnamon&  pie, ^1one slice.",
+    "item.pie.use" : "{item.default.use.ateheal `%`}",
+
+    "item.noodles.name.ow" : "Instant Noodles",
+    "item.noodles.name.battle" : "InstaNood",
+    "item.noodles.name.boss" : "I.Noodles",
+    "item.noodles.desc" : "* \"%\" - Heals HP&* Comes with everything you&  need for a quick meal!",
+    "item.noodles.use" : "* They're better dry.",
+
+    "item.steak.name.ow" : "Face Steak",
+    "item.steak.name.battle" : "FaceSteak",
+    "item.steak.name.boss" : "Steak",
+    "item.steak.desc" : "{item.default.desc.heal `%` `%`}* Huge steak in the shape&  of Mettaton's face.<pause><clear>* (You don't feel like it's&  made of real meat...)",
+    "item.steak.use" : "{item.default.use.ateheal `%`}",
+
+    "item.lhero.name.ow" : "Legendary Hero",
+    "item.lhero.name.battle" : "Leg.Hero",
+    "item.lhero.name.boss" : "L. Hero",
+    "item.lhero.desc" : "{item.default.desc.heal `%` `%`}* Sandwich shaped like a sword.&* Increases ATTACK when eaten.",
+    "item.lhero.use" : "{item.default.use.ateheal `%`}^1&* ATTACK increased by 4!",
+
+    "item.snowpiece.name.ow" : "Snowman Piece",
+    "item.snowpiece.name.battle" : "SnowPiece",
+    "item.snowpiece.name.boss" : "SnowPiece",
+    "item.snowpiece.desc" : "{item.default.desc.heal `%` `%`}* Please take this to the&  ends of the earth.",
+    "item.snowpiece.use" : "{item.default.use.ateheal `%`}",
+
+    "item.stick.name.ow" : "Stick",
+    "item.stick.name.battle" : "Stick",
+    "item.stick.name.boss" : "Stick",
+    "item.stick.desc" : "{item.default.desc.weapon `%` `%`}* Its bark is worse than&  its bite.",
+    "item.stick.use" : "* You threw the stick away.&^1* Then picked it back up.",
+
+    "item.bandage.name.ow" : "Bandage",
+    "item.bandage.name.battle" : "Bandage",
+    "item.bandage.name.boss" : "Bandage",
+    "item.bandage.desc" : "{item.default.desc.heal `%` `%`}* It has already been used&  several times.",
+    "item.bandage.use" : "* You re-applied the bandage.&* Still kind of gooey.",
+
+    "item.toughglove.name.ow" : "Tough Glove",
+    "item.toughglove.name.battle" : "TuffGlove",
+    "item.toughglove.name.boss" : "Glove",
+    "item.toughglove.desc" : "{item.default.desc.weapon `%` `%`}* A worn pink leather glove.&^1* For five-fingered folk.",
+    "item.toughglove.use" : "{item.default.use.weapon `%`}",
+
+    "item.realknife.name.ow" : "Real Knife",
+    "item.realknife.name.battle" : "RealKnife",
+    "item.realknife.name.boss" : "RealKnife",
+    "item.realknife.desc" : "{item.default.desc.weapon `%` `%`}* Here we are!",
+    "item.realknife.use" : "* About time.",
+
+    "item.rocket.name.ow" : "The Locket",
+    "item.rocket.name.battle" : "TheLocket",
+    "item.rocket.name.boss" : "TheLocket",
+    "item.rocket.desc" : "{item.default.desc.armor `%` `%`}* You can feel it beating.",
+    "item.rocket.use" : "* Right where it belongs.",
+
+    "item.punchcard.name.ow" : "Punch Card",
+    "item.punchcard.name.battle" : "PunchCard",
+    "item.punchcard.name.boss" : "PunchCard",
+    "item.punchcard.desc" : "* \"Punch Card\" - Battle Item&* Use to make punching attacks&  stronger in one battle.",
+    "item.punchcard.use.0" : "* OOOORAAAAA!!!&^1* You rip up the punch card!<pause><clear>",
+    "item.punchcard.use.1" : "* Your hands are burning!^1&* AT increased by %!",
+    "item.punchcard.use.2" : "* But nothing happened.",
+
+
+    "gameover.text" : "You cannot give up just yet.<pause><clear>Stay determined..."
+}

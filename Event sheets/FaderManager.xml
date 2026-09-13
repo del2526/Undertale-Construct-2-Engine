@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FaderManager</name>
+    <events>
+        <event-block sid="118564965109548">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="810698139973772" type="System" />
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="809464521030372" type="ScreenFader">
+                    <param id="0" name="Layer">&quot;Fader&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="945472214562663">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="718997917720618" type="System">
+                            <param id="0" name="First value">ScreenFader.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="589309969592049" type="System">
+                            <param id="0" name="Object to create">ScreenFader</param>
+                            <param id="1" name="Layer">&quot;Fader&quot;</param>
+                            <param id="2" name="X">BORDER_LEFTTOP_X</param>
+                            <param id="3" name="Y">BORDER_LEFTTOP_Y</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="653095443474715" type="ScreenFader">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="611454053127485" type="ScreenFader">
+                            <param id="0" name="Width">GAME_WIDTH</param>
+                            <param id="1" name="Height">GAME_HEIGHT</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="793416941001995" type="ScreenFader">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="213471967413314" type="ScreenFader">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="499421664567793" type="ScreenFader">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>FadeScreen&#x0D;&#x0A;Param0 - Start&#x0D;&#x0A;Param1 - Target&#x0D;&#x0A;Param2 - Duration 秒数指定&#x0D;&#x0A;Param3 - FuncCall</comment>
+        <event-block sid="351776055131834">
+            <conditions>
+                <condition id="0" name="On function" sid="264113796941128" type="Function">
+                    <param id="0" name="Name">&quot;FadeScreen&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="829249408215515" type="ScreenFader">
+                    <param id="0" name="Instance variable">Start</param>
+                    <param id="1" name="Value">float(Function.Param(0))</param>
+                </action>
+                <action id="-10" name="Set value" sid="509773989568885" type="ScreenFader">
+                    <param id="0" name="Instance variable">Target</param>
+                    <param id="1" name="Value">float(Function.Param(1))</param>
+                </action>
+                <action id="-10" name="Set value" sid="680208850266303" type="ScreenFader">
+                    <param id="0" name="Instance variable">Duration</param>
+                    <param id="1" name="Value">float(Function.Param(2))</param>
+                </action>
+                <action id="-10" name="Set value" sid="217072191288124" type="ScreenFader">
+                    <param id="0" name="Instance variable">FuncCall</param>
+                    <param id="1" name="Value">Function.Param(3)</param>
+                </action>
+                <action id="-10" name="Set value" sid="464473517277873" type="ScreenFader">
+                    <param id="0" name="Instance variable">Process</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="825111614449023">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="346142943704498" type="System">
+                            <param id="0" name="First value">ScreenFader.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="662183309100771" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">LayoutName &amp; &quot;: Fader Doesn&apos;t Exists!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="374575256119072">
+            <conditions>
+                <condition id="0" name="On function" sid="791264638558312" type="Function">
+                    <param id="0" name="Name">&quot;FadeColor&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="835799545022323">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="312931670224437" type="System">
+                            <param id="0" name="First value">left(Function.Param(0), 1)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;#&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="730622603783318">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="729808925003833" type="System">
+                                    <param id="0" name="Count">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="395874492804749" type="ScreenFader">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">loopindex</param>
+                                    <param id="2" name="Value">Function.Call(&quot;GetColor&quot;, Function.Param(0), loopindex)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="972794408697961">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="992455205046928" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="498349890752141" type="ScreenFader">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">int(Function.Param(0))</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="633230820798795" type="ScreenFader">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">int(Function.Param(1))</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="117250063435336" type="ScreenFader">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">int(Function.Param(2))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="788611490318920">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="869042209522656" type="ScreenFader">
+                    <param id="0" name="Instance variable">Process</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">Self.Duration</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="500679065927460" type="ScreenFader">
+                    <param id="0" name="Instance variable">Process</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="765116202638856">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="708292277660825" type="ScreenFader">
+                            <param id="0" name="Instance variable">Process</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Self.Duration</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="139150928833268" type="ScreenFader">
+                            <param id="0" name="Instance variable">Process</param>
+                            <param id="1" name="Value">Self.Duration</param>
+                        </action>
+                        <action id="0" name="Call function" sid="201281486618549" type="Function">
+                            <param id="0" name="Name">ScreenFader.FuncCall</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="136615289752970">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="530017381028886" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="354106421277002" type="ScreenFader">
+                            <param id="0" name="Opacity">ScreenFader.Start + (ScreenFader.Target - ScreenFader.Start) * (ScreenFader.Process / ScreenFader.Duration)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="277834996261669">
+            <conditions>
+                <condition id="0" name="On function" sid="797364799255853" type="Function">
+                    <param id="0" name="Name">&quot;FadeStop&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="866183503968230" type="ScreenFader">
+                    <param id="0" name="Instance variable">Process</param>
+                    <param id="1" name="Value">Self.Duration</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="474958050790102">
+            <conditions>
+                <condition id="0" name="On function" sid="403013270207396" type="Function">
+                    <param id="0" name="Name">&quot;FadeSkip&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="985468119185708" type="ScreenFader">
+                    <param id="0" name="Instance variable">Process</param>
+                    <param id="1" name="Value">Self.Duration</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="367260298917776" type="ScreenFader">
+                    <param id="0" name="Opacity">ScreenFader.Target</param>
+                </action>
+                <action id="0" name="Call function" sid="299831298448586" type="Function">
+                    <param id="0" name="Name">ScreenFader.FuncCall</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1321 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Others</name>
+    <events>
+        <comment>F2(Restart)時の処理</comment>
+        <event-block sid="239265855144157">
+            <conditions>
+                <condition id="0" name="On function" sid="260930893918202" type="Function">
+                    <param id="0" name="Name">&quot;GameF2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="947235432070000" type="Function">
+                    <param id="0" name="Name">&quot;TLStop&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="33" name="Stop all" sid="526752472694533" type="Audio" />
+                <action id="-2" name="Go to layout" sid="947760686281982" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+                <action id="0" name="Call function" sid="397060701871245" type="Function">
+                    <param id="0" name="Name">&quot;SetPlayerStats&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="598897931820575" title="EveryTicks">
+            <sub-events>
+                <comment>The system always applies the position coordinates of the bones&#x0A;below the function that makes the bone appear.&#x0A;↓</comment>
+                <event-block sid="941534920205565">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="680309691303908" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="641331607291503" type="Platform">
+                            <param id="0" name="Instance variable">PX</param>
+                            <param id="1" name="Value">Self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="176940878111271" type="Platform">
+                            <param id="0" name="Instance variable">PY</param>
+                            <param id="1" name="Value">Self.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="955734714350894" type="Platform">
+                            <param id="0" name="X">Self.X + cos(Self.Direction)*dt*Self.Speed</param>
+                            <param id="1" name="Y">Self.Y + sin(Self.Direction)*dt*Self.Speed</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="397630317160919" type="PlatformL">
+                            <param id="0" name="Object">Platform</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="624580907022980" type="PlatformR">
+                            <param id="0" name="Object">Platform</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="774937754505776" type="PlatformL">
+                            <param id="0" name="Angle">Platform.Angle</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="834383956432416" type="PlatformR">
+                            <param id="0" name="Angle">Platform.Angle</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="626928130260453" type="PlatformL">
+                            <param id="0" name="Layer">Platform.LayerName</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="854501484721013" type="PlatformR">
+                            <param id="0" name="Layer">Platform.LayerName</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="976906921274744" type="PlatformL" />
+                        <action id="-25" name="Move to bottom" sid="845816478025344" type="PlatformR" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="379963685731272">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="258314003903416" type="Platform">
+                                    <param id="0" name="Instance variable">Mode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="531810689917248" type="Platform">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="409336996385966" type="PlatformL">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="983440249143808" type="PlatformR">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="243735880412581">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="732456850303586" type="Platform">
+                                    <param id="0" name="Instance variable">Mode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="801598538478681" type="Platform">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="435400405265034" type="PlatformL">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="108385232753121" type="PlatformR">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="642848889120002">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="352291875814747" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Move to bottom" sid="562953929499492" type="BGaura" />
+                        <action id="-24" name="Move to top" sid="128404878404622" type="LayoutOutLine" />
+                    </actions>
+                </event-block>
+                <event-block sid="485310037689693">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="946123172037397" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="239972355388967">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="835101081116826" type="Board">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="550152687848701" type="System">
+                                    <param id="0" name="Variable">Ctop</param>
+                                    <param id="1" name="Value">Board.BBoxTop</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="355835813259986" type="System">
+                                    <param id="0" name="Variable">Cwidth</param>
+                                    <param id="1" name="Value">Board.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="170923978679000">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="223610385002034" type="Board">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="940054344477182" type="System">
+                                    <param id="0" name="Variable">Cbottom</param>
+                                    <param id="1" name="Value">Board.BBoxBottom</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="969554902527046">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="762628983188896" type="Board">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="300220524199817" type="System">
+                                    <param id="0" name="Variable">Cleft</param>
+                                    <param id="1" name="Value">Board.BBoxleft</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="536813060573469" type="System">
+                                    <param id="0" name="Variable">Cheight</param>
+                                    <param id="1" name="Value">Board.Height</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="821746925299940" type="System">
+                                    <param id="0" name="Variable">Cx</param>
+                                    <param id="1" name="Value">Board.BBoxLeft</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="724156014168627" type="System">
+                                    <param id="0" name="Variable">Cy</param>
+                                    <param id="1" name="Value">Board.BBoxTop</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="185133714222503">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="891215541992864" type="Board">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="309972841015224" type="System">
+                                    <param id="0" name="Variable">Cright</param>
+                                    <param id="1" name="Value">Board.BBoxRight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Codes that secure multiple parts of the sans.&#x0A;This code should be here because if it is not below the code that moves the X of the sans, the parts will be delayed when moving</comment>
+                <event-block sid="317115882801733">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="694053503573771" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="144307182373940" type="SansTorso">
+                            <param id="0" name="X">SansLegs.ImagePointX(&quot;Torso&quot;) + Self.ExtX + SansTorso.OffsetX </param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="272937279648586" type="SansTorso">
+                            <param id="0" name="Y">SansLegs.ImagePointY(&quot;Torso&quot;) + Self.ExtY + SansTorso.OffsetY </param>
+                        </action>
+                        <action id="-1" name="Set X" sid="937691351673842" type="SansHead">
+                            <param id="0" name="X">SansTorso.ImagePointX(&quot;Head&quot;) + SansHead.OffsetX</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="388835558896852" type="SansHead">
+                            <param id="0" name="Y">SansTorso.ImagePointY(&quot;Head&quot;) + SansHead.OffsetY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="323061194136421">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="148101858865164" type="BoneF">
+                            <param id="0" name="Instance variable">Mode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="948464488361361" type="BoneF">
+                            <param id="0" name="X">BoneF.X + cos(BoneF.Direction)*dt*BoneF.Speed</param>
+                            <param id="1" name="Y">BoneF.Y + sin(BoneF.Direction)*dt*BoneF.Speed</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="721316815528398" type="BoneF">
+                            <param id="0" name="Angle">BoneF.Angle + BoneF.AngSpeed*dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="578915287351403">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="953724041676516" type="BoneF">
+                            <param id="0" name="Instance variable">Mode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BoneC&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="848803279796890" type="BoneF">
+                            <param id="0" name="Instance variable">BC_Angle</param>
+                            <param id="1" name="Value">self.BC_Speed*dt</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="933894559003023" type="BoneF">
+                            <param id="0" name="Angle">self.BC_Angle </param>
+                        </action>
+                        <action id="-3" name="Set position" sid="850178282589082" type="BoneF">
+                            <param id="0" name="X">Self.BC_CenterX+cos(Self.BC_Angle)*self.BC_ScaleX</param>
+                            <param id="1" name="Y">Self.BC_CenterY+sin(Self.BC_Angle)*self.BC_ScaleY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621690306783169">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="299438936026272" type="BoneF">
+                            <param id="0" name="Instance variable">Mode</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BoneB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="730724247300395" type="BoneF">
+                            <param id="0" name="Acceleration">350</param>
+                            <param id="1" name="Angle">90</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="618876964094145" type="BoneF">
+                            <param id="0" name="Angle">BoneF.Angle + BoneF.AngSpeed*dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="456281885873044">
+                    <conditions>
+                        <condition id="-16" name="Is on layer" sid="560631803461104" type="PlayerHeart">
+                            <param id="0" name="Layer">&quot;CombatZoneClipped&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-29" name="Move to object" sid="273762890705904" type="PlayerHeart">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">Platform</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="241991219587495">
+                            <conditions>
+                                <condition id="-16" name="Is on layer" sid="482613923857295" type="BoneF">
+                                    <param id="0" name="Layer">&quot;CombatZoneClipped&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-29" name="Move to object" sid="781660725183824" type="PlayerHeart">
+                                    <param id="0" name="Where">1</param>
+                                    <param id="1" name="Object">BoneF</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="723386347030217" type="BoneF">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">PlayerHeart</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="371723755033228">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="652953646005477" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="575964737575239" type="BlueSpear">
+                            <param id="0" name="X">self.X+cos(self.Angle)*dt*Self.Speed</param>
+                            <param id="1" name="Y">self.Y+sin(self.Angle)*dt*Self.Speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="525966980875164">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="250211038340353" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="314211281150887" type="PlayerHitbox">
+                            <param id="0" name="Object">PlayerHeart</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="615695503629229" title="Object Coloring System">
+            <sub-events>
+                <event-block sid="220134638379085">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="164171971308652" type="AttackSprite" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="109690923353590">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="638608000434451" type="AttackSprite">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="952498855614371" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">MainColor_R/2.55</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="982716042674726" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">MainColor_G/2.55</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="258468462229966" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">MainColor_B/2.55</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="909538655796846">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="282792281850103" type="SlashWarn">
+                                            <param id="0" name="Instance variable">Color</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="890482192240396" type="SlashWarn">
+                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="237936586879886" type="SlashWarn">
+                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="580128052563277" type="SlashWarn">
+                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                            <param id="1" name="Parameter index">2</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="591582341932208">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="202381146474155" type="Slash">
+                                            <param id="0" name="Instance variable">Color</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="643403246378148" type="Slash">
+                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="931228427263839" type="Slash">
+                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="197060406778531" type="Slash">
+                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                            <param id="1" name="Parameter index">2</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="595111217461999">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="152808897323261" type="AttackSprite">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="580594396115125" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">7.84</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="340531850442226" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">66.27</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="869100119357833" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="311461207783906">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="482236102548937" type="AttackSprite">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="455303138533451" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="735364085098910" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">62.74</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="196387717509696" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">25.09</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="721777311236734">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="531059470469726" type="AttackSprite">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="331058775421506" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="243570984920332" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="683275842181481" type="AttackSprite">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="175236325662122">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="862903030318402" type="GasterBlaster">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="601851639368332" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">MainColor_R/2.55</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="802626090982990" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">MainColor_G/2.55</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="793001744379794" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">MainColor_B/2.55</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="827887780558165">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="641259696409205" type="GasterBlaster">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="597948061557213" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">7.84</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="270184121381307" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">66.27</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="512464374985412" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="355229523996708">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="582991549011314" type="GasterBlaster">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="785351870307332" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="711668908484025" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">62.74</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="700689028515086" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">25.09</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="356382791054236">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="112437333287958" type="GasterBlaster">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="577305835946352" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="276043944769011" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="743666780836273" type="GasterBlaster">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="384878350989331">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="557651954432895" type="Bones" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="699574894020620">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="819568478436451" type="Bones">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="392955272083619" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">MainColor_R/2.55</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="849789788729394" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">MainColor_G/2.55</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="395866483240954" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">MainColor_B/2.55</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="291561881595580">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="841144669911339" type="Bones">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="356912698701379" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">7.84</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="153074209377036" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">66.27</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="814748344701367" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="926371008670391">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="757314554685497" type="Bones">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="342970098194969" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="671172722785472" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">62.74</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="601128513750185" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">25.09</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="662240503257187">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="724917347532972" type="Bones">
+                                    <param id="0" name="Instance variable">Color</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="843639105120543" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="183762752940293" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="962686919824710" type="Bones">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="815415001787335" title="GoingGameOver">
+            <sub-events>
+                <event-block sid="293396531366574">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="824047325442036" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="475697477609734" type="PlayerHeart">
+                            <param id="0" name="Instance variable">Mode</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="598517943296203" type="System">
+                            <param id="0" name="Variable">DeathX</param>
+                            <param id="1" name="Value">PlayerHeart.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="471076326762657" type="System">
+                            <param id="0" name="Variable">DeathY</param>
+                            <param id="1" name="Value">PlayerHeart.Y</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="802281926206516" type="System">
+                            <param id="0" name="Layout">GameOver</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="577414723597406" title="OutlineStuff">
+            <sub-events>
+                <event-block sid="538871462480338">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="927669580109348" type="System">
+                            <param id="0" name="Variable">ObjectOutline</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="205686636438089" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="886265536210245" type="HPKR">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="555484588292398" type="UIButtons">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="382326986243954">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="796890197138929" type="BattleFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;PlayerName&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="871365882351481" type="BattleFont">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="834352248266293">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="160317582636246" type="BattleFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;PlayerLV&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="681113418616797" type="BattleFont">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="597739003949616">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="926556714781511" type="BattleFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HP&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="978252190994110" type="BattleFont">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="540428256684504">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="209626643169385" type="Board">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="352702777209351" type="Board">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="582522525461513">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="367252698764778" type="HPBars">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Background&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="681955194354824" type="HPBars">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="593719765612795">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="903330208307659" type="System">
+                            <param id="0" name="Variable">ObjectOutline</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="729478706179459" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="965198965462795" type="HPKR">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="804054748907406" type="UIButtons">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="961350296981898">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="604887964117866" type="BattleFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;PlayerName&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="656025651254453" type="BattleFont">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="621907989975928">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="288242637806473" type="BattleFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;PlayerLV&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="445029947388791" type="BattleFont">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="221016130072053">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="507504462203922" type="BattleFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;HP&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="588365752526965" type="BattleFont">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="594066731237942">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="900247390322411" type="Board">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="897714471321761" type="Board">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="357459094230954">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="878045870702661" type="HPBars">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Background&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="888317667114147" type="HPBars">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;BetterOutline&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="553149392967509">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="355842407515326" type="Keyboard">
+                            <param id="0" name="Key">72</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="249134203312607" type="System">
+                            <param id="0" name="Variable">ObjectOutline</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="100434988338699">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="565449360190094" type="Keyboard">
+                            <param id="0" name="Key">74</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="407697448388691" type="System">
+                            <param id="0" name="Variable">ObjectOutline</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="私用関数群" sid="387549027605966" title="TextPutter2">
+            <sub-events>
+                <variable constant="0" name="TextPutColorR" sid="503521970955510" static="1" type="number">100</variable>
+                <variable constant="0" name="TextPutColorG" sid="166119796481991" static="1" type="number">100</variable>
+                <variable constant="0" name="TextPutColorB" sid="107450706915675" static="1" type="number">100</variable>
+                <comment>配置用テキストの色編集&#x0D;&#x0A;Param 0: Red&#x0D;&#x0A;Param 1: Green&#x0D;&#x0A;Param 2: Blue&#x0D;&#x0A;&#x0D;&#x0A;Paramを何も渡さなければリセット</comment>
+                <event-block sid="945794261353320">
+                    <conditions>
+                        <condition id="0" name="On function" sid="424153773849259" type="Function">
+                            <param id="0" name="Name">&quot;TextPutSetColor&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="554384915034770">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="455451979640735" type="System">
+                                    <param id="0" name="First value">Function.ParamCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="563680025739093" type="System">
+                                    <param id="0" name="Variable">TextPutColorR</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="528630252404726" type="System">
+                                    <param id="0" name="Variable">TextPutColorG</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="982584012969234" type="System">
+                                    <param id="0" name="Variable">TextPutColorB</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="794099165473962">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="208543301601250" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="324311979232737" type="System">
+                                    <param id="0" name="Variable">TextPutColorR</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="742027719813239" type="System">
+                                    <param id="0" name="Variable">TextPutColorG</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="608792983102251" type="System">
+                                    <param id="0" name="Variable">TextPutColorB</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>8bitoperator_jveのような文字幅文字の配置</comment>
+                <event-block sid="448847863923330">
+                    <conditions>
+                        <condition id="0" name="On function" sid="851817623022422" type="Function">
+                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="922914674682776" type="System">
+                            <param id="0" name="Object to create">DefaultFont</param>
+                            <param id="1" name="Layer">Function.Param(2)</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="925334520118732" type="DefaultFont">
+                            <param id="0" name="Text">Function.Param(3)</param>
+                        </action>
+                        <action id="2" name="Set scale" sid="706326325288698" type="DefaultFont">
+                            <param id="0" name="Scale">Function.Param(4)</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="972635295237647" type="DefaultFont">
+                            <param id="0" name="Width">DefaultFont.TextWidth</param>
+                            <param id="1" name="Height">DefaultFont.TextHeight</param>
+                        </action>
+                        <action id="5" name="Set character width" sid="163637760659460" type="DefaultFont">
+                            <param id="0" name="Character">&quot; &quot;</param>
+                            <param id="1" name="Width">6</param>
+                        </action>
+                        <action id="3" name="Set character spacing" sid="396692651538520" type="DefaultFont">
+                            <param id="0" name="Character spacing">-6</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="844676360362208" type="DefaultFont">
+                            <param id="0" name="Instance variable">Name</param>
+                            <param id="1" name="Value">&quot;TEST&quot;</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="378274160584608" type="DefaultFont">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">TextPutColorR</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="428402535085415" type="DefaultFont">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">TextPutColorG</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="425854416781327" type="DefaultFont">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">TextPutColorB</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="471807672463085">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="362370818842366" type="Function">
+                                    <param id="0" name="Index">5</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="371171100399683" type="DefaultFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Value">Function.Param(5)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="304698159936794">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="853497962456528" type="Function">
+                                    <param id="0" name="Index">6</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set horizontal alignment" sid="838790749691878" type="DefaultFont">
+                                    <param id="0" name="Horizontal alignment">1</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="160071341220121" type="DefaultFont">
+                                    <param id="0" name="X">Self.X - DefaultFont.Width / 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="666275446021326">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="364947532273931" type="System" />
+                                <condition id="1" name="Compare parameter" sid="750189544802118" type="Function">
+                                    <param id="0" name="Index">6</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set horizontal alignment" sid="776662765818200" type="DefaultFont">
+                                    <param id="0" name="Horizontal alignment">2</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="387491839150368" type="DefaultFont">
+                                    <param id="0" name="X">Self.X - DefaultFont.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="499977325966471">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="557172761541538" type="Function">
+                                    <param id="0" name="Index">7</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set vertical alignment" sid="340238577358552" type="DefaultFont">
+                                    <param id="0" name="Vertical alignment">1</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="189468524899704" type="DefaultFont">
+                                    <param id="0" name="Y">Self.Y - DefaultFont.Height / 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="869275041344645">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="493640971385681" type="System" />
+                                <condition id="1" name="Compare parameter" sid="571707665856143" type="Function">
+                                    <param id="0" name="Index">7</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set vertical alignment" sid="770944904418645" type="DefaultFont">
+                                    <param id="0" name="Vertical alignment">2</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="615907214269579" type="DefaultFont">
+                                    <param id="0" name="Y">Self.Y - DefaultFont.Height</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>fps shower</comment>
+        <event-block sid="181575946559048">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="438358526066743" type="System" />
+                <condition id="-14" name="Compare variable" sid="811784572343714" type="System">
+                    <param id="0" name="Variable">Setting_FPSDisplay</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="271829535328332" type="System">
+                    <param id="0" name="Object to create">StatFont</param>
+                    <param id="1" name="Layer">&quot;Absolute&quot;</param>
+                    <param id="2" name="X">160</param>
+                    <param id="3" name="Y">30</param>
+                </action>
+                <action id="2" name="Set scale" sid="794296903888703" type="StatFont">
+                    <param id="0" name="Scale">2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="852441995297649" type="StatFont">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="798450338495437" type="StatFont">
+                    <param id="0" name="Width">640</param>
+                    <param id="1" name="Height">80</param>
+                </action>
+                <action id="0" name="Set text" sid="375667760221209" type="StatFont">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="473596375026779" type="StatFont">
+                    <param id="0" name="Instance variable">Name</param>
+                    <param id="1" name="Value">&quot;FpsDisplay&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="461886779346566">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="501144475672142" type="StatFont">
+                    <param id="0" name="Instance variable">Name</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;FpsDisplay&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="699671697963533" type="StatFont">
+                    <param id="0" name="Text">fps</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>fps lower alart</comment>
+        <event-block sid="278478554905941">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="896723213532163" type="System">
+                    <param id="0" name="First value">fps</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">40</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="341206870196375" type="System">
+                    <param id="0" name="First value">fps</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="679132813515634" type="System">
+                    <param id="0" name="Variable">Setting_MaxFPS</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="123782697459054">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="672035470225845" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="868591784622071" type="System">
+                            <param id="0" name="Object to create">StatFont</param>
+                            <param id="1" name="Layer">&quot;Absolute&quot;</param>
+                            <param id="2" name="X">160</param>
+                            <param id="3" name="Y">30</param>
+                        </action>
+                        <action id="2" name="Set scale" sid="822889722662976" type="StatFont">
+                            <param id="0" name="Scale">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="416385349980064" type="StatFont">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="294699213852515" type="StatFont">
+                            <param id="0" name="Width">640</param>
+                            <param id="1" name="Height">80</param>
+                        </action>
+                        <action id="0" name="Set text" sid="901689920136433" type="StatFont">
+                            <param id="0" name="Text">&quot;LAG!&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="725196627720930" type="StatFont">
+                            <param id="0" name="Instance variable">Name</param>
+                            <param id="1" name="Value">&quot;DropFps&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="798930373560911">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="555728130544317" type="System">
+                    <param id="0" name="First value">fps</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">40</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="831362663842523">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="621421640337969" type="StatFont">
+                            <param id="0" name="Instance variable">Name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;DropFps&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="567934460867579" type="StatFont" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>プレイ時間</comment>
+        <event-block sid="470071001355826">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="218172414747608" type="System" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="216977268271814" type="Area_SystemVars">
+                    <param id="0" name="Instance variable">PlayTimer</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

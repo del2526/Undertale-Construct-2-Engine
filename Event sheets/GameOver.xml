@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameOver</name>
+    <events>
+        <include>Engine Prev</include>
+        <event-group description="" sid="673601963631285" title="GameOver">
+            <sub-events>
+                <event-block sid="219865819676695">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="147236552535848" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="196919553446361" type="Audio">
+                            <param id="0" name="Audio file">PlayerDamaged</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="550220143818078" type="System">
+                            <param id="0" name="Object to create">PlayerHeart</param>
+                            <param id="1" name="Layer">&quot;Overlay&quot;</param>
+                            <param id="2" name="X">DeathX</param>
+                            <param id="3" name="Y">DeathY</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="157760424348438" type="PlayerHeart">
+                            <param id="0" name="Layer">&quot;Overlay&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="204148797793441" type="PlayerHeart">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="645848538544285" type="PlayerHitbox" />
+                        <action id="-10" name="Set value" sid="742567602645360" type="PlayerHeart">
+                            <param id="0" name="Instance variable">Mode</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action behavior="CustomMovement" id="12" name="Set enabled" sid="972854924832422" type="PlayerHeart">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="664337513619249" type="PlayerHeart">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="460439170041361" type="PlayerHeart">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">255</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="535516871147008" type="PlayerHeart">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="113329269287500" type="PlayerHeart">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="506632817277272" type="Audio" />
+                        <action id="-16" name="Wait" sid="963065968005554" type="System">
+                            <param id="0" name="Seconds">20/30</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="229411544250447" type="PlayerHeart">
+                            <param id="0" name="Animation">&quot;Split&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="254282031443626" type="Audio">
+                            <param id="0" name="Audio file">HeartSplit</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="768917196362196" type="System">
+                            <param id="0" name="Seconds">40/30</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="522523640122864" type="PlayerHeart">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="741564298863828" type="Audio">
+                            <param id="0" name="Audio file">HeartShatter</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="662590497883097">
+                            <conditions>
+                                <condition id="-10" name="For" sid="652785566355219" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="367421170376440" type="PlayerHeart">
+                                    <param id="0" name="Object">HeartShard</param>
+                                    <param id="1" name="Layer">&quot;Overlay&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="173501990513440" type="HeartShard">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">255</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="528909242489646" type="HeartShard">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="206425987385770" type="HeartShard">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" sid="292343335871100" type="HeartShard">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">180</param>
+                                </action>
+                                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="391653331035431" type="HeartShard">
+                                    <param id="0" name="Angle">random(360)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="646801030915633">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="956667364383645" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="446267277081665" type="System">
+                                    <param id="0" name="Seconds">1.4</param>
+                                </action>
+                                <action id="0" name="Call function" sid="863795124366263" type="Function">
+                                    <param id="0" name="Name">&quot;GameoverScreen&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="272778789428701">
+                    <conditions>
+                        <condition id="0" name="On function" sid="750745581334500" type="Function">
+                            <param id="0" name="Name">&quot;GameoverScreen&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="346313956641709" type="System">
+                            <param id="0" name="Object to create">GameOver</param>
+                            <param id="1" name="Layer">&quot;Overlay&quot;</param>
+                            <param id="2" name="X">322</param>
+                            <param id="3" name="Y">124</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="911146413761317" type="GameOver">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="227889299345154" type="GameOver">
+                            <param id="0" name="Fade-in time">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="324013535615863" type="GameOver" />
+                        <action id="-16" name="Wait" sid="136761555258280" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="490801946742766" type="System">
+                            <param id="0" name="Object to create">TypeWriter</param>
+                            <param id="1" name="Layer">&quot;Overlay&quot;</param>
+                            <param id="2" name="X">150</param>
+                            <param id="3" name="Y">326</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="322926260411017" type="TypeWriter">
+                            <param id="0" name="Instance variable">Scale</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="437049190700727" type="TypeWriter">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;{gameover.text}&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="464237013014466" type="TypeWriter">
+                            <param id="0" name="Instance variable">Tag</param>
+                            <param id="1" name="Value">&quot;InfoText&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="163153920242316" type="TypeWriter">
+                            <param id="0" name="Instance variable">Interactive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="411693407010120" type="TypeWriter">
+                            <param id="0" name="Instance variable">Func</param>
+                            <param id="1" name="Value">&quot;GameoverFadeOut&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="742101630519490" type="TypeWriter">
+                            <param id="0" name="Instance variable">Voice</param>
+                            <param id="1" name="Value">&quot;BattleText&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="163851269740155">
+                    <conditions>
+                        <condition id="0" name="On function" sid="273701317788748" type="Function">
+                            <param id="0" name="Name">&quot;GameoverFadeOut&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="103722955579263" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="484329369322769" type="GameOver">
+                            <param id="0" name="Instance variable">MVM</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="216776894248561" type="GameOver">
+                            <param id="0" name="Fade-in time">0</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="141205920417458" type="GameOver">
+                            <param id="0" name="Fade-out time">1.2</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="194778432801186" type="GameOver" />
+                        <action id="-16" name="Wait" sid="544704810302795" type="System">
+                            <param id="0" name="Seconds">1.2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="116439400312417" type="GameOver">
+                            <param id="0" name="Instance variable">MusicVolume</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="933569472687777" type="GameOver">
+                            <param id="0" name="Instance variable">MVM</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="6" name="Stop" sid="922274101845607" type="Audio">
+                            <param id="0" name="Tag">&quot;Music&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="802687567808581" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="935414811920523">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="491531425524789" type="Area_SystemVars">
+                                    <param id="0" name="Instance variable">StartFromArea</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="931573171299687" type="Function">
+                                    <param id="0" name="Name">&quot;LoadData&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="944110364315767">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="633910229912883" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="549394668026738" type="System">
+                                    <param id="0" name="Layout">MainMenu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="503615270900622">
+                    <conditions>
+                        <condition id="0" name="On function" sid="412938159203155" type="Function">
+                            <param id="0" name="Name">&quot;OnDataLoadComplete&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="357422265772848" type="Function">
+                            <param id="0" name="Name">&quot;FadeScreen&quot;</param>
+                            <param id="1" name="Parameter {n}">100{###}0{###}1 / 3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>データがなければ初期化してもどす</comment>
+                        <event-block sid="704952953659309">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="614295728925948" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="311028796920858" type="Area_SystemVars" />
+                                <action id="-3" name="Create object" sid="546581410373331" type="System">
+                                    <param id="0" name="Object to create">Area_SystemVars</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="980019442482838" type="Area_UserVars" />
+                                <action id="-3" name="Create object" sid="317573025885911" type="System">
+                                    <param id="0" name="Object to create">Area_UserVars</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="129408112891805" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerInitStatus&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="944890385730957" type="System">
+                                    <param id="0" name="Layout">Area_SystemVars.ReturnAreaName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="950326943123008">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="911161205458120" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="178717187520960" type="System">
+                                    <param id="0" name="Layout">Area_SystemVars.ReturnAreaName</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="537226752362682">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="544028203857099" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="540684573592308" type="HeartShard">
+                            <param id="0" name="Acceleration">300</param>
+                            <param id="1" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

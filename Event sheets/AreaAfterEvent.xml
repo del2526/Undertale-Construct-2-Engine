@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>AreaAfterEvent</name>
+    <events>
+        <comment>Moving</comment>
+        <event-block sid="627231609342847">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="399172369609971" type="Area_SystemVars">
+                    <param id="0" name="Instance variable">PlayerMove</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="130830991918783" type="Player">
+                    <param id="0" name="Instance variable">Moving</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="480687025097339">
+            <conditions>
+                <condition id="-22" name="Else" sid="976148641288474" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="983972629127291" type="PlayerCollision">
+                    <param id="0" name="Instance variable">MoveX</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="734031979962907" type="PlayerCollision">
+                    <param id="0" name="Instance variable">MoveY</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="477379721069490" type="Player">
+                    <param id="0" name="Instance variable">Moving</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="350908363113258">
+            <conditions>
+                <condition id="-22" name="Else" sid="814256689475901" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="973475321736144" type="Player">
+                    <param id="0" name="Instance variable">Moving</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="551421674864311">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="597262478019589" type="Player">
+                    <param id="0" name="Instance variable">Moving</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="536651833717394" type="Player">
+                    <param id="0" name="Instance variable">ImageTimer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="394337067158101">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="265622768630499" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="683566891792082" type="Player">
+                    <param id="0" name="Frame number">Self.ImageTimer % Self.AnimationFrameCount</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="605912325252907" title="ScrollSystem">
+            <sub-events>
+                <comment>ゲームサイズは640x480とする</comment>
+                <comment>各CameraAreaの同IDのUIDを設定</comment>
+                <event-block sid="685500574870592">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="323249098532220" type="System" />
+                        <condition id="-11" name="For Each" sid="180147817940287" type="System">
+                            <param id="0" name="Object">CameraAreaStart</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="480132437525628">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="537096816228361" type="System">
+                                    <param id="0" name="Object">CameraAreaStart</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="438144236691762" type="CameraAreaEnd">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">CameraAreaStart.ID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="187789955930799" type="CameraAreaStart">
+                                    <param id="0" name="Instance variable">PairUID</param>
+                                    <param id="1" name="Value">CameraAreaEnd.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="215685007166311">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="157699986479744" type="CameraAreaStart">
+                                    <param id="0" name="Instance variable">PairUID</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="840149644395590" type="Browser">
+                                    <param id="0" name="Type">1</param>
+                                    <param id="1" name="Message">&quot;[CameraArea] Pair not found (ID: &quot; &amp; CameraAreaStart.ID &amp; &quot;)&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="613086951809348">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="953686935383139" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">PlayerScroll</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="TempTargetX" sid="172733571946616" static="0" type="number">0</variable>
+                        <variable constant="0" name="TempTargetY" sid="693253945598595" static="0" type="number">0</variable>
+                        <comment>Scrollを(0, 0)に設定した時&#x0D;&#x0A;中心座標は(0, 0)になる</comment>
+                        <event-block sid="198467224661146">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="646729377895573" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="334108229034927" type="System">
+                                    <param id="0" name="Variable">TempTargetX</param>
+                                    <param id="1" name="Value">Player.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="898138558589964" type="System">
+                                    <param id="0" name="Variable">TempTargetY</param>
+                                    <param id="1" name="Value">Player.Y</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="CameraAreaSize" sid="988547320322897" static="0" type="number">0</variable>
+                                <event-block sid="408350708853532">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="581473831548364" type="System">
+                                            <param id="0" name="Object">CameraAreaStart</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="177485570759195" type="CameraAreaStart">
+                                            <param id="0" name="Instance variable">PairUID</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="623809653602633" type="CameraAreaEnd">
+                                            <param id="0" name="Unique ID">CameraAreaStart.PairUID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>CameraStart.Pos &lt;= Player.Pos &lt;= CameraEnd.Pos&#x0D;&#x0A;CameraAreaの範囲内の場合</comment>
+                                        <event-block sid="571630409118568">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="463740299885826" type="CameraAreaStart">
+                                                    <param id="0" name="Comparison">3</param>
+                                                    <param id="1" name="X co-ordinate">TempTargetX</param>
+                                                </condition>
+                                                <condition id="-1" name="Compare X" sid="348200716416817" type="CameraAreaEnd">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="X co-ordinate">TempTargetX</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="656470748929986" type="CameraAreaStart">
+                                                    <param id="0" name="Comparison">3</param>
+                                                    <param id="1" name="Y co-ordinate">TempTargetY</param>
+                                                </condition>
+                                                <condition id="-2" name="Compare Y" sid="389350017185528" type="CameraAreaEnd">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="Y co-ordinate">TempTargetY</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="626113054185051" type="System">
+                                                    <param id="0" name="Variable">TempTargetX</param>
+                                                    <param id="1" name="Value">clamp(TempTargetX, CameraAreaStart.X + 320, CameraAreaEnd.X - 320)</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="458036916853808" type="System">
+                                                    <param id="0" name="Variable">TempTargetY</param>
+                                                    <param id="1" name="Value">clamp(TempTargetY, CameraAreaStart.Y + 240, CameraAreaEnd.Y - 240)</param>
+                                                </action>
+                                                <action id="-24" name="Stop loop" sid="414815092793935" type="System" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="255523933180652">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="250578681443633" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Scroll to position" sid="102093617658717" type="System">
+                                            <param id="0" name="X">CenterX + TempTargetX - 320</param>
+                                            <param id="1" name="Y">CenterY + TempTargetY - 240</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="353707646497526">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="943965404992142" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>NPCレイヤー</comment>
+        <event-block sid="969595339723707">
+            <conditions>
+                <condition id="-24" name="For Each (ordered)" sid="115371212950756" type="System">
+                    <param id="0" name="Object">AreaObjects</param>
+                    <param id="1" name="Expression">AreaObjects.Y</param>
+                    <param id="2" name="Order">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="723258487103524">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="979181491043817" type="AreaObjects">
+                            <param id="0" name="Instance variable">isDepthTarget</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="899011378889376" type="AreaObjects" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="940858402902011">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="112492904641197" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <include>Engine After</include>
+    </events>
+</c2eventsheet>

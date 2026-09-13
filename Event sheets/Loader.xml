@@ -1,0 +1,1134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Loader</name>
+    <events>
+        <event-group description="" sid="5235824354903566" title="FileLoader">
+            <sub-events>
+                <variable comment="読み取り位置" constant="0" name="FileIndex" sid="8842408703534389" static="1" type="number">0</variable>
+                <variable comment="読み取り対象" constant="0" name="FileTarget" sid="559107285515615" static="1" type="number">0</variable>
+                <variable comment="読み取り対象のファイル数" constant="0" name="FileTargetCount" sid="943787563106984" static="1" type="number">0</variable>
+                <variable comment="全ファイル読み取り数" constant="0" name="FileTotalIndex" sid="250394278942134" static="1" type="number">0</variable>
+                <variable comment="全ファイル数" constant="0" name="FileTotalCount" sid="406687038194633" static="1" type="number">0</variable>
+                <event-block sid="238953590947157">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="283442081708294" type="System" />
+                        <condition id="4" name="Is empty" sid="228970133821694" type="AttackList" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="100560821295154" type="Function">
+                            <param id="0" name="Name">&quot;FileLoader&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="11" name="Load" sid="279250040723081" type="Array">
+                            <param id="0" name="JSON">&quot;{&quot;&quot;c2array&quot;&quot;:true,&quot;&quot;size&quot;&quot;:[2,20,1],&quot;&quot;data&quot;&quot;:[[[0],[2],[3],[4],[5],[6],[7],[8],[9],[10],[11],[12],[13],[14],[15],[16],[17],[18],[19],[20]],[[&quot;&quot;　&quot;&quot;],[&quot;&quot;｜′|&quot;&quot;],[&quot;&quot;：；！ｉｌ!i:;,l.&quot;&quot;],[&quot;&quot;．・´‘’［］`&apos;1]}&quot;&quot;],[&quot;&quot;，｀¨‐）〔〕｛｝″()[{&quot;&quot;],[&quot;&quot;゛゜（〉「」【】１I&lt;=&quot;&quot;],[&quot;&quot;、＾ヽゝ“〈『°\&quot;&quot;rt5-&quot;&quot;],[&quot;&quot;。〃”』↓Ｉ#$Paq2Rb3ScsDTd%EUu&amp;6FfGg8HXh9*Jjz+KkL\\M&gt;N^~/?Oo&quot;&quot;],[&quot;&quot;ゞ∥‥§↑0@pQBC4eVv7WxYyZ&quot;&quot;],[&quot;&quot;ヾ《＝＜ｎｐｑｒｔｕぅョAn_&quot;&quot;],[&quot;&quot;〆》≠＞￥＄￠〒ｇｈｊｋｏｓｖｘｚュヮwm&quot;&quot;],[&quot;&quot;月肖〇…－∴♂♀＆＊５ＥＬｅｙぃィォットドャリヵ≒&quot;&quot;],[&quot;&quot;日目良？±×＃→♪２３６９ＦＨＪＰＲＳＵＶｂｄｆｍぇくしじりゥヶ&quot;&quot;],[&quot;&quot;口旨自貞々＋÷￡％※７８ＢＤＫＭＮＴＸＺａｃぁぉきさっゃゅゎァェノヒビヨレロワ&quot;&quot;],[&quot;&quot;胃引貝角巨巾己甲申川曽男中白冒由了呂∞←４ＣＧＹいぎこざもょらるコシジソゾタハピミメモラルヲン⑤⑨⑲&quot;&quot;],[&quot;&quot;医一印因員円園凹乙開閣弓旧臼凶曲斤隅串兄幻向高克困山氏史司四寺叱爵商臣人図西則田刀当同凸内南肉閥鼻丙閉万勇用両臨労＿ー―≦≧℃＠ＡＯＱＷｗあぐけそてとどにまろゐゑオゴサセゼダツナニフヘベペホユヰヱ④⑥⑧⑪⑫⑬⑮⑰⑱⑳&quot;&quot;],[&quot;&quot;哀握嵐囲維茨咽唄畝疫閲沿宴遠往押殴翁虞俺家嫁暇靴箇画回皆階蓋該概垣柿覚楽喝渇割株刈刊缶肝換管監緩憾簡韓鑑岩頑企伎危岐祈紀軌既起飢鬼規揮技宜偽疑儀犠喫客脚虐丘朽去拒虚許距御京況恐胸教郷境矯響仰暁凝局近筋僅禁錦襟区偶屈掘窟熊訓勲薫刑径型啓携詣稽警芸桁欠肩剣軒険嫌献遣憲謙玄弦現源厳枯個誇鼓顧五互呉悟碁誤工后更効侯恒荒香貢控梗慌港硬絞項鉱綱稿衡講乞号拷豪告刻国駒頃昆痕紺魂佐沙唆差詐鎖砕宰栽最債催塞載埼在剤崎削柵策錯冊刷刹拶撮皿桟惨賛私刺姉肢姿指施脂詞歯嗣詩飼雌賜諮示耳似侍磁璽鹿軸疾執湿嫉芝舎赦煮遮蛇尺借釈寂守狩寿授儒収十旬准所叙匠抄招唱紹鐘丈場色植身真親仁世制省逝醒斥占践潜鮮善阻組送造即促捉多打滞態代卓諾濁但炭団断値致注庁町釣嘲懲沈朕賃帝程艇笛冬討透陶棟動徳届豚難二燃波伯拍泊剥半阪畔般斑晩比扉罷避美匹猫不富侮武服幅聞兵陛弊別蔑片辺邦奉忙坊防剖帽牧没毎枕抹慢魅民霧門闇油悠余陽瘍浴利履僚輪隣暦恋廉炉賂朗和枠腕￣仝～◯０うえおせぞただちぢでへぺむゆをイエカキギクグスズチテヌパブボポマヤ①③⑦⑩⑭⑯&quot;&quot;],[&quot;&quot;亜挨愛曖悪圧扱宛安案暗以衣依委威為畏尉異移萎偉椅彙意違慰遺緯域育壱逸芋姻院淫陰飲隠韻右宇羽雨鬱浦運雲永泳英映栄営詠影鋭衛易益液駅悦越謁延炎怨媛援煙猿鉛塩演縁艶汚王央応旺欧桜奥横岡屋億憶臆卸音恩温穏下化火加可仮何花佳価果河苛科架夏荷華菓貨渦過禍寡歌稼課蚊牙瓦我芽賀雅餓介灰会快戒改怪拐悔海界械絵塊楷解潰壊懐諧外劾害崖涯街慨骸各拡革格核殻郭較隔確獲嚇穫学岳額顎掛潟括活葛滑褐轄且釜鎌干甘汗完官冠巻看陥乾勘患貫寒喚堪敢棺款間閑勧寛幹感漢慣関歓還館環観艦丸含岸玩眼顔願机気希忌汽奇季記帰基寄亀喜幾期棋貴棄毀旗器畿輝機騎欺義戯擬議菊吉詰却逆九久及休吸求究泣急級糾宮救球給嗅窮牛居拠挙魚漁共叫狂享供協峡挟狭恭脅強橋鏡競驚業極玉均金菌勤琴緊謹銀句苦駆具惧愚空遇繰君軍郡群形系茎係契計恵掲渓経蛍敬景軽傾継慶憬憩鶏迎鯨隙劇撃激穴血決結傑潔犬件見券建研県倹兼拳健圏堅検絹権賢鍵繭顕験懸元言限原舷減戸古呼固股虎孤弧故庫湖雇錮午後娯語護公勾孔功巧広交光好江考行坑孝抗攻幸拘肯厚洪皇紅郊候校耕航降康黄喉溝構酵興鋼購合剛傲谷黒穀酷獄骨込今恨根婚混墾懇左査砂座挫才再災妻采彩採済祭斎細菜裁歳際材財罪作昨索酢搾咲札殺察擦雑三参蚕産傘散算酸残斬暫士子支止仕市矢死糸至伺志使始枝祉思師恣紙視紫試資誌摯字次児事治持時滋慈辞餌式識七失室漆質実写社車者射捨斜謝邪酌若弱手主朱取首殊珠酒腫種趣受呪需樹囚州舟秀周宗拾秋臭修袖終羞習週就衆集愁酬醜蹴襲汁充住柔重従渋銃獣縦叔祝宿淑粛縮塾熟出述術俊春瞬巡盾殉純循順準潤遵処初書庶暑署緒諸女如助序徐除小升少召床尚承昇松沼昭宵将消症祥称笑渉章訟勝掌晶焼焦硝粧詔証象傷奨照詳彰障憧衝賞償礁上冗条状乗城浄剰常情畳蒸縄壌嬢錠譲醸拭食殖飾触嘱織職辱尻心伸芯辛侵信津神唇娠振浸針深紳進森診寝慎新審震薪刃尽迅甚陣尋腎須水吹垂炊帥粋衰推酔遂睡穂随髄枢崇数据裾寸瀬是井正生成声姓征性青斉政星牲凄清盛婿晴勢聖誠精製誓静請整税夕石赤昔析席脊隻惜戚責跡積績籍切折拙窃接設雪摂節説舌絶千仙先宣専泉浅洗染扇栓旋船戦煎羨腺詮箋銭線遷選薦繊全前然禅漸膳繕狙祖租素措粗疎訴塑遡礎双壮早争走奏相荘草倉捜挿桑巣掃曹爽窓創喪痩葬装僧想層総遭槽踪操燥霜騒藻像増憎蔵贈臓束足息速側測俗族属賊続卒率存村孫尊損遜他汰妥唾堕惰駄太対体耐待怠胎退帯泰堆袋逮替貸隊戴大台第題滝宅択沢拓託濯達脱奪棚誰丹旦担単胆探淡短嘆端綻誕鍛段弾暖談壇地池知恥遅痴稚置緻竹畜逐蓄築秩窒茶着嫡仲虫沖宙忠抽昼柱衷酎鋳駐著貯丁弔兆長挑帳張彫眺頂鳥朝貼超腸跳徴潮澄調聴直勅捗珍陳鎮追椎墜通痛塚漬坪爪鶴低呈廷弟定底抵邸亭訂庭逓停偵堤提締諦泥的摘滴適敵溺迭哲鉄徹撤天典店点展添転填伝殿電斗吐妬徒途都渡塗賭土奴努度怒灯投豆東到逃倒凍唐島桃党悼盗塔搭湯痘登答等筒統稲踏糖頭謄藤闘騰洞胴堂童道働銅導瞳峠匿特得督篤毒独読栃突屯頓貪鈍曇丼那奈梨謎鍋軟尼弐匂虹入乳任妊忍認寧熱年念捻粘悩納能脳農濃把派破覇馬婆罵拝杯背肺俳配排敗廃輩売倍梅培陪媒買賠迫舶博薄麦漠縛爆箱箸畑肌八鉢発髪伐抜罰反氾犯帆汎伴判坂板版班販飯搬煩頒範繁藩番蛮盤皮妃否批彼披肥非卑飛疲秘被悲費碑尾眉備微膝肘必泌筆姫百氷表俵票評漂標苗秒病描品浜貧賓頻敏瓶夫父付布扶府怖阜附訃負赴浮婦符普腐敷膚賦譜部舞封風伏副復福腹複覆払沸仏物粉紛雰噴墳憤奮分文平併並柄塀幣蔽餅米壁璧癖返変偏遍編弁便勉歩保哺捕補舗母募墓慕暮簿方包芳宝抱放法泡胞俸倣峰砲崩訪報蜂豊飽褒縫亡乏妨忘房肪某紡望傍棒貿貌暴膨謀頬北木朴睦僕墨撲勃堀本奔翻凡盆麻摩磨魔妹枚昧埋幕膜又末満漫未味岬密蜜脈妙眠矛務無夢娘名命明迷冥盟銘鳴滅免面綿麺茂模毛妄盲耗猛網黙紋問冶夜野弥厄役約訳薬躍喩愉諭輸癒唯友有幽郵湧猶裕遊雄誘憂融優与予誉預幼羊妖洋要容庸揚揺葉溶腰様踊窯養擁謡曜抑沃欲翌翼拉裸羅来雷頼絡落酪辣乱卵覧濫藍欄吏里理痢裏璃離陸立律慄略柳流留竜粒隆硫侶旅虜慮料涼猟陵量領寮療瞭糧力緑林厘倫瑠涙累塁類令礼冷励戻例鈴零霊隷齢麗歴列劣烈裂連練錬路露老弄郎浪廊楼漏籠六録麓論話賄脇惑湾／＼かごすつづのべほぼみめやよれんアウガケゲヂネバプムヴ②&quot;&quot;],[&quot;&quot;位吟杉尿がげずなねはひびぴふぶぽわザヅデ─&quot;&quot;],[&quot;&quot;ぜぬばぱぷ━&quot;&quot;]]]}&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3323177073111975">
+                    <conditions>
+                        <condition id="0" name="On function" sid="246850721735522" type="Function">
+                            <param id="0" name="Name">&quot;FileLoader&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="795014772054004" type="System">
+                            <param id="0" name="Variable">FileIndex</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="291011874900283" type="System">
+                            <param id="0" name="Variable">FileTarget</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="769072255111579" type="System">
+                            <param id="0" name="Variable">FileTotalIndex</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-group description="" sid="326350879222486" title="LoadingScreenUI">
+                            <sub-events>
+                                <event-block sid="556878747792609">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="657254309124125" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="101849658098103" type="System">
+                                            <param id="0" name="Object to create">SystemLoading</param>
+                                            <param id="1" name="Layer">&quot;Loading&quot;</param>
+                                            <param id="2" name="X">20 + BORDER_LEFTTOP_X</param>
+                                            <param id="3" name="Y">480 - 36 + BORDER_LEFTTOP_Y</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="773949953677710" type="SystemLoading">
+                                            <param id="0" name="Width">640 - 57</param>
+                                            <param id="1" name="Height">8</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="417142843259059" type="SystemLoading">
+                                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="736518191208649" type="System">
+                                            <param id="0" name="Object to create">SystemLoading</param>
+                                            <param id="1" name="Layer">&quot;Loading&quot;</param>
+                                            <param id="2" name="X">20 + BORDER_LEFTTOP_X</param>
+                                            <param id="3" name="Y">480 - 20 + BORDER_LEFTTOP_Y</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="265196730108024" type="SystemLoading">
+                                            <param id="0" name="Width">640 - 57</param>
+                                            <param id="1" name="Height">8</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="662976179340485" type="SystemLoading">
+                                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="758503066106487" type="System">
+                                            <param id="0" name="Object to create">SystemLoading</param>
+                                            <param id="1" name="Layer">&quot;Loading&quot;</param>
+                                            <param id="2" name="X">20 + BORDER_LEFTTOP_X</param>
+                                            <param id="3" name="Y">480 - 36 + BORDER_LEFTTOP_Y</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="813122714873421" type="SystemLoading">
+                                            <param id="0" name="Width">0</param>
+                                            <param id="1" name="Height">8</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="462701598388026" type="SystemLoading">
+                                            <param id="0" name="Instance variable">Tag</param>
+                                            <param id="1" name="Value">&quot;System&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="896017083672463" type="System">
+                                            <param id="0" name="Object to create">SystemLoading</param>
+                                            <param id="1" name="Layer">&quot;Loading&quot;</param>
+                                            <param id="2" name="X">20 + BORDER_LEFTTOP_X</param>
+                                            <param id="3" name="Y">480 - 20 + BORDER_LEFTTOP_Y</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="990795865049377" type="SystemLoading">
+                                            <param id="0" name="Width">0</param>
+                                            <param id="1" name="Height">8</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="772430730014326" type="SystemLoading">
+                                            <param id="0" name="Instance variable">Tag</param>
+                                            <param id="1" name="Value">&quot;Solo&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="995246383978959" type="System">
+                                            <param id="0" name="Object to create">DefaultFont</param>
+                                            <param id="1" name="Layer">&quot;Loading&quot;</param>
+                                            <param id="2" name="X">20 + BORDER_LEFTTOP_X</param>
+                                            <param id="3" name="Y">480 - 60 + BORDER_LEFTTOP_Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="876716227218897" type="DefaultFont">
+                                            <param id="0" name="Instance variable">ParentUID</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="421871979615313" type="DefaultFont">
+                                            <param id="0" name="Width">640-20</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="383088276909819" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="832046877415262" title="Load_Attack">
+                            <sub-events>
+                                <event-block sid="590170563520388">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="905640266322363" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="849603704980087" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack0&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="202115023360230" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack1&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="736487750371897" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack2&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="260566755713656" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack3&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="782945607785446" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack4&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="513988263970892" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack5&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="155525844461726" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack6&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="653754833962187" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack7&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="588134042675417" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack8&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="415298312715670" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack9&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="304777076331288" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack10&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="106852218136511" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack11&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="373579023049405" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack12&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="335765948801948" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack13&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="119120047169164" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack14&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="760057080396862" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack15&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="915156306818784" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack16&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="569129314474326" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack17&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="364379559810269" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack18&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="302583905285752" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack19&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="498167899314756" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack20&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="614036725178467" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack21&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="337880063516250" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack22&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="381094386629790" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack23&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="570345195401538" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack24&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="903928141972535" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack25&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="568783532933429" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack26&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="117110476146482" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack27&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="218668367604038" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack28&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="605978255662600" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack29&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="810438999167644" type="AttackLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ds_attack30&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="836627704164421" title="Load_Lang">
+                            <sub-events>
+                                <event-block sid="190726108101324">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="840433426395040" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="861250782934301" type="L10N_Loading">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;en_us&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="5" name="Push" sid="102608742068134" type="L10N_Loading">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ja_jp&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="10" name="Set New Array" sid="299785017107863" type="L10N_Texts">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="305274085475631" title="Load_Item">
+                            <sub-events>
+                                <event-block sid="586361009333778">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="364195642334337" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="472462912369029" type="ItemLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;ItemData&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="10" name="Set New Array" sid="422393485090925" type="ItemDB">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="658377936504603" title="Load_Phone">
+                            <sub-events>
+                                <event-block sid="384023430059590">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="850022396759505" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="987966781482013" type="PhoneLoader">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;PhoneData&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="10" name="Set New Array" sid="931828753659442" type="PhoneDB">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="692191893558452" title="Load_PrepareCombatZone">
+                            <sub-events>
+                                <event-block sid="323228292183452">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="675601487675231" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="906453785546327" type="PrepareCombatZone_Loading">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">&quot;pre_cz&quot;</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="10" name="Set New Array" sid="428789420752720" type="PrepareCombatZone">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block sid="985192199893723">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="347320822132428" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="847605088966086" type="System">
+                                    <param id="0" name="Variable">FileTotalCount</param>
+                                    <param id="1" name="Value">AttackLoader.Width + L10N_Loading.Width + 1 + 1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="138199758711331" type="Function">
+                                    <param id="0" name="Name">&quot;NextCount&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="767095490994767" type="Function">
+                                    <param id="0" name="Name">&quot;NextLoad&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="120293104451438">
+                    <conditions>
+                        <condition id="0" name="On function" sid="764766928124210" type="Function">
+                            <param id="0" name="Name">&quot;NextCount&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>処理JSON追加時ここへ</comment>
+                        <event-block sid="609251967388688">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="938849713551509" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="719750171173689" type="System">
+                                    <param id="0" name="Variable">FileTargetCount</param>
+                                    <param id="1" name="Value">AttackLoader.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="449436684502392">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="618085129468703" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="915734273800886" type="System">
+                                    <param id="0" name="Variable">FileTargetCount</param>
+                                    <param id="1" name="Value">L10N_Loading.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="909525435542201">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="628220882020453" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="788022509232424" type="System">
+                                    <param id="0" name="Variable">FileTargetCount</param>
+                                    <param id="1" name="Value">ItemLoader.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="169836917641264">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="260050341778841" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="211780493608034" type="System">
+                                    <param id="0" name="Variable">FileTargetCount</param>
+                                    <param id="1" name="Value">PhoneLoader.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="563247825684230">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="959452931567539" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="770049572181498" type="System">
+                                    <param id="0" name="Variable">FileTargetCount</param>
+                                    <param id="1" name="Value">PrepareCombatZone_Loading.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="355829961142839">
+                    <conditions>
+                        <condition id="0" name="On function" sid="250642405294817" type="Function">
+                            <param id="0" name="Name">&quot;NextLoad&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>処理JSON追加時ここへ</comment>
+                        <event-block sid="352233697717093">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="188436373676663" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Request URL" sid="955591222262490" type="AJAX">
+                                    <param id="0" name="Tag">&quot;FileLoader&quot;</param>
+                                    <param id="1" name="URL">AttackLoader.At(FileIndex) &amp; &quot;.csv&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="291905265258650">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="383033056838521" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Request URL" sid="524941114160982" type="AJAX">
+                                    <param id="0" name="Tag">&quot;FileLoader&quot;</param>
+                                    <param id="1" name="URL">L10N_Loading.At(FileIndex) &amp; &quot;.json&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="115764505921706">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="966656179913076" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Request URL" sid="867518614319053" type="AJAX">
+                                    <param id="0" name="Tag">&quot;FileLoader&quot;</param>
+                                    <param id="1" name="URL">ItemLoader.At(FileIndex) &amp; &quot;.json&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="268703960397604">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="111891673961323" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Request URL" sid="808752940403060" type="AJAX">
+                                    <param id="0" name="Tag">&quot;FileLoader&quot;</param>
+                                    <param id="1" name="URL">PhoneLoader.At(FileIndex) &amp; &quot;.json&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="312004691676408">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="333484654771283" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Request URL" sid="222336523484892" type="AJAX">
+                                    <param id="0" name="Tag">&quot;FileLoader&quot;</param>
+                                    <param id="1" name="URL">PrepareCombatZone_Loading.At(FileIndex) &amp; &quot;.json&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Finished</comment>
+                        <event-block sid="771080637548654">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="413842941629962" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="623186467798940" type="Function">
+                                    <param id="0" name="Name">&quot;LoadFinished&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="160170272153760" type="SystemLoading" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="439680031598216">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="974808395777419" type="DefaultFont">
+                                            <param id="0" name="Instance variable">ParentUID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="430844813316560" type="DefaultFont" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="266905837816662">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="977965697998974" type="System">
+                                            <param id="0" name="First value">LayoutName</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;Loader&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="317886437944481" type="System">
+                                            <param id="0" name="Layout">MainMenu</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="315025430750861">
+                    <conditions>
+                        <condition id="2" name="On progress" sid="915470240454786" type="AJAX">
+                            <param id="0" name="Tag">&quot;FileLoader&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="770987817983492">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="239190282817337" type="SystemLoading">
+                                    <param id="0" name="Instance variable">Tag</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Solo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="308690608487607" type="SystemLoading">
+                                    <param id="0" name="Width">AJAX.Progress * (WindowWidth - 72)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="539324805644612">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="825498250683224" type="DefaultFont">
+                                    <param id="0" name="Instance variable">ParentUID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>処理JSON追加時ここへ</comment>
+                                <event-block sid="411355473332198">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="371952186803281" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="509355812523332" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;Now loading... (&quot; &amp; AttackLoader.At(FileIndex) &amp; &quot;.csv)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="612974398891996">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="465826494321444" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="773531326208382" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;Now loading... (&quot; &amp; L10N_Loading.At(FileIndex) &amp; &quot;.json)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="582102575934270">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="262432390027238" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="908978927985073" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;Now loading... (&quot; &amp; ItemLoader.At(FileIndex) &amp; &quot;.json)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="931135775005100">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="574039886886189" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="409753262807095" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;Now loading... (&quot; &amp; PhoneLoader.At(FileIndex) &amp; &quot;.json)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="781234431219362">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="563574949781192" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="558732808450156" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;Now loading... (&quot; &amp; PrepareCombatZone_Loading.At(FileIndex) &amp; &quot;.json)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="647439936127494">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="887354314346800" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="810886771801247" type="DefaultFont">
+                                            <param id="0" name="Text">Self.Text &amp; &quot; - &quot; &amp; floor(AJAX.Progress * 100) &amp; &quot;% - &quot; &amp; floor(FileTarget) &amp; &quot; / &quot; &amp; floor(FileTargetCount)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="829307751759064">
+                    <conditions>
+                        <condition id="1" name="On error" sid="320614107745760" type="AJAX">
+                            <param id="0" name="Tag">&quot;FileLoader&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="332907691657353">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="214083210091181" type="SystemLoading">
+                                    <param id="0" name="Instance variable">Tag</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Solo&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="741311437342072" type="SystemLoading">
+                                    <param id="0" name="Width">FileTotalIndex / FileTotalCount * (WindowWidth - 72)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="272496370046989">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="150984317240664" type="DefaultFont">
+                                    <param id="0" name="Instance variable">ParentUID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="407309912155679" type="DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="115096245878955" type="DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>処理JSON追加時ここへ</comment>
+                                <event-block sid="883939068553705">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="662695875023412" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="820079660317957" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;ERROR (&quot; &amp; AttackLoader.At(FileIndex) &amp; &quot;.csv)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="486328203846260">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="872737524916091" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="826296498240449" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;ERROR (&quot; &amp; L10N_Loading.At(FileIndex) &amp; &quot;.json)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="819955543302729">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="554719749762291" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="550519358039504" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;ERROR (&quot; &amp; ItemLoader.At(FileIndex) &amp; &quot;.json)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="527378183786847">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="658932963610571" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="533624638175790" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;ERROR (&quot; &amp; PhoneLoader.At(FileIndex) &amp; &quot;.json)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="771004843988586">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="654517468228699" type="System">
+                                            <param id="0" name="Variable">FileTarget</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="525623275061207" type="DefaultFont">
+                                            <param id="0" name="Text">&quot;ERROR (&quot; &amp; PrepareCombatZone_Loading.At(FileIndex) &amp; &quot;.json)&quot; </param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="133190641712644">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="712552910685068" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="548930796936195" type="DefaultFont">
+                                            <param id="0" name="Text">Self.Text &amp; &quot; - &quot; &amp; floor(FileTarget) &amp; &quot; / &quot; &amp; floor(FileTargetCount)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="660517691060809">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="863772896257609" type="AJAX">
+                            <param id="0" name="Tag">&quot;FileLoader&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>処理JSON追加時ここへ</comment>
+                        <event-block sid="539651927877515">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="239793803073244" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Delete key" sid="135939967145797" type="AttackList">
+                                    <param id="0" name="Key">AttackLoader.At(FileIndex)</param>
+                                </action>
+                                <action id="0" name="Add key" sid="321967788732498" type="AttackList">
+                                    <param id="0" name="Key">AttackLoader.At(FileIndex)</param>
+                                    <param id="1" name="Value">AJAX.LastData</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="570649762502813">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="768488815831826" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="60" name="LoadJSON" sid="620647833236409" type="L10N_Texts">
+                                    <param id="0" name="JSON">AJAX.LastData</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">FileIndex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="287372399707572">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="451763348053108" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="60" name="LoadJSON" sid="193752311975304" type="ItemDB">
+                                    <param id="0" name="JSON">AJAX.LastData</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="481382270300256">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="863590502609975" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="60" name="LoadJSON" sid="509820951128715" type="PhoneDB">
+                                    <param id="0" name="JSON">AJAX.LastData</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="325017351360630">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="131021799381000" type="System">
+                                    <param id="0" name="Variable">FileTarget</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="60" name="LoadJSON" sid="684417004882252" type="PrepareCombatZone">
+                                    <param id="0" name="JSON">AJAX.LastData</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="785872636868426">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="848411159663953" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="527840468549016" type="System">
+                                    <param id="0" name="Variable">FileIndex</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="743129524579180" type="System">
+                                    <param id="0" name="Variable">FileTotalIndex</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="546907080705767">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="145717917095095" type="System">
+                                            <param id="0" name="Variable">FileIndex</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">FileTargetCount</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="497172142146651">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="840656633805703" type="SystemLoading">
+                                                    <param id="0" name="Instance variable">Tag</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Solo&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-5" name="Set width" sid="207584017645705" type="SystemLoading">
+                                                    <param id="0" name="Width">FileTotalIndex / FileTotalCount * (640 - 57)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="947148823431155">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="626639558533468" type="DefaultFont">
+                                                    <param id="0" name="Instance variable">ParentUID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">-1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <comment>処理JSON追加時ここへ</comment>
+                                                <event-block sid="946501652942427">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="826311377205967" type="System">
+                                                            <param id="0" name="Variable">FileTarget</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="722772886073368" type="DefaultFont">
+                                                            <param id="0" name="Text">&quot;Loaded (&quot; &amp; AttackLoader.At(FileIndex-1) &amp; &quot;.csv)&quot; </param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="603441542464286">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="750020285718596" type="System">
+                                                            <param id="0" name="Variable">FileTarget</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="867290410113235" type="DefaultFont">
+                                                            <param id="0" name="Text">&quot;Loaded (&quot; &amp; L10N_Loading.At(FileIndex-1) &amp; &quot;.json)&quot; </param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="803579754829153">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="573927160024034" type="System">
+                                                            <param id="0" name="Variable">FileTarget</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="279404017712786" type="DefaultFont">
+                                                            <param id="0" name="Text">&quot;Loaded (&quot; &amp; ItemLoader.At(FileIndex-1) &amp; &quot;.json)&quot; </param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="555357426912945">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="302772264096012" type="System">
+                                                            <param id="0" name="Variable">FileTarget</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="304666789586848" type="DefaultFont">
+                                                            <param id="0" name="Text">&quot;Loaded (&quot; &amp; PhoneLoader.At(FileIndex-1) &amp; &quot;.json)&quot; </param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="656489711133016">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="896583022609236" type="System">
+                                                            <param id="0" name="Variable">FileTarget</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">4</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="504630520312174" type="DefaultFont">
+                                                            <param id="0" name="Text">&quot;Loaded (&quot; &amp; PrepareCombatZone_Loading.At(FileIndex-1) &amp; &quot;.json)&quot; </param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="386155658423846">
+                                            <conditions>
+                                                <condition id="-1" name="Every tick" sid="733998974459473" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="126784727967461" type="System">
+                                                    <param id="0" name="Variable">FileIndex</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="257237561072035" type="System">
+                                                    <param id="0" name="Variable">FileTarget</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="276472497181728" type="Function">
+                                                    <param id="0" name="Name">&quot;NextCount&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="655445415176465">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="681845900325354" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="103756107511619" type="Function">
+                                            <param id="0" name="Name">&quot;NextLoad&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="548148217971270">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="140274972665473" type="SystemLoading">
+                            <param id="0" name="Instance variable">Tag</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;System&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="552707604631660" type="SystemLoading">
+                            <param id="0" name="Width">(FileTotalIndex / FileTotalCount * loadingprogress) * (640 - 57)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <include>WindowManager</include>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FontsLoader</name>
+    <events>
+        <event-block any="1" sid="5834412354404267">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5276123136482903" type="System" />
+                <condition id="-18" name="On created" sid="5603647828736235" type="BattleFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="8299797374752195" type="BattleFont">
+                    <param id="0" name="Character">&quot;#$&amp;*+@MW^&quot;</param>
+                    <param id="1" name="Width">19</param>
+                </action>
+                <action id="5" name="Set character width" sid="2197363519653944" type="BattleFont">
+                    <param id="0" name="Character">&quot;!%/023456789=?ABCDEFGHIJKLNOPQRSTUVXYZ\_&quot;</param>
+                    <param id="1" name="Width">16</param>
+                </action>
+                <action id="5" name="Set character width" sid="1864998382634315" type="BattleFont">
+                    <param id="0" name="Character">&quot;&quot;&quot;()1&lt;&gt;[]&quot;</param>
+                    <param id="1" name="Width">13</param>
+                </action>
+                <action id="5" name="Set character width" sid="6203890301199909" type="BattleFont">
+                    <param id="0" name="Character">&quot;,-&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="649709132459676" type="BattleFont">
+                    <param id="0" name="Character">&quot; &quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="929964321339040" type="BattleFont">
+                    <param id="0" name="Character">&quot;&apos;.:;&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="3" name="Set character spacing" sid="811995479991814" type="BattleFont">
+                    <param id="0" name="Character spacing">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="691396465107972">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="260082989297434" type="System" />
+                <condition id="-18" name="On created" sid="765765930115107" type="JP_BattleFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="135971302737681" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot; &quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="968601565143089" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;｜|&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="880853325124322" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;，．・：；！‘’!`&apos;i:;,l.&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="508616568156729" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;、゜´｀′Ｉｉｌ1I{}&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="301426329534104" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;。゛°１r()j[]&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="618645503522831" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;∥“”（）〔〕［］｛｝〈〉「」【】&quot;&quot;tf&lt;&gt;&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="520332602907013" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;¨‐『』§ｊく02suhJKkLn&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+                <action id="5" name="Set character width" sid="387512846859387" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;＾″↑↓ｃｅｒｓぅトョ#$@PpAQaqBRb3CSc4DTd%5EUe&amp;6FVv7GWgw8HXx9Yy*Zz+\-=MmN^~/?O_o&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+                <action id="5" name="Set character width" sid="696419340248707" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;？ヽヾゝ〃《》￠Ｊｂｄｆｏｐｑｔｚりィリ&quot;</param>
+                    <param id="1" name="Width">13</param>
+                </action>
+                <action id="5" name="Set character width" sid="986378837971692" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;ゞ＊２５ａｇｈｎｕｖｙしじっょァゥェォッドミレヮヵ&quot;</param>
+                    <param id="1" name="Width">14</param>
+                </action>
+                <action id="5" name="Set character width" sid="996173813542339" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;々‥×♀＄０３６７８９ＬＳＺｋｘぁぃうぇぉぐさとゅらゎイヒャヨヲ&quot;</param>
+                    <param id="1" name="Width">15</param>
+                </action>
+                <action id="5" name="Set character width" sid="270347572270446" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;＋＜＞♪４ＣＦＰＸＹｍきこまゃろウカクコソノメュロワヶ①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳&quot;</param>
+                    <param id="1" name="Width">16</param>
+                </action>
+                <action id="5" name="Set character width" sid="310579092182058" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;〆－±÷＝≠≦≧∴＃＠※ＢＤＥＨＫＮＯＲＵＶｗえござそちどにもよるオシジタツヌビフムラン≒&quot;</param>
+                    <param id="1" name="Width">17</param>
+                </action>
+                <action id="5" name="Set character width" sid="896012466778042" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;ー￥￡＆ＡＧＭＱＴあいかがぎけすぞただぢなのはほむゆゑをアキギケスセゾチテデナネピブホマモヤヱヴ&quot;</param>
+                    <param id="1" name="Width">18</param>
+                </action>
+                <action id="5" name="Set character width" sid="993371197030101" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;〇～…∞♂℃％〒Ｗおげずせつてぬねばぱひへべぺぼぽみめやわゐんエガグゲゴサズゼダヂヅニハバパプヘベペボポユルヰ&quot;</param>
+                    <param id="1" name="Width">19</param>
+                </action>
+                <action id="5" name="Set character width" sid="759274389578083" type="JP_BattleFont">
+                    <param id="0" name="Character">&quot;￣＿仝―／＼→←◯ぜづでびぴふぶぷれザ─━&quot;</param>
+                    <param id="1" name="Width">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="4795387788698696">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4998938932169473" type="System" />
+                <condition id="-18" name="On created" sid="7426065134553322" type="DamageFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="9650715589090074" type="DamageFont">
+                    <param id="0" name="Character">&quot; &quot;</param>
+                    <param id="1" name="Width">14</param>
+                </action>
+                <action id="5" name="Set character width" sid="3767000439903289" type="DamageFont">
+                    <param id="0" name="Character">&quot;1&quot;</param>
+                    <param id="1" name="Width">18</param>
+                </action>
+                <action id="5" name="Set character width" sid="105238651514754" type="DamageFont">
+                    <param id="0" name="Character">&quot;I&quot;</param>
+                    <param id="1" name="Width">22</param>
+                </action>
+                <action id="5" name="Set character width" sid="9166024949406787" type="DamageFont">
+                    <param id="0" name="Character">&quot;ABCDEFGHJKLMNOPQRSTUVWXYZ023456789&quot;</param>
+                    <param id="1" name="Width">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>TypeWriter</comment>
+        <comment>EN</comment>
+        <event-block any="1" sid="137151638373087">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="678701729159555" type="System" />
+                <condition id="-18" name="On created" sid="633494625453973" type="DefaultFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="426865526789725" type="DefaultFont">
+                    <param id="0" name="Character">&quot; &quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="202293588242442" type="DefaultFont">
+                    <param id="0" name="Character">&quot;　&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+                <action id="5" name="Set character width" sid="520864860325467" type="DefaultFont">
+                    <param id="0" name="Character">&quot;&apos;,.:;|&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="898335026123331" type="DefaultFont">
+                    <param id="0" name="Character">&quot;`&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="445705444574318" type="DefaultFont">
+                    <param id="0" name="Character">&quot;!()-[\]&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="262778810991658" type="DefaultFont">
+                    <param id="0" name="Character">&quot;&quot;&quot;&lt;&gt;{}&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="524437013789772" type="DefaultFont">
+                    <param id="0" name="Character">&quot;$+/0123456789=?@ABCDEFGHIJKLNOPQRSTUVXYZ^_abcdefghijklnopqrstuvxyz&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="426095129684809" type="DefaultFont">
+                    <param id="0" name="Character">&quot;#%&amp;MWmw~&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+                <action id="5" name="Set character width" sid="628478670925648" type="DefaultFont">
+                    <param id="0" name="Character">&quot;*&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+                <action id="3" name="Set character spacing" sid="809753499948745" type="DefaultFont">
+                    <param id="0" name="Character spacing">-4</param>
+                </action>
+                <action id="4" name="Set line height" sid="818400017276176" type="DefaultFont">
+                    <param id="0" name="Line height">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="454439776588733">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="251712814128963" type="System" />
+                <condition id="-18" name="On created" sid="368919149160026" type="SansFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="488489332328726" type="SansFont">
+                    <param id="0" name="Character">&quot;!&apos;,.:il|&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="235050727874885" type="SansFont">
+                    <param id="0" name="Character">&quot;&quot;&quot;;`&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="151883101898668" type="SansFont">
+                    <param id="0" name="Character">&quot;()&lt;&gt;[]&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="710688802714887" type="SansFont">
+                    <param id="0" name="Character">&quot;-=Pjs{}&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="968371300327293" type="SansFont">
+                    <param id="0" name="Character">&quot;*+/0135689FILR\^abcefghknopqrtuvz&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="978220126366766" type="SansFont">
+                    <param id="0" name="Character">&quot;247?BDEKdxy~&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="839765698762386" type="SansFont">
+                    <param id="0" name="Character">&quot; $ACHJSTUYZmw&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="719965886709572" type="SansFont">
+                    <param id="0" name="Character">&quot;#&amp;GNVX_&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+                <action id="5" name="Set character width" sid="488729827271581" type="SansFont">
+                    <param id="0" name="Character">&quot;MO&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+                <action id="5" name="Set character width" sid="564120380197922" type="SansFont">
+                    <param id="0" name="Character">&quot;%Q&quot;</param>
+                    <param id="1" name="Width">13</param>
+                </action>
+                <action id="5" name="Set character width" sid="518254324200262" type="SansFont">
+                    <param id="0" name="Character">&quot;@&quot;</param>
+                    <param id="1" name="Width">14</param>
+                </action>
+                <action id="5" name="Set character width" sid="412698543293882" type="SansFont">
+                    <param id="0" name="Character">&quot;W&quot;</param>
+                    <param id="1" name="Width">15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="228134265973818">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="389364916318068" type="System" />
+                <condition id="-18" name="On created" sid="300973619767916" type="PapyrusFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="754480676296884" type="PapyrusFont">
+                    <param id="0" name="Character">&quot; &quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="796346621491416" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;!&apos;*.:Iil|&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="933365326713189" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;,1;[]&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="228388702439878" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;&quot;&quot;()=`ar{}&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="448320824394305" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;-3678&gt;?cefhjnqstuvz&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="445141394469840" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;#$+259&lt;^_bdkopxy&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="495634156966259" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;/JLRZm&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="221478213654975" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;/JLRZm&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="856648653413227" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;@FKNTVX\&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+                <action id="5" name="Set character width" sid="820649448117056" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;EHUY&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+                <action id="5" name="Set character width" sid="755289147747588" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;BCDGMS&quot;</param>
+                    <param id="1" name="Width">13</param>
+                </action>
+                <action id="5" name="Set character width" sid="410952809393422" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;AOW&quot;</param>
+                    <param id="1" name="Width">14</param>
+                </action>
+                <action id="5" name="Set character width" sid="933868729483370" type="PapyrusFont">
+                    <param id="0" name="Character">&quot;Q&quot;</param>
+                    <param id="1" name="Width">16</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="197004180872212">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="357290791537335" type="System" />
+                <condition id="-18" name="On created" sid="886343955083150" type="EnemyFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="879579026016157" type="EnemyFont">
+                    <param id="0" name="Character">&quot; &quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="363977554110574" type="EnemyFont">
+                    <param id="0" name="Character">&quot;!&apos;.:Iil|&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="622948699848173" type="EnemyFont">
+                    <param id="0" name="Character">&quot;,;&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="619960994523699" type="EnemyFont">
+                    <param id="0" name="Character">&quot;1[]`j&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="535938704314632" type="EnemyFont">
+                    <param id="0" name="Character">&quot;\&quot;&quot;(){}&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="257763052928065" type="EnemyFont">
+                    <param id="0" name="Character">&quot;*J^r&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="707329057192575" type="EnemyFont">
+                    <param id="0" name="Character">&quot;/2356789LZ\\fghknstuz&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="612322900216770" type="EnemyFont">
+                    <param id="0" name="Character">&quot;$%&amp;+-04&lt;=&gt;?@ABCDEFGHKMNOPQRSTUVWXY_abcdemopqvwxy~&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="847359263955560" type="EnemyFont">
+                    <param id="0" name="Character">&quot;#&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>JP</comment>
+        <event-block any="1" sid="374751381018817">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="202488450671641" type="System" />
+                <condition id="-18" name="On created" sid="441672029132718" type="JP_DefaultFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="212865856830596" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot; &quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="310625405533421" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;　&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+                <action id="5" name="Set character width" sid="188707363627781" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;｜!|&quot;</param>
+                    <param id="1" name="Width">3</param>
+                </action>
+                <action id="5" name="Set character width" sid="896139330702710" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;，．：；`&apos;i:;,l.&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="272983218218379" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;、・！‘’′ＩｉｌI&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="446502891765325" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;。゛゜´｀∥〔〕°１()j[{]}&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="712650380073603" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;‐（）［］【】§ｊ&quot;&quot;#1vWwY*J+&lt;\-m&gt;&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="853740858703898" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;ゝ｛｝「」″ぅくトョ$0@PpAQaq2BRbr3CScs4Ddt%5EUeu&amp;6FVf7Gg8HXhx9yZzKkL=MN^n/?O_o&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="915385293308395" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;¨＾ヽ〃‥“”〈〉《》『』↑↓０５ＪｆｒｔりリT~&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="992221005231044" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;？ヾゞ￠♪２３８９ａｂｃｄｅｇｏｐｑｓｘｚしじょァィゥォッドミレヮヵ&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="745663952972300" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;自日白目呂々♀＄＊４６７ＥＦＬＰＳＹｈｋｎｕｙぃうぇぉきぐこさとまらゎイェクソノヒャュヨヲヶ&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+                <action id="5" name="Set character width" sid="876748946582737" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;弓旧口当了〆…＜＞ＢＣＤＨＫＮＲＵｖぁそちっゃゅよるろウカコシタツビピフメラロワン≒&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+                <action id="5" name="Set character width" sid="943391778015552" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;囲胃引印員円園凹岡乙回角隔閣陥臼曲巾串月己甲剛困山旨囚出肖尚申夕占曽中弔田刀闘凸内肉買閥冒闇由幽ー＋－±×÷＝≠≦≧∞∴￥＃＆※ＡＧＯＱＴＶＸＺｍｗあいえぎござすたどなにのひもゆゐをんアエオキケジスセゾチテナヌネホマムモヤルヰ①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳&quot;</param>
+                    <param id="1" name="Width">13</param>
+                </action>
+                <action id="5" name="Set character width" sid="173548529675516" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;亜医因咽姻院陰隠羽唄易謁閲押欧殴卸渦禍賀拐開階貝劾喝渇割褐刈刊勘間閑勧関鬼期却脚巨御凶脅仰均勤区句偶隅屈訓兄刑隙劇潔倹剣険圏絹賢幻限固個湖錮勾功向効拘降綱稿鋼乞刻国駒頃細際剤崎削刷刹司四伺刺師詞飼軸酌弱州袖習酬旬殉潤初如助除召匠招沼昭消唱紹晶詔障冗剰嘱伸臣神紳刃陣腎図帥随制切拙川仙阻塑相創僧層増憎贈即則側測属多隊第濁棚団男知沖抽町釣朝嘲潮調勅陳弟貞偵的溺到倒凍島陶同洞働銅匿届匂悩納脳陪伯拍泊剥舶畑罰判阪眉匹品附負副幅福物聞陛閉別偏崩防剖帽貿勃翻名明銘綿網門問約油勇幼用陽踊曜抑卵利陸柳留隆侶陵力隣臨累例列朗和～♂℃￡％＠〒→←Ｍおかけげずせぞだぢつてぬねはびぴほむめやわゑガギグゲサゼダデニハボポユヱヴ&quot;</param>
+                    <param id="1" name="Width">14</param>
+                </action>
+                <action id="5" name="Set character width" sid="557191633232816" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;哀挨愛曖悪握圧扱宛嵐安案暗以衣位依委威為畏尉異移萎偉椅彙意違維慰遺緯域育一壱逸茨芋淫飲韻右宇雨鬱畝浦運雲永泳英映栄営詠影鋭衛疫益液駅悦越延沿炎怨宴媛援煙猿遠鉛塩演縁艶汚王央応往旺桜翁奥横屋億憶臆虞俺音恩温穏下化火加可仮何花佳価果河苛科架夏家荷華菓貨過嫁暇靴寡歌箇稼課蚊牙瓦我画芽雅餓介灰会快戒改怪悔海界械絵塊楷解潰壊懐諧外害崖涯街慨蓋該概骸垣柿各拡革格核殻郭覚較確獲嚇穫学岳楽額顎掛潟括活葛滑轄且株釜鎌干甘汗缶完肝官冠巻看乾患貫寒喚堪換敢棺款寛幹感漢慣管歓監緩憾還館環簡観韓艦鑑丸含岸岩玩眼頑顔願企伎危机気岐希忌汽奇祈季紀軌既記起飢帰基寄規亀喜幾揮棋貴棄毀旗器畿輝機騎技宜偽欺義疑儀戯擬犠議菊吉喫詰客逆虐九久及丘休吸朽求究泣急級糾宮救球給嗅窮牛去居拒拠挙虚許距魚漁共叫狂京享供協況峡挟狭恐恭胸強教郷境橋矯鏡競響驚暁業凝局極玉斤近金菌琴筋僅禁緊錦謹襟吟銀苦駆具惧愚空遇掘窟熊繰君勲薫軍郡群形系径茎係型契計恵啓掲渓経蛍敬景軽傾携継詣慶憬稽憩警鶏芸迎鯨撃激桁欠穴血決結傑犬件見券肩建研県兼拳軒健堅検嫌献遣権憲謙鍵繭顕験懸元玄言弦原現舷減源厳戸古呼股虎孤弧故枯庫雇誇鼓顧五互午呉後娯悟碁語誤護工公孔巧広交光后好江考坑孝抗攻更幸肯侯厚恒洪皇紅荒郊香候校耕航貢高康控梗黄喉慌港硬絞項溝鉱構酵興衡講購号合拷傲豪克告谷黒穀酷獄骨込今昆恨根婚混痕紺魂墾懇左佐沙査砂唆差詐鎖座挫才再災妻采砕宰栽彩採済祭斎菜最裁債催塞歳載埼在材財罪作昨柵索策酢搾錯咲冊札拶殺察撮擦雑皿三参桟蚕惨産傘散算酸賛残斬暫士子支止氏仕史市矢死糸至志私使始姉枝祉肢姿思指施恣紙脂視紫歯嗣試詩資誌雌摯賜諮示字寺次耳似児事侍治持時滋慈辞磁餌璽鹿式識七叱失室疾執湿嫉漆質実芝写社車舎者射捨赦斜煮遮謝邪蛇尺借釈爵若寂手主守朱取狩首殊珠酒腫種趣寿受呪授需儒樹舟秀周宗拾秋臭修終羞週就衆集愁醜蹴襲十汁充住柔重従渋銃獣縦叔祝宿淑粛縮塾熟述術俊春瞬巡盾准純循順準遵処所書庶暑署緒諸女序叙徐小升少床抄承昇松宵将症祥称笑商渉章訟勝掌焼焦硝粧証象傷奨照詳彰憧衝賞償礁鐘上丈条状乗城浄常情場畳蒸縄壌嬢錠譲醸色拭食植殖飾触織職辱尻心芯身辛侵信津唇娠振浸真針深進森診寝慎新審震薪親人仁尽迅甚尋須水吹垂炊粋衰推酔遂睡穂髄枢崇数据杉裾寸瀬是井世正生西声姓征性青斉政星牲省凄逝清盛婿晴勢聖誠精製誓静請整醒税斥石赤昔析席脊隻惜戚責跡積績籍折窃接設雪摂節説舌絶千先宣専泉浅洗染扇栓旋船戦煎羨腺詮践箋銭潜線遷選薦繊鮮全前善然禅漸膳繕狙祖租素措粗組疎訴遡礎双壮早争走奏荘草送倉捜挿桑巣掃曹爽窓喪痩葬装想総遭槽踪操燥霜騒藻造像蔵臓束足促息捉速俗族賊続卒率存村孫尊損遜他汰打妥唾堕惰駄太対体耐待怠胎退帯泰堆袋逮替貸滞態戴大代台題滝宅択沢卓拓託濯諾但達脱奪誰丹旦担単炭胆探淡短嘆端綻誕鍛段断弾暖談壇地池値恥致遅痴稚置緻竹畜逐蓄築秩窒茶着嫡仲虫宙忠注昼柱衷酎鋳駐著貯丁庁兆長挑帳張彫眺頂鳥貼超腸跳徴澄聴懲直捗沈珍朕賃鎮追椎墜通痛塚漬坪爪鶴低呈廷定底抵邸亭帝訂庭逓停堤提程艇締諦泥笛摘滴適敵迭哲鉄徹撤天典店点展添転填伝殿電斗吐妬徒途都渡塗賭土奴努度怒冬灯投豆東逃唐桃討透党悼盗塔搭棟湯痘登答等筒統稲踏糖頭謄藤騰胴動堂童道導瞳峠特得督徳篤毒独読栃突屯豚頓貪鈍曇丼那奈梨謎鍋南軟難二尼弐虹入乳尿任妊忍認寧熱年念捻粘燃能農濃把波派破覇馬婆罵拝杯背肺俳配排敗廃輩売倍梅培媒賠迫博薄麦漠縛爆箱箸肌八鉢発髪伐抜反半氾犯帆汎伴坂板版班畔般販斑飯搬煩頒範繁藩晩番蛮盤比皮妃否批彼披肥非卑飛疲秘被悲扉費碑罷避尾美備微鼻膝肘必泌筆姫百氷表俵票評漂標苗秒病描猫浜貧賓頻敏瓶不夫父付布扶府怖阜訃赴浮婦符富普腐敷膚賦譜侮武部舞封風伏服復腹複覆払沸仏粉紛雰噴墳憤奮分文丙平兵併並柄塀幣弊蔽餅米壁璧癖蔑片辺返変遍編弁便勉歩保哺捕補舗母募墓慕暮簿方包芳邦奉宝抱放法泡胞俸倣峰砲訪報蜂豊飽褒縫亡乏忙坊妨忘房肪某紡望傍棒貌暴膨謀頬北木朴牧睦僕墨撲没堀本奔凡盆麻摩磨魔毎妹枚昧埋幕膜枕又末抹万満慢漫未味魅岬密蜜脈妙民眠矛務無夢霧娘命迷冥盟鳴滅免面麺茂模毛妄盲耗猛黙紋冶夜野弥厄役訳薬躍喩愉諭輸癒唯友有悠郵湧猶裕遊雄誘憂融優与予余誉預羊妖洋要容庸揚揺葉溶腰様瘍窯養擁謡沃浴欲翌翼拉裸羅来雷頼絡落酪辣乱覧濫藍欄吏里理痢裏履璃離立律慄略流竜粒硫旅虜慮両良料涼猟量僚領寮療瞭糧緑林厘倫輪瑠涙塁類令礼冷励戻鈴零霊隷齢麗暦歴劣烈裂恋連廉練錬炉賂路露老労弄郎浪廊楼漏籠六録麓論話賄脇惑枠湾腕仝〇◯Ｗがぜづでばぱふぶぷへべぺぼぽみれゴザズヂヅバパブプヘベペ&quot;</param>
+                    <param id="1" name="Width">15</param>
+                </action>
+                <action id="5" name="Set character width" sid="127880717079587" type="JP_DefaultFont">
+                    <param id="0" name="Character">&quot;皆行収成￣＿―／＼─━&quot;</param>
+                    <param id="1" name="Width">16</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="838449833036050">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="653888690373797" type="System" />
+                <condition id="-18" name="On created" sid="383078657323835" type="JP_SansFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="680997629898346" type="JP_SansFont">
+                    <param id="0" name="Character">&quot; &quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="601910533161033" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;　´¨′″①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳&quot;</param>
+                    <param id="1" name="Width">2</param>
+                </action>
+                <action id="5" name="Set character width" sid="235859567216913" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;｜‘’:|&quot;</param>
+                    <param id="1" name="Width">3</param>
+                </action>
+                <action id="5" name="Set character width" sid="126174276004338" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;．：゜!&apos;;.&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="343468599619331" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;，；∥°ｉｌi,l&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="782370439220110" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;・゛｀“”〔〕］【】≠ｊ`*j[]&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="565803240922090" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;、。（）［｝「」『』&quot;&quot;rf()I{}_&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="161239385125232" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;！＾‐｛〈〉∞￠Ｉｆｒｔt-^&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="949483283085956" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;《》Ｌｚpaqbcdeughz&lt;L&gt;no&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="280044345397750" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;ヽゝ〃－＄￡＊§↑↓♪１２６７ＥＦＺａｂｃｄｅｇｈｋｎｏｐｑｓｕｖｘ$0123s5E6Fv7x9+k=~/?&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="843053541868938" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;ヾ…０３５９ＢＤＪＰｙPBCS4DTUGHyJZN&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+                <action id="5" name="Set character width" sid="491872307930624" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;日目‥±×＝♀￥４８ＣＧＨＫＮＯＲＳＴＵＸＹｍくトドノョヵ#≒QR8XYK\mO&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+                <action id="5" name="Set character width" sid="213167110023543" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;月自白？ゞ々〆♂＃＆ＡＱＶぁぃぉしじゅりァィゥェヒュリヮA&amp;Vw&quot;</param>
+                    <param id="1" name="Width">13</param>
+                </action>
+                <action id="5" name="Set character width" sid="571484124987736" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;囲胃引印因咽閲円園凹岡回開閣陥間閑関弓旧臼巨凶曲巾区串圏固口甲向国困山司四囚習出肖尚申図夕曽団窒中丁田当闘同内肉閥百品富副聞閉冒望明門問闇由了呂〇ー～＋÷＜＞≦≧∴％＠※〒Ｍｗあいぅうぇきぐこさすそただちっつてとにのまむもゃょらるろゎアウエォオカキコセチッテニヌビピフマミメモャヤユヨラレロワヰヱヲヶ@%M&quot;</param>
+                    <param id="1" name="Width">14</param>
+                </action>
+                <action id="5" name="Set character width" sid="352486882120003" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;亜曖暗医院陰隠宇羽唄映易旺欧殴乙卸下加暇画改拐階害崖角隔嚇喝割刈刊喚岸眼危岐期吉喫虐吸嗅窮虚叫峡強仰暁局均吟句空隅屈窟刑隙劇穴肩剣険堅幻限己呼虎個雇勾功効拘皇降乞剛刻頃唆才際剤崎削昨咲刷刹旨伺刺師嗣飼時式軸叱室弱呪州周瞬旬初如除召匠招沼昭宵唱晶障剰常嘱伸臣刃陣腎吹帥睡随寸正制晴席切窃雪川仙占扇阻塑相曹創僧層則側測属唾堕隊宅濁嘆男断暖知宙町張眺朝直勅陳墜呈弟的店電吐刀豆到倒島陶洞胴堂瞳峠匿凸届尼匂馬罵陪伯拍泊剥舶畑罰判阪畔晩扉眉匹附膚噴丙陛幣別哺宝崩豊防剖勃昧万味岬眠名鳴妄厄油唯勇幽用陽曜雷卵利痢陸略留隆侶虜陵瞭力隣臨例列労朗和℃→←おかがぎけげござずせぜぞぢづでどなぬはばぱひびぴほぼぽみめゆよをイガギクゴシジスズゼソゾタヂツヅデハバパブプホボポムルンヴ…&quot;</param>
+                    <param id="1" name="Width">15</param>
+                </action>
+                <action id="5" name="Set character width" sid="746053533507868" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;哀挨愛悪握圧扱宛嵐安案以衣位依委威為畏尉異移萎偉椅彙意違維慰遺緯域育一壱逸茨芋姻員淫飲韻右雨鬱畝浦運雲永泳英栄営詠影鋭衛疫益液駅悦越謁延沿炎怨宴媛援煙猿遠鉛塩演縁艶汚王央応往押桜翁奥横屋億憶臆虞俺音恩温穏化火可仮何花佳価果河苛科架夏家荷華菓貨渦過嫁禍靴寡歌箇稼課蚊牙瓦我芽賀雅餓介灰会快戒怪悔海界皆械絵塊楷解潰壊懐諧貝外劾涯街慨蓋該概骸垣柿各拡革格核殻郭覚較確獲穫学岳楽額顎掛潟括活渇葛滑褐轄且株釜鎌干甘汗缶完肝官冠巻看乾勘患貫寒堪換敢棺款勧寛幹感漢慣管歓監緩憾還館環簡観韓艦鑑丸含岩玩頑顔願企伎机気希忌汽奇祈季紀軌既記起飢鬼帰基寄規亀喜幾揮棋貴棄毀旗器畿輝機騎技宜偽欺義疑儀戯擬犠議菊詰却客脚逆九久及丘休朽求究泣急級糾宮救球給牛去居拒拠挙許距魚御漁共狂京享供協況挟狭恐恭胸脅教郷境橋矯鏡競響驚業凝極玉斤近金菌勤琴筋僅禁緊錦謹襟銀苦駆具惧愚偶遇掘熊繰君訓勲薫軍郡群兄形系径茎係型契計恵啓掲渓経蛍敬景軽傾携継詣慶憬稽憩警鶏芸迎鯨撃激桁欠血決結傑潔犬件見券建研県倹兼拳軒健検嫌献絹遣権憲賢謙鍵繭顕験懸元玄言弦原現舷減源厳戸古股孤弧故枯庫湖誇鼓錮顧五互午呉後娯悟碁語誤護工公孔巧広交光后好江考行坑孝抗攻更幸肯侯厚恒洪紅荒郊香候校耕航貢高康控梗黄喉慌港硬絞項溝鉱構綱酵稿興衡鋼講購号合拷傲豪克告谷黒穀酷獄骨駒込今昆恨根婚混痕紺魂墾懇左佐沙査砂差詐鎖座挫再災妻采砕宰栽彩採済祭斎細菜最裁債催塞歳載埼在材財罪作柵索策酢搾錯冊札拶殺察撮擦雑皿三参桟蚕惨産傘散算酸賛残斬暫士子支止氏仕史市矢死糸至志私使始姉枝祉肢姿思指施恣紙脂視紫詞歯試詩資誌雌摯賜諮示字寺次耳似児事侍治持滋慈辞磁餌璽鹿識七失疾執湿嫉漆質実芝写社車舎者射捨赦斜煮遮謝邪蛇尺借酌釈爵若寂手主守朱取狩首殊珠酒腫種趣寿受授需儒樹収舟秀宗拾秋臭修袖終羞週就衆集愁酬醜蹴襲十汁充住柔重従渋銃獣縦叔祝宿淑粛縮塾熟述術俊春巡盾准殉純循順準潤遵処所書庶暑署緒諸女助序叙徐小升少床抄承昇松将消症祥称笑商渉章紹訟勝掌焼焦硝粧詔証象傷奨照詳彰憧衝賞償礁鐘上丈冗条状乗城浄情場畳蒸縄壌嬢錠譲醸色拭食植殖飾触織職辱尻心芯身辛侵信津神唇娠振浸真針深紳進森診寝慎新審震薪親人仁尽迅甚尋須水垂炊粋衰推酔遂穂髄枢崇数据杉裾瀬是井世生成西声姓征性青斉政星牲省凄逝清盛婿勢聖誠精製誓静請整醒税斥石赤昔析脊隻惜戚責跡積績籍折拙接設摂節説舌絶千先宣専泉浅洗染栓旋船戦煎羨腺詮践箋銭潜線遷選薦繊鮮全前善然禅漸膳繕狙祖租素措粗組疎訴遡礎双壮早争走奏荘草送倉捜挿桑巣掃爽窓喪痩葬装想総遭槽踪操燥霜騒藻造像増憎蔵贈臓即束足促息捉速俗族賊続卒率存村孫尊損遜他多汰打妥惰駄太対体耐待怠胎退帯泰堆袋逮替貸滞態戴大代台第題滝択沢卓拓託濯諾但達脱奪棚誰丹旦担単炭胆探淡短端綻誕鍛段弾談壇地池値恥致遅痴稚置緻竹畜逐蓄築秩茶着嫡仲虫沖忠抽注昼柱衷酎鋳駐著貯弔庁兆長挑帳彫釣頂鳥貼超腸跳徴嘲潮澄調聴懲捗沈珍朕賃鎮追椎通痛塚漬坪爪鶴低廷定底抵邸亭貞帝訂庭逓停偵堤提程艇締諦泥笛摘滴適敵溺迭哲鉄徹撤天典点展添転填伝殿斗妬徒途都渡塗賭土奴努度怒冬灯投東逃凍唐桃討透党悼盗塔搭棟湯痘登答等筒統稲踏糖頭謄藤騰動童道働銅導特得督徳篤毒独読栃突屯豚頓貪鈍曇丼那奈梨謎鍋南軟難二弐虹入乳尿任妊忍認寧熱年念捻粘燃悩納能脳農濃把波派破覇婆拝杯背肺俳配排敗廃輩売倍梅培媒買賠迫博薄麦漠縛爆箱箸肌八鉢発髪伐抜反半氾犯帆汎伴坂板版班般販斑飯搬煩頒範繁藩番蛮盤比皮妃否批彼披肥非卑飛疲秘被悲費碑罷避尾美備微鼻膝肘必泌筆姫氷表俵票評漂標苗秒病描猫浜貧賓頻敏瓶不夫父付布扶府怖阜訃負赴浮婦符普腐敷賦譜侮武部舞封風伏服幅復福腹複覆払沸仏物粉紛雰墳憤奮分文平兵併並柄塀弊蔽餅米壁璧癖蔑片辺返変偏遍編弁便勉歩保捕補舗母募墓慕暮簿方包芳邦奉抱放法泡胞俸倣峰砲訪報蜂飽褒縫亡乏忙坊妨忘房肪某紡傍帽棒貿貌暴膨謀頬北木朴牧睦僕墨撲没堀本奔翻凡盆麻摩磨魔毎妹枚埋幕膜枕又末抹満慢漫未魅密蜜脈妙民矛務無夢霧娘命迷冥盟銘滅免面綿麺茂模毛盲耗猛網黙紋冶夜野弥役約訳薬躍喩愉諭輸癒友有悠郵湧猶裕遊雄誘憂融優与予余誉預幼羊妖洋要容庸揚揺葉溶腰様瘍踊窯養擁謡抑沃浴欲翌翼拉裸羅来頼絡落酪辣乱覧濫藍欄吏里理裏履璃離立律慄柳流竜粒硫旅慮両良料涼猟量僚領寮療糧緑林厘倫輪瑠涙累塁類令礼冷励戻鈴零霊隷齢麗暦歴劣烈裂恋連廉練錬炉賂路露老弄郎浪廊楼漏籠六録麓論話賄脇惑枠湾腕￣＿仝―／＼◯Ｗえねふぶぷへべぺやれわゐゑんグケゲサザダナネヘベペ─━W&quot;</param>
+                    <param id="1" name="Width">16</param>
+                </action>
+                <action id="5" name="Set character width" sid="929679986896931" type="JP_SansFont">
+                    <param id="0" name="Character">&quot;　&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="208819799674590">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="819573921812650" type="System" />
+                <condition id="-18" name="On created" sid="864586634768837" type="JP_PapyrusFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="110138785849370" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;｜′|&quot;</param>
+                    <param id="1" name="Width">2</param>
+                </action>
+                <action id="5" name="Set character width" sid="356667559578935" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;：；！ｉｌ!i:;,l.&quot;</param>
+                    <param id="1" name="Width">3</param>
+                </action>
+                <action id="5" name="Set character width" sid="360665718881136" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;．・´‘’［］`&apos;1]}&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="444547319039733" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;，｀¨‐）〔〕｛｝″()[&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="804584968054234" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;゛゜（〉「」【】１I&lt;=&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="550561039634518" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;、＾ヽゝ“〈『°\&quot;&quot;rt5-&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="510122698066463" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;。〃”』↓Ｉ#$Paq2Rb3ScsDTd%EUu&amp;6FfGg8HXh9*Jjz+KkL\\M&gt;N^~/?Oo&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="482725596775722" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;ゞ∥‥§↑0@pQBC4eVv7WxYyZ&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="143883042071403" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;ヾ《＝＜ｎｐｑｒｔｕぅョAn_&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="784534528623910" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;〆》≠＞￥＄￠〒ｇｈｊｋｏｓｖｘｚュヮwm&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+                <action id="5" name="Set character width" sid="243127727214622" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;月肖〇…－∴♂♀＆＊５ＥＬｅｙぃィォットドャリヵ≒&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+                <action id="5" name="Set character width" sid="538465615093878" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;日目良？±×＃→♪２３６９ＦＨＪＰＲＳＵＶｂｄｆｍぇくしじりゥヶ&quot;</param>
+                    <param id="1" name="Width">13</param>
+                </action>
+                <action id="5" name="Set character width" sid="884203748561634" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;口旨自貞々＋÷￡％※７８ＢＤＫＭＮＴＸＺａｃぁぉきさっゃゅゎァェノヒビヨレロワ&quot;</param>
+                    <param id="1" name="Width">14</param>
+                </action>
+                <action id="5" name="Set character width" sid="166892379968609" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;胃引貝角巨巾己甲申川曽男中白冒由了呂∞←４ＣＧＹいぎこざもょらるコシジソゾタハピミメモラルヲン⑤⑨⑲&quot;</param>
+                    <param id="1" name="Width">15</param>
+                </action>
+                <action id="5" name="Set character width" sid="790904683812141" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;医一印因員円園凹乙開閣弓旧臼凶曲斤隅串兄幻向高克困山氏史司四寺叱爵商臣人図西則田刀当同凸内南肉閥鼻丙閉万勇用両臨労＿ー―≦≧℃＠ＡＯＱＷｗあぐけそてとどにまろゐゑオゴサセゼダツナニフヘベペホユヰヱ④⑥⑧⑪⑫⑬⑮⑰⑱⑳&quot;</param>
+                    <param id="1" name="Width">16</param>
+                </action>
+                <action id="5" name="Set character width" sid="798392560459891" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;哀握嵐囲維茨咽唄畝疫閲沿宴遠往押殴翁虞俺家嫁暇靴箇画回皆階蓋該概垣柿覚楽喝渇割株刈刊缶肝換管監緩憾簡韓鑑岩頑企伎危岐祈紀軌既起飢鬼規揮技宜偽疑儀犠喫客脚虐丘朽去拒虚許距御京況恐胸教郷境矯響仰暁凝局近筋僅禁錦襟区偶屈掘窟熊訓勲薫刑径型啓携詣稽警芸桁欠肩剣軒険嫌献遣憲謙玄弦現源厳枯個誇鼓顧五互呉悟碁誤工后更効侯恒荒香貢控梗慌港硬絞項鉱綱稿衡講乞号拷豪告刻国駒頃昆痕紺魂佐沙唆差詐鎖砕宰栽最債催塞載埼在剤崎削柵策錯冊刷刹拶撮皿桟惨賛私刺姉肢姿指施脂詞歯嗣詩飼雌賜諮示耳似侍磁璽鹿軸疾執湿嫉芝舎赦煮遮蛇尺借釈寂守狩寿授儒収十旬准所叙匠抄招唱紹鐘丈場色植身真親仁世制省逝醒斥占践潜鮮善阻組送造即促捉多打滞態代卓諾濁但炭団断値致注庁町釣嘲懲沈朕賃帝程艇笛冬討透陶棟動徳届豚難二燃波伯拍泊剥半阪畔般斑晩比扉罷避美匹猫不富侮武服幅聞兵陛弊別蔑片辺邦奉忙坊防剖帽牧没毎枕抹慢魅民霧門闇油悠余陽瘍浴利履僚輪隣暦恋廉炉賂朗和枠腕￣仝～◯０うえおせぞただちぢでへぺむゆをイエカキギクグスズチテヌパブボポマヤ①③⑦⑩⑭⑯&quot;</param>
+                    <param id="1" name="Width">17</param>
+                </action>
+                <action id="5" name="Set character width" sid="842881583462717" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;亜挨愛曖悪圧扱宛安案暗以衣依委威為畏尉異移萎偉椅彙意違慰遺緯域育壱逸芋姻院淫陰飲隠韻右宇羽雨鬱浦運雲永泳英映栄営詠影鋭衛易益液駅悦越謁延炎怨媛援煙猿鉛塩演縁艶汚王央応旺欧桜奥横岡屋億憶臆卸音恩温穏下化火加可仮何花佳価果河苛科架夏荷華菓貨渦過禍寡歌稼課蚊牙瓦我芽賀雅餓介灰会快戒改怪拐悔海界械絵塊楷解潰壊懐諧外劾害崖涯街慨骸各拡革格核殻郭較隔確獲嚇穫学岳額顎掛潟括活葛滑褐轄且釜鎌干甘汗完官冠巻看陥乾勘患貫寒喚堪敢棺款間閑勧寛幹感漢慣関歓還館環観艦丸含岸玩眼顔願机気希忌汽奇季記帰基寄亀喜幾期棋貴棄毀旗器畿輝機騎欺義戯擬議菊吉詰却逆九久及休吸求究泣急級糾宮救球給嗅窮牛居拠挙魚漁共叫狂享供協峡挟狭恭脅強橋鏡競驚業極玉均金菌勤琴緊謹銀句苦駆具惧愚空遇繰君軍郡群形系茎係契計恵掲渓経蛍敬景軽傾継慶憬憩鶏迎鯨隙劇撃激穴血決結傑潔犬件見券建研県倹兼拳健圏堅検絹権賢鍵繭顕験懸元言限原舷減戸古呼固股虎孤弧故庫湖雇錮午後娯語護公勾孔功巧広交光好江考行坑孝抗攻幸拘肯厚洪皇紅郊候校耕航降康黄喉溝構酵興鋼購合剛傲谷黒穀酷獄骨込今恨根婚混墾懇左査砂座挫才再災妻采彩採済祭斎細菜裁歳際材財罪作昨索酢搾咲札殺察擦雑三参蚕産傘散算酸残斬暫士子支止仕市矢死糸至伺志使始枝祉思師恣紙視紫試資誌摯字次児事治持時滋慈辞餌式識七失室漆質実写社車者射捨斜謝邪酌若弱手主朱取首殊珠酒腫種趣受呪需樹囚州舟秀周宗拾秋臭修袖終羞習週就衆集愁酬醜蹴襲汁充住柔重従渋銃獣縦叔祝宿淑粛縮塾熟出述術俊春瞬巡盾殉純循順準潤遵処初書庶暑署緒諸女如助序徐除小升少召床尚承昇松沼昭宵将消症祥称笑渉章訟勝掌晶焼焦硝粧詔証象傷奨照詳彰障憧衝賞償礁上冗条状乗城浄剰常情畳蒸縄壌嬢錠譲醸拭食殖飾触嘱織職辱尻心伸芯辛侵信津神唇娠振浸針深紳進森診寝慎新審震薪刃尽迅甚陣尋腎須水吹垂炊帥粋衰推酔遂睡穂随髄枢崇数据裾寸瀬是井正生成声姓征性青斉政星牲凄清盛婿晴勢聖誠精製誓静請整税夕石赤昔析席脊隻惜戚責跡積績籍切折拙窃接設雪摂節説舌絶千仙先宣専泉浅洗染扇栓旋船戦煎羨腺詮箋銭線遷選薦繊全前然禅漸膳繕狙祖租素措粗疎訴塑遡礎双壮早争走奏相荘草倉捜挿桑巣掃曹爽窓創喪痩葬装僧想層総遭槽踪操燥霜騒藻像増憎蔵贈臓束足息速側測俗族属賊続卒率存村孫尊損遜他汰妥唾堕惰駄太対体耐待怠胎退帯泰堆袋逮替貸隊戴大台第題滝宅択沢拓託濯達脱奪棚誰丹旦担単胆探淡短嘆端綻誕鍛段弾暖談壇地池知恥遅痴稚置緻竹畜逐蓄築秩窒茶着嫡仲虫沖宙忠抽昼柱衷酎鋳駐著貯丁弔兆長挑帳張彫眺頂鳥朝貼超腸跳徴潮澄調聴直勅捗珍陳鎮追椎墜通痛塚漬坪爪鶴低呈廷弟定底抵邸亭訂庭逓停偵堤提締諦泥的摘滴適敵溺迭哲鉄徹撤天典店点展添転填伝殿電斗吐妬徒途都渡塗賭土奴努度怒灯投豆東到逃倒凍唐島桃党悼盗塔搭湯痘登答等筒統稲踏糖頭謄藤闘騰洞胴堂童道働銅導瞳峠匿特得督篤毒独読栃突屯頓貪鈍曇丼那奈梨謎鍋軟尼弐匂虹入乳任妊忍認寧熱年念捻粘悩納能脳農濃把派破覇馬婆罵拝杯背肺俳配排敗廃輩売倍梅培陪媒買賠迫舶博薄麦漠縛爆箱箸畑肌八鉢発髪伐抜罰反氾犯帆汎伴判坂板版班販飯搬煩頒範繁藩番蛮盤皮妃否批彼披肥非卑飛疲秘被悲費碑尾眉備微膝肘必泌筆姫百氷表俵票評漂標苗秒病描品浜貧賓頻敏瓶夫父付布扶府怖阜附訃負赴浮婦符普腐敷膚賦譜部舞封風伏副復福腹複覆払沸仏物粉紛雰噴墳憤奮分文平併並柄塀幣蔽餅米壁璧癖返変偏遍編弁便勉歩保哺捕補舗母募墓慕暮簿方包芳宝抱放法泡胞俸倣峰砲崩訪報蜂豊飽褒縫亡乏妨忘房肪某紡望傍棒貿貌暴膨謀頬北木朴睦僕墨撲勃堀本奔翻凡盆麻摩磨魔妹枚昧埋幕膜又末満漫未味岬密蜜脈妙眠矛務無夢娘名命明迷冥盟銘鳴滅免面綿麺茂模毛妄盲耗猛網黙紋問冶夜野弥厄役約訳薬躍喩愉諭輸癒唯友有幽郵湧猶裕遊雄誘憂融優与予誉預幼羊妖洋要容庸揚揺葉溶腰様踊窯養擁謡曜抑沃欲翌翼拉裸羅来雷頼絡落酪辣乱卵覧濫藍欄吏里理痢裏璃離陸立律慄略柳流留竜粒隆硫侶旅虜慮料涼猟陵量領寮療瞭糧力緑林厘倫瑠涙累塁類令礼冷励戻例鈴零霊隷齢麗歴列劣烈裂連練錬路露老弄郎浪廊楼漏籠六録麓論話賄脇惑湾／＼かごすつづのべほぼみめやよれんアウガケゲヂネバプムヴ②&quot;</param>
+                    <param id="1" name="Width">18</param>
+                </action>
+                <action id="5" name="Set character width" sid="888714492583604" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;位吟杉尿がげずなねはひびぴふぶぽわザヅデ─&quot;</param>
+                    <param id="1" name="Width">19</param>
+                </action>
+                <action id="5" name="Set character width" sid="830685332009362" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;ぜぬばぱぷ━&quot;</param>
+                    <param id="1" name="Width">20</param>
+                </action>
+                <action id="5" name="Set character width" sid="819289218977892" type="JP_PapyrusFont">
+                    <param id="0" name="Character">&quot;　&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="760672402270698">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="392948057659766" type="System" />
+                <condition id="-18" name="On created" sid="536665594820615" type="JP_EnemyFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="947464620313824" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;lI&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="429288223473464" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;！：；i.:!&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="480294778492037" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;1rj,];[&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="588523845159898" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;。、・」「（）tfJ&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="100014774991044" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;ushkznL/\\*&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="207040331294904" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;57ypaxcvbEPFB?&gt;&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="618836252926539" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;239卜？qeodgRTSK&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="137434803297867" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;4680りょぅリョッゥヮ＊YUHZN&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+                <action id="5" name="Set character width" sid="662836893853601" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;くしじゅぃぉトノヒドャァィェ＜wmADXCV&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+                <action id="5" name="Set character width" sid="172784656889638" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;囲胃引印因閲円園凹岡回開閣間閑関弓旧臼凶曲巾串月圏固口甲向国困山四旨自囚出肖尚晶申図曽団中田当闘同凸内肉日白聞閉冒目門問闇由了呂圃昌畠閃閏閤吊うきこさたちとにまもよらゃっぁぇゎウコソツフミヨラレロワヲンビュォ＞G&quot;</param>
+                    <param id="1" name="Width">13</param>
+                </action>
+                <action id="5" name="Set character width" sid="822929375297566" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;医咽姻羽営易押乙卸加劾角割刈刊官勘勧期却宮巨胸局均勤区句屈窟訓刑劇剣幻己戸個勾功効拘剛刻駒頃剤削刷刹司伺刺詞嗣飼酌州周袖習宿旬殉初如助召匠宵剰常臣刃帥制夕切窃川仙占相創僧層即則側属男知宙弔町釣朝嘲勅的刀到倒動働匿届馬罵伯拍泊剥畑罰閥判眉匹品富副物別崩剖翻名明網約油勇幽幼用卵利留侶力励例列朗和乃伽佃俐劉劫勁勺勿匡卯吻嘗宕屑已巳巴摑昂昴智朋朔柏桐洲洵湘灼珀穹籾絢肋胡詢豹邑釧馴駕叩あいおけてはひほむゆるろぎぐげござだぢどばびぼアイエカキクスセタテニヌマメモヤゴゾヅブーQO&quot;</param>
+                    <param id="1" name="Width">14</param>
+                </action>
+                <action id="5" name="Set character width" sid="202144799443615" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;亜哀挨愛曖悪握圧扱宛嵐安案暗以衣位依委威為畏尉異移萎偉椅彙意違維慰遺緯域育一壱逸茨芋員院淫陰飲隠韻右宇雨唄鬱畝浦運雲永泳英映栄詠影鋭衛疫益液駅悦越謁延沿炎怨宴媛援煙猿遠鉛塩演縁艶汚王央応往旺欧殴桜翁奥横屋億憶臆虞俺音恩温穏下化火可仮何花佳価果河苛科架夏家荷華菓貨渦過嫁暇禍靴寡歌箇稼課蚊牙瓦我画芽賀雅餓介灰会快戒改怪拐悔海界皆械絵階塊楷解潰壊懐諧貝外害崖涯街慨蓋該概骸垣柿各拡革格核殻郭覚較隔確獲嚇穫学岳楽額顎掛潟括活喝渇葛滑褐轄且株釜鎌干甘汗缶完肝冠巻看陥乾患貫寒喚堪換敢棺款寛幹感漢慣管歓監緩憾還館環簡観韓艦鑑丸含岸岩玩眼頑顔願企伎危机気岐希忌汽奇祈季紀軌既記起飢鬼帰基寄規亀喜幾揮棋貴棄毀旗器畿輝機騎技宜偽欺義疑儀戯擬犠議菊吉喫詰客脚逆虐九久及丘休吸朽求究泣急級糾救球給嗅窮牛去居拒拠挙虚許距魚御漁共叫狂京享供協況峡挟狭恐恭脅強教郷境橋矯鏡競響驚仰暁業凝極玉斤近金菌琴筋僅禁緊錦謹襟吟銀苦駆具惧愚空偶遇隅掘熊繰君勲薫軍郡群兄形系径茎係型契計恵啓掲渓経蛍敬景軽傾携継詣慶憬稽憩警鶏芸迎鯨隙撃激桁欠穴血決結傑潔犬件見券肩建研県倹兼拳軒健険堅検嫌献絹遣権憲賢謙鍵繭顕験懸元玄言弦限原現舷減源厳古呼股虎孤弧故枯庫湖雇誇鼓錮顧五互午呉後娯悟碁語誤護工公孔巧広交光后好江考行坑孝抗攻更幸肯侯厚恒洪皇紅荒郊香候校耕航貢降高康控梗黄喉慌港硬絞項溝鉱構綱酵稿興衡鋼講購乞号合拷傲豪克告谷黒穀酷獄骨込今昆恨根婚混痕紺魂墾懇左佐沙査砂唆差詐鎖座挫才再災妻采砕宰栽彩採済祭斎細菜最裁債催塞歳載際埼在材財罪崎作昨柵索策酢搾錯咲冊札拶殺察撮擦雑皿三参桟蚕惨産傘散算酸賛残斬暫士子支止氏仕史市矢死糸至志私使始姉枝祉肢姿思指施師恣紙脂視紫歯試詩資誌雌摯賜諮示字寺次耳似児事侍治持時滋慈辞磁餌璽鹿式識軸七叱失室疾執湿嫉漆質実芝写社車舎者射捨赦斜煮遮謝邪蛇尺借釈爵若弱寂手主守朱取狩首殊珠酒腫種趣寿受呪授需儒樹収舟秀宗拾秋臭修終羞週就衆集愁酬醜蹴襲十汁充住柔重従渋銃獣縦叔祝淑粛縮塾熟述術俊春瞬巡盾准純循順準潤遵処所書庶暑署緒諸女序叙徐除小升少床抄招承昇松沼昭将消症祥称笑唱商渉章紹訟勝掌焼焦硝粧詔証象傷奨照詳彰障憧衝賞償礁鐘上丈冗条状乗城浄情場畳蒸縄壌嬢錠譲醸色拭食植殖飾触嘱織職辱尻心伸芯身辛侵信津神唇娠振浸真針深紳進森診寝慎新審震薪親人仁尽迅甚陣尋腎須水吹垂炊粋衰推酔遂睡穂随髄枢崇数据杉裾寸瀬是井世正生成西声姓征性青斉政星牲省凄逝清盛婿晴勢聖誠精製誓静請整醒税斥石赤昔析席脊隻惜戚責跡積績籍折拙接設雪摂節説舌絶千先宣専泉浅洗染扇栓旋船戦煎羨腺詮践箋銭潜線遷選薦繊鮮全前善然禅漸膳繕狙阻祖租素措粗組疎訴塑遡礎双壮早争走奏荘草送倉捜挿桑巣掃曹爽窓喪痩葬装想総遭槽踪操燥霜騒藻造像増憎蔵贈臓束足促息捉速測俗族賊続卒率存村孫尊損遜他多汰打妥唾堕惰駄太対体耐待怠胎退帯泰堆袋逮替貸隊滞態戴大代台第題滝宅択沢卓拓託濯諾濁但達脱奪棚誰丹旦担単炭胆探淡短嘆端綻誕鍛段断弾暖談壇地池値恥致遅痴稚置緻竹畜逐蓄築秩窒茶着嫡仲虫沖忠抽注昼柱衷酎鋳駐著貯丁庁兆長挑帳張彫眺頂鳥貼超腸跳徴潮澄調聴懲直捗沈珍朕陳賃鎮追椎墜通痛塚漬坪爪鶴低呈廷弟定底抵邸亭貞帝訂庭逓停偵堤提程艇締諦泥笛摘滴適敵溺迭哲鉄徹撤天典店点展添転填伝殿電斗吐妬徒途都渡塗賭土奴努度怒冬灯投豆東逃凍唐島桃討透党悼盗陶塔搭棟湯痘登答等筒統稲踏糖頭謄藤騰洞胴堂童道銅導瞳峠特得督徳篤毒独読栃突屯豚頓貪鈍曇丼那奈梨謎鍋南軟難二尼弐匂虹入乳尿任妊忍認寧熱年念捻粘燃悩納能脳農濃把波派破覇婆拝杯背肺俳配排敗廃輩売倍梅培陪媒買賠迫舶博薄麦漠縛爆箱箸肌八鉢発髪伐抜反半氾犯帆汎伴坂阪板版班畔般販斑飯搬煩頒範繁藩晩番蛮盤比皮妃否批彼披肥非卑飛疲秘被悲扉費碑罷避尾美備微鼻膝肘必泌筆姫百氷表俵票評漂標苗秒病描猫浜貧賓頻敏瓶不夫父付布扶府怖阜附訃負赴浮婦符普腐敷膚賦譜侮武部舞封風伏服幅復福腹複覆払沸仏粉紛雰噴墳憤奮分文丙平兵併並柄陛塀幣弊蔽餅米壁璧癖蔑片辺返変偏遍編弁便勉歩保哺捕補舗母募墓慕暮簿方包芳邦奉宝抱放法泡胞俸倣峰砲訪報蜂豊飽褒縫亡乏忙坊妨忘防房肪某紡望傍帽棒貿貌暴膨謀頬北木朴牧睦僕墨撲没勃堀本奔凡盆麻摩磨魔毎妹枚昧埋幕膜枕又末抹万満慢漫未味魅岬密蜜脈妙民眠矛務無夢霧娘命迷冥盟銘鳴滅免面綿麺茂模毛妄盲耗猛黙紋冶夜野弥厄役訳薬躍喩愉諭輸癒唯友有悠郵湧猶裕遊雄誘憂融優与予余誉預羊妖洋要容庸揚揺葉陽溶腰様瘍踊窯養擁謡曜抑沃浴欲翌翼拉裸羅来雷頼絡落酪辣乱覧濫藍欄吏里理痢裏履璃離陸立律慄略柳流竜粒隆硫旅虜慮両良料涼猟陵量僚領寮療瞭糧緑林厘倫輪隣臨瑠涙累塁類令礼冷戻鈴零霊隷齢麗暦歴劣烈裂恋連廉練錬炉賂路露老労弄郎浪廊楼漏籠六録麓論話賄脇惑枠湾腕丑丞之乎也云亘些亦亥亨亮仔伊伍佑伶侃侑俄俠俣倭俱倦倖偲傭儲允兎兜其冴凌凜凧凪凰凱函匁廿卿厨厩叉叡叢叶只吾吞哉哨啄哩喬喧喰喋嘩嘉噌噂圭坐尭坦埴堰堺堵塙壕壬夷奄奎套娃姪姥娩嬉孟宏宋宥寅寓寵尖尤峨峻崚嵯嵩嶺巌巫巷巽帖幌幡庄庇庚庵廟廻弘弛彗彦彪彬徠忽怜恢恰恕悌惟惚悉惇惹惺惣慧憐戊或戟托按挺挽掬捲捷捺捧掠揃摺撒撰撞播撫擢孜敦斐斡斧斯於旭昊昏晏晃晒晋晟晦晨暉暢曙曝曳杏杖杜李杭杵杷枇柑柴柘柊柾柚桧栞桔桂栖栗梧梓梢梛梯桶梶椛梁棲椋椀楯楚楕椿楠楓椰楢楊榎樺榊榛槙槍槌樫槻樟樋橘樽橙檎檀櫂櫛櫓欣欽歎此殆毅毘毬汀汝汐汲沌沓沫洸洛浩浬淵淳渚淀淋渥湊湛溢滉溜漱漕漣澪濡瀕灘灸烏焰焚煌煤煉熙燕燎燦燭燿爾牒牟牡牽犀狼猪獅玖珂珈珊玲琢琉瑛琥琶琵琳瑚瑞瑶瑳瓜瓢甥甫畢疋疏皐皓眸瞥矩砦砥砧硯碓碗碩碧磐磯祇祢祐祷禄禎禽禾秦秤稀稔稟稜穣穿窄窪窺竣竪竺竿笈笹笙笠筈筑箕箔篇篠簞簾粥粟糊紘紗紐絃紬絆綺綜綴緋綾綸縞徽繫繡纂纏羚翔翠耀而耶耽聡肇肴胤脩腔脹膏臥舜舵芥芹芭芙芦苑茄苔苺茅茉茸茜莞荻莫莉菅菫菖萄菩萌萊菱葦葵萱葺萩董葡蓑蒔蒐蒼蒲蒙蓉蓮蔭蔣蔦蓬蔓蕎蕨蕉蕃蕪薙蕾蕗藁薩蘇蘭蝦蝶螺蟬蟹蠟衿袈袴裡裟裳襖訊訣註詫誼諏諄諒謂諺讃貰賑赳跨蹄蹟輔輯輿轟辰辻迂迄辿迪迦這逞逗逢遥遁遼祁郁鄭酉醇醐醍醬釉釘銑鋒鋸錘錐錆錫鍬鎧阿陀隈隼雀雁雛雫霞靖鞄鞍鞘鞠鞭頁頌頗顚颯饗馨馳駿驍魁魯鮎鯉鯛鰯鱒鱗鳩鳶鳳鴨鴻鵜鵬鷗鷲鷺鷹麒麟麿黎黛鼎噓覗頷嚙洩搔腿壺祀歪媚疼賤截綬揆躇躊狽撥謳捏饉屛恍膠疇謗乖誹聘憚えかすせそつなぬねのふへみめやれわをんがずぜぞづでぶべオケサシチナネハヘホムユルガギグゲザジズゼダヂデバベボ～M&quot;</param>
+                    <param id="1" name="Width">15</param>
+                </action>
+                <action id="5" name="Set character width" sid="458557851554100" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;W&quot;</param>
+                    <param id="1" name="Width">16</param>
+                </action>
+                <action id="5" name="Set character width" sid="959901192888210" type="JP_EnemyFont">
+                    <param id="0" name="Character">&quot;　&quot;</param>
+                    <param id="1" name="Width">12</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="894107938540105">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="688370394586303" type="System" />
+                <condition id="-18" name="On created" sid="456250620700449" type="StatFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="585493864075935" type="EnemyFont">
+                    <param id="0" name="Character">&quot; &quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="156580505029119" type="EnemyFont">
+                    <param id="0" name="Character">&quot;!&apos;.:Iil|&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+                <action id="5" name="Set character width" sid="933032479376450" type="EnemyFont">
+                    <param id="0" name="Character">&quot;,;&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="490665293110342" type="EnemyFont">
+                    <param id="0" name="Character">&quot;1[]`j&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="896563504595273" type="EnemyFont">
+                    <param id="0" name="Character">&quot;\&quot;&quot;(){}&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="301076271191025" type="EnemyFont">
+                    <param id="0" name="Character">&quot;*J^r&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="908789755226510" type="EnemyFont">
+                    <param id="0" name="Character">&quot;/2356789LZ\\fghknstuz&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="419355978806845" type="EnemyFont">
+                    <param id="0" name="Character">&quot;$%&amp;+-04&lt;=&gt;?@ABCDEFGHKMNOPQRSTUVWXY_abcdemopqvwxy~&quot;</param>
+                    <param id="1" name="Width">10</param>
+                </action>
+                <action id="5" name="Set character width" sid="826440108104199" type="EnemyFont">
+                    <param id="0" name="Character">&quot;#&quot;</param>
+                    <param id="1" name="Width">11</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

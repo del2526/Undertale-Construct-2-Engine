@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Util</name>
+    <events>
+        <event-group description="" sid="452101805374800" title="UtilFunctions">
+            <sub-events>
+                <comment>hex2dec by NatuMikqn</comment>
+                <event-block sid="623241196326944">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="272296907147362" type="System" />
+                        <condition id="6" name="Is empty" sid="355436602567777" type="HexList" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="536804488453780" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;0&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="883176569274925" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="735613671645785" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;2&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="141785645405154" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;3&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="599176429444248" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;4&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="173758588066412" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;5&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="940352705091642" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;6&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="638208991825793" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;7&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="386531054262010" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;8&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="644019372565044" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;9&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="987210076070553" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;a&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="595940739258792" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;b&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="970767337858804" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;c&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="189142301817684" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;d&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="930762148290127" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;e&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="503026860364624" type="HexList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;f&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="516090355231693">
+                    <conditions>
+                        <condition id="0" name="On function" sid="413157779308002" type="Function">
+                            <param id="0" name="Name">&quot;hex2dec&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="hextext" sid="798290906696520" static="0" type="text"></variable>
+                        <variable constant="0" name="hex" sid="350592598927088" static="0" type="text"></variable>
+                        <variable constant="0" name="loopcount" sid="810020872216894" static="0" type="number">0</variable>
+                        <variable comment="結果" constant="0" name="dec" sid="331104518977688" static="0" type="number">0</variable>
+                        <event-block sid="700849980666013">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="703400976995940" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="712465690515264" type="System">
+                                    <param id="0" name="Variable">hextext</param>
+                                    <param id="1" name="Value">lowercase(Function.Param(0))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="236588766302247" type="System">
+                                    <param id="0" name="Variable">loopcount</param>
+                                    <param id="1" name="Value">len(hextext)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="338975011037921">
+                            <conditions>
+                                <condition id="-10" name="For" sid="530756883385398" type="System">
+                                    <param id="0" name="Name">&quot;HexRepeat&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">loopcount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="719590704207785" type="System">
+                                    <param id="0" name="Variable">hex</param>
+                                    <param id="1" name="Value">lowercase(mid(hextext, loopindex(&quot;HexRepeat&quot;) - 1, 1))</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="527092429286637" type="System">
+                                    <param id="0" name="Variable">dec</param>
+                                    <param id="1" name="Value">HexList.IndexOf(hex) * 16 ^ (loopcount - loopindex(&quot;HexRepeat&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="353919457041571">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="374322447036415" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="794148991683918" type="Function">
+                                    <param id="0" name="Value">dec</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>GetRot (Return number)&#x0D;&#x0A;Param0 : x&#x0D;&#x0A;Param1 : y&#x0D;&#x0A;Param2 : center x&#x0D;&#x0A;Param3 : center y&#x0D;&#x0A;Param4 : angle&#x0D;&#x0A;by NatuMikqn</comment>
+                <event-block sid="797856353820532">
+                    <conditions>
+                        <condition id="0" name="On function" sid="836066423520947" type="Function">
+                            <param id="0" name="Name">&quot;GetRotX&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="xx" sid="450152504474375" static="0" type="number">0</variable>
+                        <variable constant="0" name="yy" sid="889097038419429" static="0" type="number">0</variable>
+                        <event-block sid="615342661976306">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="854617442159617" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="244095279247718" type="System">
+                                    <param id="0" name="Variable">xx</param>
+                                    <param id="1" name="Value">float(Function.Param(0)) - float(Function.Param(2))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="496261616349162" type="System">
+                                    <param id="0" name="Variable">yy</param>
+                                    <param id="1" name="Value">float(Function.Param(1)) - float(Function.Param(3))</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="749676322896707" type="Function">
+                                    <param id="0" name="Value">float(Function.Param(2)) + xx * cos(float(Function.Param(4))) - yy * sin(float(Function.Param(4)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="800950596416550">
+                    <conditions>
+                        <condition id="0" name="On function" sid="438447151584594" type="Function">
+                            <param id="0" name="Name">&quot;GetRotY&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="xx" sid="644983324738046" static="0" type="number">0</variable>
+                        <variable constant="0" name="yy" sid="571584962756631" static="0" type="number">0</variable>
+                        <event-block sid="475659394342765">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="586823433375142" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="183631578847217" type="System">
+                                    <param id="0" name="Variable">xx</param>
+                                    <param id="1" name="Value">float(Function.Param(0)) - float(Function.Param(2))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="367527312578258" type="System">
+                                    <param id="0" name="Variable">yy</param>
+                                    <param id="1" name="Value">float(Function.Param(1)) - float(Function.Param(3))</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="384513923849188" type="Function">
+                                    <param id="0" name="Value">float(Function.Param(3)) + yy * cos(float(Function.Param(4))) + xx * sin(float(Function.Param(4)))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>GetColor (Return number)&#x0D;&#x0A;Param0 : color code (#xxxxxx)&#x0D;&#x0A;Param1 : get rgb (0 = red, 1 = green, 2 = blue)&#x0D;&#x0A;by NatuMikqn</comment>
+                <event-block sid="302148696207899">
+                    <conditions>
+                        <condition id="0" name="On function" sid="625732475379360" type="Function">
+                            <param id="0" name="Name">&quot;GetColor&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="872624503655864" type="Function">
+                            <param id="0" name="Value">Function.Call(&quot;hex2dec&quot;, mid(Function.Param(0), 1 + Function.Param(1) * 2, 2)) / 255 * 100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

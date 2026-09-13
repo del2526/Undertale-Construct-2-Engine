@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>WindowManager</name>
+    <events>
+        <variable constant="0" name="BorderFunction" sid="250040617696178" static="0" type="number">1</variable>
+        <variable constant="0" name="BorderMode" sid="540306306628632" static="0" type="number">0</variable>
+        <variable constant="0" name="BorderMem" sid="728238905146586" static="0" type="number">0</variable>
+        <variable comment="画面幅" constant="1" name="GAME_WIDTH" sid="724181049558458" static="0" type="number">640</variable>
+        <variable comment="画面高さ" constant="1" name="GAME_HEIGHT" sid="796742705245644" static="0" type="number">480</variable>
+        <variable comment="ボーダー無効化" constant="1" name="BORDER_STATE_DISABLE" sid="512812431871535" static="0" type="number">0</variable>
+        <variable comment="ボーダー有効化（ダイナミック）" constant="1" name="BORDER_STATE_ENABLE_DYNAMIC" sid="724961025876633" static="0" type="number">1</variable>
+        <variable comment="ボーダー有効化" constant="1" name="BORDER_STATE_ENABLE" sid="529505600376107" static="0" type="number">2</variable>
+        <variable comment="画面左上端X座標" constant="1" name="BORDER_LEFTTOP_X" sid="529371101914145" static="0" type="number">160</variable>
+        <variable comment="画面左上端Y座標" constant="1" name="BORDER_LEFTTOP_Y" sid="155586836297650" static="0" type="number">30</variable>
+        <event-block sid="235721213467843">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="876808430105605" type="System" />
+            </conditions>
+            <actions>
+                <action id="-49" name="Set minimum framerate" sid="795487769186321" type="System">
+                    <param id="0" name="Minimum FPS">0</param>
+                </action>
+                <action id="6" name="Set max FPS" sid="475789581907169" type="C2EX">
+                    <param id="0" name="Max FPS">Setting_MaxFPS = 0 ? 0 : Setting_MaxFPS = 1 ? 60 : 30&#x0D;&#x0A;</param>
+                </action>
+                <action id="7" name="Set window title" sid="992006198472195" type="C2EX">
+                    <param id="0" name="Title">projectname</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="572959293886317">
+                    <conditions>
+                        <condition id="-18" name="Is in preview" sid="911463130930237" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set window title" sid="495804980343985" type="C2EX">
+                            <param id="0" name="Title">projectname&amp;&quot; (Construct 2 preview)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>SpaceキーでBorder切り替え</comment>
+        <event-block sid="284787479131089">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="722700139634576" type="Keyboard">
+                    <param id="0" name="Key">32</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="554362833384887" type="System">
+                    <param id="0" name="Variable">BorderMode</param>
+                    <param id="1" name="Value">1 - BorderMode</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="711134126907515">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="693791141947481" type="System">
+                            <param id="0" name="Variable">BorderFunction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="993883782321666" type="Function">
+                            <param id="0" name="Name">&quot;BorderStateChange&quot;</param>
+                            <param id="1" name="Parameter {n}">BORDER_STATE_DISABLE</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="661005485207619">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="234941739063670" type="System">
+                            <param id="0" name="Variable">BorderFunction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="372241160883629" type="Function">
+                            <param id="0" name="Name">&quot;BorderStateChange&quot;</param>
+                            <param id="1" name="Parameter {n}">BORDER_STATE_ENABLE_DYNAMIC</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="782810457363342">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="727317705316368" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="305071015294699" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="875055718206818" type="System">
+                            <param id="0" name="Variable">BorderFunction</param>
+                            <param id="1" name="Value">1 - BorderMode</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="841309582318282" title="WindowManage">
+            <sub-events>
+                <comment>フルスクリーン変更</comment>
+                <event-block sid="318621179364159">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="956772643538280" type="Keyboard">
+                            <param id="0" name="Key">115</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="592909976160754">
+                            <conditions>
+                                <condition id="2" name="Is fullscreen" sid="744420064327467" type="C2EX" />
+                            </conditions>
+                            <actions>
+                                <action id="16" name="Cancel fullscreen" sid="277155015454202" type="C2EX" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="907254666286280">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="639925091157712" type="System">
+                                            <param id="0" name="Variable">BorderMem</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="789355618964657" type="Function">
+                                            <param id="0" name="Name">&quot;SetWindowSize&quot;</param>
+                                            <param id="1" name="Parameter {n}">640{###}480</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="752787345963806">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="477910796003382" type="System">
+                                            <param id="0" name="Variable">BorderMem</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="791017018438546" type="Function">
+                                            <param id="0" name="Name">&quot;SetWindowSize&quot;</param>
+                                            <param id="1" name="Parameter {n}">960{###}540</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="317312924956473">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="398689348715019" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="15" name="Request fullscreen" sid="843356423200755" type="C2EX">
+                                    <param id="0" name="Mode">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>ゲーム簡易リスタート</comment>
+                <event-block sid="714008093391517">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="415087837728736" type="Keyboard">
+                            <param id="0" name="Key">113</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="862214930402195" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;Loader&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="785938246261060" type="Function">
+                            <param id="0" name="Name">&quot;GameF2&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>ゲームリスタート</comment>
+                <event-block sid="499078431370892">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="963559236814075" type="Keyboard">
+                            <param id="0" name="Key">112</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Reload" sid="458130041839590" type="Browser" />
+                    </actions>
+                </event-block>
+                <event-block sid="565878323540453">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="604920229190981" type="Keyboard">
+                            <param id="0" name="Key">123</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="26" name="Show dev tools" sid="319675473169814" type="NWjs" />
+                    </actions>
+                </event-block>
+                <event-block sid="751148447938940">
+                    <conditions>
+                        <condition id="0" name="On function" sid="345061767755194" type="Function">
+                            <param id="0" name="Name">&quot;SetWindowSize&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="TempWidth" sid="357303813717222" static="0" type="number">0</variable>
+                        <variable constant="0" name="TempHeight" sid="331648074205591" static="0" type="number">0</variable>
+                        <event-block sid="709086535620733">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="936723949767549" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="289220174028266" type="System">
+                                    <param id="0" name="Variable">TempWidth</param>
+                                    <param id="1" name="Value">int(Function.Param(0))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="501770872030712" type="System">
+                                    <param id="0" name="Variable">TempHeight</param>
+                                    <param id="1" name="Value">int(Function.Param(1))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="688491112067345">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is in WebView2 wrapper" sid="584533679623807" type="C2EX" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="884094925993643" type="System">
+                                            <param id="0" name="Variable">TempWidth</param>
+                                            <param id="1" name="Value">16</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="162210290760441" type="System">
+                                            <param id="0" name="Variable">TempHeight</param>
+                                            <param id="1" name="Value">39</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="283387968168282">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="123975236966668" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="10" name="Set size and center" sid="225397710583620" type="C2EX">
+                                    <param id="0" name="Width">TempWidth</param>
+                                    <param id="1" name="Height">TempHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="190818725570283" title="Borders">
+            <sub-events>
+                <event-block sid="528960553702972">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="199540638604898" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="627631167278646" type="Function">
+                            <param id="0" name="Name">&quot;BorderStateChange&quot;</param>
+                            <param id="1" name="Parameter {n}">BorderMode</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="561229016411530">
+                            <conditions>
+                                <condition id="2" name="Is fullscreen" sid="414908710577803" type="C2EX" />
+                            </conditions>
+                            <actions>
+                                <action id="15" name="Request fullscreen" sid="743538104234590" type="C2EX">
+                                    <param id="0" name="Mode">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Border表示&#x0D;&#x0A;Param0 = Enable?</comment>
+                <event-block sid="962921789856194">
+                    <conditions>
+                        <condition id="0" name="On function" sid="150155779246868" type="Function">
+                            <param id="0" name="Name">&quot;BorderStateChange&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="544273070571854" type="System">
+                            <param id="0" name="Variable">BorderMode</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="166809169640412">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="513394624419478" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">BORDER_STATE_DISABLE</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="485787635020924" type="Border" />
+                                <action id="-9" name="Destroy" sid="550588465882419" type="BorderMask" />
+                                <action id="-28" name="Set canvas size" sid="270485922886441" type="System">
+                                    <param id="0" name="Width">GAME_WIDTH</param>
+                                    <param id="1" name="Height">GAME_HEIGHT</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="378641935400394" type="System">
+                                    <param id="0" name="Variable">CenterX</param>
+                                    <param id="1" name="Value">OriginalWindowWidth / 2 </param>
+                                </action>
+                                <action id="-9" name="Set value" sid="374038834729767" type="System">
+                                    <param id="0" name="Variable">CenterY</param>
+                                    <param id="1" name="Value">OriginalWindowHeight / 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="559595218055051">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="848065640372299" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set canvas size" sid="139361358891727" type="System">
+                                    <param id="0" name="Width">GAME_WIDTH + BORDER_LEFTTOP_X * 2</param>
+                                    <param id="1" name="Height">GAME_HEIGHT + BORDER_LEFTTOP_Y * 2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="496918798014964" type="System">
+                                    <param id="0" name="Variable">CenterX</param>
+                                    <param id="1" name="Value">OriginalWindowWidth / 2 -BORDER_LEFTTOP_X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="301260921499353" type="System">
+                                    <param id="0" name="Variable">CenterY</param>
+                                    <param id="1" name="Value">OriginalWindowHeight / 2 - BORDER_LEFTTOP_Y</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="595780958951734" type="System">
+                                    <param id="0" name="Object to create">Border</param>
+                                    <param id="1" name="Layer">&quot;Absolute&quot;</param>
+                                    <param id="2" name="X">GAME_WIDTH / 2 + BORDER_LEFTTOP_X</param>
+                                    <param id="3" name="Y">GAME_HEIGHT / 2 + BORDER_LEFTTOP_Y</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>480/960&#x0D;&#x0A;270/540&#x0D;&#x0A;642/960&#x0D;&#x0A;482/540</comment>
+                                <event-block sid="276578925488106">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="109401302333157" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">BORDER_STATE_ENABLE_DYNAMIC</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="360343773958618" type="System">
+                                            <param id="0" name="Object to create">BorderMask</param>
+                                            <param id="1" name="Layer">&quot;Absolute&quot;</param>
+                                            <param id="2" name="X">GAME_WIDTH / 2 + BORDER_LEFTTOP_X</param>
+                                            <param id="3" name="Y">GAME_HEIGHT / 2 + BORDER_LEFTTOP_Y</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="912654424661375" type="BorderMask">
+                                            <param id="0" name="Effect">&quot;Clipping&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">(GAME_WIDTH / 2 + BORDER_LEFTTOP_X) / (GAME_WIDTH + BORDER_LEFTTOP_X * 2)</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="537774181778152" type="BorderMask">
+                                            <param id="0" name="Effect">&quot;Clipping&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">(GAME_HEIGHT / 2 + BORDER_LEFTTOP_Y) / (GAME_HEIGHT + BORDER_LEFTTOP_Y * 2)</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="296652948729789" type="BorderMask">
+                                            <param id="0" name="Effect">&quot;Clipping&quot;</param>
+                                            <param id="1" name="Parameter index">2</param>
+                                            <param id="2" name="Value">(GAME_WIDTH + 2) / (GAME_WIDTH + BORDER_LEFTTOP_X * 2)</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="933414928740662" type="BorderMask">
+                                            <param id="0" name="Effect">&quot;Clipping&quot;</param>
+                                            <param id="1" name="Parameter index">3</param>
+                                            <param id="2" name="Value">(GAME_HEIGHT + 2) / (GAME_HEIGHT + BORDER_LEFTTOP_Y * 2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="404144418887550">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="447702309993187" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">BORDER_STATE_ENABLE</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="875642886363990" type="Border">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="623600662730384">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="946455015195985" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Scroll to position" sid="698088379187298" type="System">
+                                    <param id="0" name="X">CenterX</param>
+                                    <param id="1" name="Y">CenterY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="253211491913559">
+                            <conditions>
+                                <condition id="2" name="Is fullscreen" sid="623656222141635" type="C2EX" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="741347278137943">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="896803418378555" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">BORDER_STATE_DISABLE</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="726098763754644" type="System">
+                                            <param id="0" name="Variable">BorderMem</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="282161807923591">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="897876756251992" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="199981491818133" type="System">
+                                            <param id="0" name="Variable">BorderMem</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="708574311210428">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="422657879697948" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="232627956401611" type="System">
+                                    <param id="0" name="Variable">BorderMem</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="237951675176508">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="675276794301250" type="Function">
+                                            <param id="0" name="Index">0</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">BORDER_STATE_DISABLE</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="754080599821951" type="Function">
+                                            <param id="0" name="Name">&quot;SetWindowSize&quot;</param>
+                                            <param id="1" name="Parameter {n}">GAME_WIDTH{###}GAME_HEIGHT</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="708585209684637">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="728321814752377" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="874592609365107" type="Function">
+                                            <param id="0" name="Name">&quot;SetWindowSize&quot;</param>
+                                            <param id="1" name="Parameter {n}">GAME_WIDTH + BORDER_LEFTTOP_X * 2{###}GAME_HEIGHT + BORDER_LEFTTOP_Y * 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>スクリーンショット</comment>
+        <event-block sid="987669813253966">
+            <conditions>
+                <condition id="3" name="On key released" sid="170617347728015" type="Keyboard">
+                    <param id="0" name="Key">72</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-27" name="Snapshot canvas" sid="394815253664467" type="System">
+                    <param id="0" name="Format">0</param>
+                    <param id="1" name="JPEG quality">75</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>スクリーンショットされたものを保存</comment>
+        <event-block sid="781115756441098">
+            <conditions>
+                <condition id="-26" name="On canvas snapshot" sid="162285551741268" type="System" />
+            </conditions>
+            <actions>
+                <action id="11" name="Download Base64 data" sid="820216148995328" type="C2EX">
+                    <param id="0" name="Base64 Data">CanvasSnapshot</param>
+                    <param id="1" name="Filename">&quot;Screenshot_&quot; &amp; zeropad(Date.Year, 4) &amp; &quot;-&quot; &amp; zeropad(Date.Month, 2) &amp; &quot;-&quot; &amp; zeropad(Date.Date, 2) &amp; &quot;_&quot; &amp; zeropad(Date.Hours, 2) &amp; &quot;-&quot; &amp; zeropad(Date.Minutes, 2) &amp; &quot;-&quot; &amp; zeropad(Date.Seconds, 2) &amp; &quot;.png&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

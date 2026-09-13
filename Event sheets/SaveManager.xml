@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SaveManager</name>
+    <events>
+        <event-block sid="457466282358587">
+            <conditions>
+                <condition id="0" name="On function" sid="238966758480253" type="Function">
+                    <param id="0" name="Name">&quot;SaveUserData&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="529507772945610" type="SaveDataDict">
+                    <param id="0" name="Key">&quot;SansFightStep&quot;</param>
+                    <param id="1" name="Value">Area_UserVars.SansFightStep</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="240591645490858">
+            <conditions>
+                <condition id="0" name="On function" sid="214327048292377" type="Function">
+                    <param id="0" name="Name">&quot;LoadUserData&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="224123300084563" type="Area_UserVars">
+                    <param id="0" name="Instance variable">SansFightStep</param>
+                    <param id="1" name="Value">SaveDataDict.Get(&quot;SansFightStep&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="987157841988646" title="SystemSaveData">
+            <sub-events>
+                <variable constant="0" name="SaveDataName" sid="193962585406306" static="1" type="text"></variable>
+                <event-block sid="254531340988386">
+                    <conditions>
+                        <condition id="0" name="On function" sid="699202400332745" type="Function">
+                            <param id="0" name="Name">&quot;SaveData&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Clear" sid="614528554185322" type="SaveDataDict" />
+                        <action id="0" name="Call function" sid="643495167105165" type="Function">
+                            <param id="0" name="Name">&quot;SaveSystemData&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="619584076491657" type="Function">
+                            <param id="0" name="Name">&quot;SaveUserData&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set item" sid="407782692427749" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SaveData&quot; &amp; Area_SystemVars.SaveSlot</param>
+                            <param id="1" name="Value">SaveDataDict.AsJSON</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="924218765955572" type="System">
+                            <param id="0" name="Variable">SaveDataName</param>
+                            <param id="1" name="Value">&quot;SaveData&quot; &amp; Area_SystemVars.SaveSlot</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>セーブ完了時 OnSaveComplete をトリガー</comment>
+                <event-block sid="958948040034727">
+                    <conditions>
+                        <condition id="0" name="On item set" sid="597829323363136" type="LocalStorage">
+                            <param id="0" name="Key">SaveDataName</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="965541430619615" type="Function">
+                            <param id="0" name="Name">&quot;OnDataSaveComplete&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="706399885847101">
+                    <conditions>
+                        <condition id="0" name="On function" sid="166163583406199" type="Function">
+                            <param id="0" name="Name">&quot;SaveSystemData&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="743698270655082" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_PlayerName&quot;</param>
+                            <param id="1" name="Value">PlayerName</param>
+                        </action>
+                        <action id="0" name="Add key" sid="439995535026560" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_HP&quot;</param>
+                            <param id="1" name="Value">HP</param>
+                        </action>
+                        <action id="0" name="Add key" sid="153981769420955" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_MaxHP&quot;</param>
+                            <param id="1" name="Value">MaxHP</param>
+                        </action>
+                        <action id="0" name="Add key" sid="882386555852027" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_LV&quot;</param>
+                            <param id="1" name="Value">LV</param>
+                        </action>
+                        <action id="0" name="Add key" sid="354666502126896" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_Gold&quot;</param>
+                            <param id="1" name="Value">Gold</param>
+                        </action>
+                        <action id="0" name="Add key" sid="228675508522410" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_KillCount&quot;</param>
+                            <param id="1" name="Value">KillCount</param>
+                        </action>
+                        <action id="0" name="Add key" sid="519718012797104" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_Weapon&quot;</param>
+                            <param id="1" name="Value">Weapon</param>
+                        </action>
+                        <action id="0" name="Add key" sid="136711225656353" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_Armor&quot;</param>
+                            <param id="1" name="Value">Armor</param>
+                        </action>
+                        <action id="0" name="Add key" sid="397813906446465" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_ATK&quot;</param>
+                            <param id="1" name="Value">PlayerATK</param>
+                        </action>
+                        <action id="0" name="Add key" sid="295621616846453" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_DEF&quot;</param>
+                            <param id="1" name="Value">PlayerDEF</param>
+                        </action>
+                        <action id="0" name="Add key" sid="919642093007000" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_AreaName&quot;</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                        <action id="0" name="Add key" sid="257003000855525" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_PlayTimer&quot;</param>
+                            <param id="1" name="Value">Area_SystemVars.PlayTimer</param>
+                        </action>
+                        <action id="0" name="Add key" sid="822572899359183" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_ItemCount&quot;</param>
+                            <param id="1" name="Value">PlayerItems.Width</param>
+                        </action>
+                        <action id="0" name="Add key" sid="865152185698025" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_BoxCount&quot;</param>
+                            <param id="1" name="Value">DBoxList.Count - 1</param>
+                        </action>
+                        <action id="0" name="Add key" sid="693475922552299" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_PhoneCount&quot;</param>
+                            <param id="1" name="Value">Phones.Width</param>
+                        </action>
+                        <action id="0" name="Add key" sid="556361959335017" type="SaveDataDict">
+                            <param id="0" name="Key">&quot;Sys_Armor&quot;</param>
+                            <param id="1" name="Value">Armor</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>アイテムの保存&#x0D;&#x0A;&#x0D;&#x0A;Example&#x0D;&#x0A;&quot;Item&quot; &amp; loopindex =&gt; &quot;Item[n]&quot; (アイテムID)</comment>
+                        <event-block sid="124238539117839">
+                            <conditions>
+                                <condition id="7" name="Compare size" sid="855844612958111" type="PlayerItems">
+                                    <param id="0" name="Axis">0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-10" name="For" sid="497437303904002" type="System">
+                                    <param id="0" name="Name">&quot;i&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">PlayerItems.Width</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="865354887927973" type="SaveDataDict">
+                                    <param id="0" name="Key">&quot;Sys_Item&quot; &amp; loopindex(&quot;i&quot;)</param>
+                                    <param id="1" name="Value">Function.Call(&quot;ItemGetTag&quot;, loopindex(&quot;i&quot;) - 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>各次元ボックスの保存&#x0D;&#x0A;&#x0D;&#x0A;Example&#x0D;&#x0A;&quot;BoxId&quot; &amp; loopindex =&gt; &quot;BoxId[n]&quot; (ボックスの各ID)&#x0D;&#x0A;&quot;Box&quot; &amp; DBoxList.ID &amp; &quot;Count&quot; =&gt; &quot;Box0Count&quot; (ボックス内各個数)&#x0D;&#x0A;&quot;Box&quot; &amp; DBoxList.ID &amp; &quot;-&quot; &amp; loopindex =&gt; &quot;Box0-[n]&quot; (ボックス内のアイテムID)</comment>
+                        <event-block sid="746107115179687">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="676677321996083" type="System">
+                                    <param id="0" name="Object">DBoxList</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="182923649877120" type="DBoxList">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="929694476313670" type="SaveDataDict">
+                                    <param id="0" name="Key">&quot;Sys_BoxId&quot; &amp; loopindex</param>
+                                    <param id="1" name="Value">DBoxList.ID</param>
+                                </action>
+                                <action id="0" name="Add key" sid="718378840339276" type="SaveDataDict">
+                                    <param id="0" name="Key">&quot;Sys_Box&quot; &amp; DBoxList.ID &amp; &quot;Count&quot;</param>
+                                    <param id="1" name="Value">DBoxList.Width</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="928233587253163">
+                                    <conditions>
+                                        <condition id="7" name="Compare size" sid="465942426860045" type="DBoxList">
+                                            <param id="0" name="Axis">0</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-10" name="For" sid="413373289679426" type="System">
+                                            <param id="0" name="Name">&quot;i&quot;</param>
+                                            <param id="1" name="Start index">1</param>
+                                            <param id="2" name="End index">DBoxList.Width</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="204594171259306" type="SaveDataDict">
+                                            <param id="0" name="Key">&quot;Sys_Box&quot; &amp; DBoxList.ID &amp; &quot;-&quot; &amp; loopindex(&quot;i&quot;)</param>
+                                            <param id="1" name="Value">DBoxList.At(loopindex(&quot;i&quot;) - 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>電話リストの保存</comment>
+                        <event-block sid="707978500123058">
+                            <conditions>
+                                <condition id="7" name="Compare size" sid="522295900276287" type="Phones">
+                                    <param id="0" name="Axis">0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-10" name="For" sid="802271052409786" type="System">
+                                    <param id="0" name="Name">&quot;i&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">Phones.Width</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="654886346752503" type="SaveDataDict">
+                                    <param id="0" name="Key">&quot;Sys_Phone&quot; &amp; loopindex</param>
+                                    <param id="1" name="Value">Phones.At(loopindex(&quot;i&quot;) - 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="888172385860087">
+                    <conditions>
+                        <condition id="0" name="On function" sid="874402785062429" type="Function">
+                            <param id="0" name="Name">&quot;LoadData&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="652332734431000" type="System">
+                            <param id="0" name="Variable">SaveDataName</param>
+                            <param id="1" name="Value">&quot;SaveData&quot; &amp; Area_SystemVars.SaveSlot</param>
+                        </action>
+                        <action id="1" name="Get item" sid="116178679367010" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SaveData&quot; &amp; Area_SystemVars.SaveSlot</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>ロード完了時 OnLoadComplete をトリガー&#x0D;&#x0A;第一引数にはデータがあれば1 なければ0が返される</comment>
+                <event-block sid="938227957516573">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="113651897957161" type="LocalStorage">
+                            <param id="0" name="Key">SaveDataName</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="201699342343524">
+                            <conditions>
+                                <condition id="12" name="Compare value" sid="805857980483149" type="LocalStorage">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="679068452518940" type="Function">
+                                    <param id="0" name="Name">&quot;OnDataLoadComplete&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="244009528242077">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="443654394693989" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Load" sid="455045593877135" type="SaveDataDict">
+                                    <param id="0" name="JSON">LocalStorage.ItemValue</param>
+                                </action>
+                                <action id="0" name="Call function" sid="349121895526075" type="Function">
+                                    <param id="0" name="Name">&quot;LoadSystemData&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="191897569197384" type="Function">
+                                    <param id="0" name="Name">&quot;LoadUserData&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="956276573060821" type="System">
+                                    <param id="0" name="Variable">SaveDataName</param>
+                                    <param id="1" name="Value">&quot;SaveData&quot; &amp; Area_SystemVars.SaveSlot</param>
+                                </action>
+                                <action id="0" name="Call function" sid="123352641289030" type="Function">
+                                    <param id="0" name="Name">&quot;OnDataLoadComplete&quot;</param>
+                                    <param id="1" name="Parameter {n}">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="993997406732612">
+                    <conditions>
+                        <condition id="0" name="On function" sid="322319737660570" type="Function">
+                            <param id="0" name="Name">&quot;LoadSystemData&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="515505373959639" type="System">
+                            <param id="0" name="Variable">PlayerName</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_PlayerName&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="390056347528285" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_HP&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="984709526160472" type="System">
+                            <param id="0" name="Variable">MaxHP</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_MaxHP&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="139742795132858" type="System">
+                            <param id="0" name="Variable">LV</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_LV&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="118233427306417" type="System">
+                            <param id="0" name="Variable">Gold</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_Gold&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="491940784193620" type="System">
+                            <param id="0" name="Variable">KillCount</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_KillCount&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="546050641062859" type="System">
+                            <param id="0" name="Variable">Weapon</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_Weapon&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="819621671123494" type="System">
+                            <param id="0" name="Variable">Armor</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_Armor&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="452958546211910" type="System">
+                            <param id="0" name="Variable">PlayerATK</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_ATK&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="194235084246182" type="System">
+                            <param id="0" name="Variable">PlayerDEF</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_DEF&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="371607061407305" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">NextRoomName</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_AreaName&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="240912887651823" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">NextSummonID</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="582037502170412" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">PlayTimer</param>
+                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_PlayTimer&quot;)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="993109650171875" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">BeforeSaveRoomName</param>
+                            <param id="1" name="Value">Self.NextRoomName</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="812985471962355" type="Area_SystemVars">
+                            <param id="0" name="Instance variable">BeforeSavePlayTime</param>
+                            <param id="1" name="Value">Self.PlayTimer</param>
+                        </action>
+                        <action id="0" name="Call function" sid="860977106342536" type="Function">
+                            <param id="0" name="Name">&quot;ItemClear&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="555462838115700" type="Function">
+                            <param id="0" name="Name">&quot;PhoneClear&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="ItemCount" sid="765108518738100" static="0" type="number">0</variable>
+                        <variable constant="0" name="BoxCount" sid="658986942116839" static="0" type="number">0</variable>
+                        <variable constant="0" name="PhoneCount" sid="582498327452294" static="0" type="number">0</variable>
+                        <event-block sid="139510101106023">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="260575940118143" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="521076269430200" type="System">
+                                    <param id="0" name="Variable">ItemCount</param>
+                                    <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_ItemCount&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="603305012194979" type="System">
+                                    <param id="0" name="Variable">BoxCount</param>
+                                    <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_BoxCount&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="778301425766480" type="System">
+                                    <param id="0" name="Variable">PhoneCount</param>
+                                    <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_PhoneCount&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>アイテムの読込</comment>
+                        <event-block sid="812364940255103">
+                            <conditions>
+                                <condition id="-10" name="For" sid="574581221347403" type="System">
+                                    <param id="0" name="Name">&quot;i&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">ItemCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="467700104117610" type="Function">
+                                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                                    <param id="1" name="Parameter {n}">SaveDataDict.Get(&quot;Sys_Item&quot; &amp; loopindex(&quot;i&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>各次元ボックスの読込&#x0D;&#x0A;既存の次元ボックスは削除</comment>
+                        <event-block sid="273909534560836">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="889518148501792" type="System">
+                                    <param id="0" name="Object">DBoxList</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="121590128087908" type="DBoxList">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="610357440911621" type="DBoxList" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="236152247357591">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="799955817590218" type="System">
+                                    <param id="0" name="Variable">BoxCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-10" name="For" sid="838469800258416" type="System">
+                                    <param id="0" name="Name">&quot;i&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">BoxCount</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="BoxID" sid="961947697498198" static="0" type="number">0</variable>
+                                <variable constant="0" name="BoxItemCount" sid="862572566621538" static="0" type="number">0</variable>
+                                <event-block sid="846601633563185">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="863145771979352" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="966966602960587" type="System">
+                                            <param id="0" name="Variable">BoxID</param>
+                                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_BoxId&quot; &amp; loopindex(&quot;i&quot;))</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="497043052464902" type="System">
+                                            <param id="0" name="Object to create">DBoxList</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="137714624593581" type="DBoxList">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Value">BoxID</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="254563194561294" type="System">
+                                            <param id="0" name="Variable">BoxItemCount</param>
+                                            <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_Box&quot; &amp; BoxID &amp; &quot;Count&quot;)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="808774875487327">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="895471480784966" type="System">
+                                                    <param id="0" name="Variable">BoxItemCount</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-10" name="For" sid="606576044238371" type="System">
+                                                    <param id="0" name="Name">&quot;j&quot;</param>
+                                                    <param id="1" name="Start index">1</param>
+                                                    <param id="2" name="End index">BoxItemCount</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Push" sid="643858859164816" type="DBoxList">
+                                                    <param id="0" name="Where">0</param>
+                                                    <param id="1" name="Value">SaveDataDict.Get(&quot;Sys_Box&quot; &amp; BoxID &amp; &quot;-&quot; &amp; loopindex(&quot;j&quot;))</param>
+                                                    <param id="2" name="Axis">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>電話リストの読込</comment>
+                        <event-block sid="844099445084230">
+                            <conditions>
+                                <condition id="-10" name="For" sid="158114226024835" type="System">
+                                    <param id="0" name="Name">&quot;i&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">PhoneCount</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="538848585739120" type="Function">
+                                    <param id="0" name="Name">&quot;PhoneAdd&quot;</param>
+                                    <param id="1" name="Parameter {n}">SaveDataDict.Get(&quot;Sys_Phone&quot; &amp; loopindex(&quot;i&quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="826461713042528">
+                    <conditions>
+                        <condition id="5" name="On error" sid="125310695265985" type="LocalStorage" />
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="595994775158858" type="Browser">
+                            <param id="0" name="Type">2</param>
+                            <param id="1" name="Message">&quot;LocalStorage: &quot; &amp; LocalStorage.ErrorMessage</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ItemManager</name>
+    <events>
+        <event-block sid="358513671165072">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="672661467459128" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>DimentionalBoxが生成されているかどうか&#x0D;&#x0A;DBoxListの個数が1つなら生成されていないことになるから新しく作る</comment>
+                <event-block sid="308072073375790">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="653093768974615" type="System">
+                            <param id="0" name="First value">DBoxList.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="543294197991088">
+                            <conditions>
+                                <condition id="-10" name="For" sid="250460819983828" type="System">
+                                    <param id="0" name="Name">&quot;&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="317773345626591" type="System">
+                                    <param id="0" name="Object to create">DBoxList</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">0</param>
+                                    <param id="3" name="Y">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="414732759666839" type="DBoxList">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Value">loopindex</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Param 0: ItemSlot&#x0D;&#x0A;Param 1: ItemUseTiming (&quot;Overworld&quot;, &quot;Battle&quot;, &quot;Boss&quot;)&#x0D;&#x0A;Param 2: NoSound&#x0D;&#x0A;Return: ItemUseText</comment>
+        <event-block sid="393883780063036">
+            <conditions>
+                <condition id="0" name="On function" sid="541804502798278" type="Function">
+                    <param id="0" name="Name">&quot;ItemUse&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="ItemSlot" sid="315721302424888" static="0" type="number">0</variable>
+                <variable constant="0" name="ItemType" sid="832792993991992" static="0" type="text"></variable>
+                <variable comment="仮" constant="0" name="ItemUseTiming" sid="595971095288111" static="0" type="text">Boss</variable>
+                <variable constant="0" name="ItemTag" sid="545118518476962" static="0" type="text"></variable>
+                <variable constant="0" name="ItemGetText" sid="950270774050786" static="0" type="text"></variable>
+                <variable constant="0" name="ItemUseText" sid="907721663269931" static="0" type="text"></variable>
+                <variable constant="0" name="ItemUseName" sid="342443171839302" static="0" type="text"></variable>
+                <variable constant="0" name="HealPoint" sid="991977339735937" static="0" type="number">0</variable>
+                <variable constant="0" name="ItemSwapTemp" sid="669526515531666" static="0" type="text"></variable>
+                <event-block sid="883841408179427">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="487870228576982" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="528973844986585" type="System">
+                            <param id="0" name="Variable">ItemSlot</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="109282074470938" type="System">
+                            <param id="0" name="Variable">ItemUseTiming</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="961661897262234" type="System">
+                            <param id="0" name="Variable">ItemTag</param>
+                            <param id="1" name="Value">PlayerItems.At(ItemSlot)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="118511479305454" type="System">
+                            <param id="0" name="Variable">ItemType</param>
+                            <param id="1" name="Value">ItemDB.Value(0, ItemTag, &quot;Type&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="652625727626755" type="System">
+                            <param id="0" name="Variable">ItemUseText</param>
+                            <param id="1" name="Value">ItemTag &amp; &quot; - ITEMTYPE ERROR \&lt;&quot; &amp; ItemType &amp; &quot;&gt;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="411913371152434" type="System">
+                            <param id="0" name="Variable">ItemUseName</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetL10NText&quot;, ItemDB.Value(0, ItemTag, &quot;Name&quot;, ItemUseTiming), Language)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="340585894406924" type="System">
+                            <param id="0" name="Variable">ItemGetText</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetL10NText&quot;, ItemDB.Value(0, ItemTag, &quot;Message&quot;, &quot;Use&quot;), Language, ItemUseName)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>回復アイテム</comment>
+                <event-block sid="225433108193315">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="515409178549353" type="System">
+                            <param id="0" name="First value">ItemType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Heal&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="719888158159571" type="System">
+                            <param id="0" name="Variable">HP</param>
+                            <param id="1" name="Value">min(ItemDB.Value(0, ItemTag, &quot;Action&quot;, &quot;Point&quot;), max(MaxHP - HP, 0))</param>
+                        </action>
+                        <action id="0" name="Call function" sid="140594362975193" type="Function">
+                            <param id="0" name="Name">&quot;ItemRemove&quot;</param>
+                            <param id="1" name="Parameter {n}">ItemSlot</param>
+                        </action>
+                        <action id="0" name="Call function" sid="211021924680207" type="Function">
+                            <param id="0" name="Name">ItemDB.Value(0, ItemTag, &quot;Action&quot;, &quot;Func&quot;)</param>
+                            <param id="1" name="Parameter {n}">ItemSlot</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="518685185649558">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="659518483736848" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="426006985865158" type="System">
+                                    <param id="0" name="Variable">HealPoint</param>
+                                    <param id="1" name="Value">ItemDB.Value(0, ItemTag, &quot;Point&quot;)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="969006340256530" type="System">
+                                    <param id="0" name="Variable">ItemUseText</param>
+                                    <param id="1" name="Value">ItemGetText &amp; &quot;&amp;^1&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="100991926271279">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="343328981415713" type="System">
+                                            <param id="0" name="Variable">HP</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">MaxHP</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="193721094644308" type="System">
+                                            <param id="0" name="Variable">ItemUseText</param>
+                                            <param id="1" name="Value">&quot;{item.default.use.hpheal &quot; &amp; HealPoint &amp; &quot;}&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="133593618411647">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="279384984354644" type="System">
+                                            <param id="0" name="Variable">HP</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">MaxHP</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="577673644303240" type="System">
+                                            <param id="0" name="Variable">ItemUseText</param>
+                                            <param id="1" name="Value">&quot;{item.default.use.hpmax}&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="658415791635683">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="256798316931045" type="System">
+                                                    <param id="0" name="Variable">ItemKRSystem</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="220473345122067" type="System">
+                                                    <param id="0" name="Variable">KR</param>
+                                                    <param id="1" name="Value">max(0, MaxHP + KR - HP)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="455279905384915">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="446509787592484" type="System">
+                                                    <param id="0" name="Variable">ItemKRSystem</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="426510835671618" type="System">
+                                                    <param id="0" name="Variable">KR</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="455253058512342">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="700772564175652" type="System">
+                                    <param id="0" name="First value">int(Function.Param(2))</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>音声再生</comment>
+                                <event-block sid="201424696660217">
+                                    <conditions>
+                                        <condition id="10" name="Is array" sid="122172662016942" type="ItemDB">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">ItemTag{###}&quot;Action&quot;{###}&quot;HealSoundSchedule&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <variable constant="0" name="DelayTime" sid="365924295668011" static="0" type="number">0</variable>
+                                        <variable constant="0" name="AudioName" sid="762953396319405" static="0" type="text"></variable>
+                                        <event-block sid="170239673626011">
+                                            <conditions>
+                                                <condition id="100" name="For each property" sid="136193243169354" type="ItemDB">
+                                                    <param id="0" name="Reference point">0</param>
+                                                    <param id="1" name="Key {n}">ItemTag{###}&quot;Action&quot;{###}&quot;HealSoundSchedule&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="682685317386898">
+                                                    <conditions>
+                                                        <condition id="70" inverted="1" name="Is Empty" sid="853480395890458" type="ItemDB">
+                                                            <param id="0" name="Reference point">0</param>
+                                                            <param id="1" name="Key {n}">ItemTag{###}&quot;Action&quot;{###}&quot;HealSoundSchedule&quot;{###}ItemDB.CurrentKey{###}&quot;Audio&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="444378750773458" type="System">
+                                                            <param id="0" name="Variable">AudioName</param>
+                                                            <param id="1" name="Value">ItemDB.Value(0, ItemTag, &quot;Action&quot;, &quot;HealSoundSchedule&quot;, ItemDB.CurrentKey, &quot;Audio&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="768635561321870">
+                                                            <conditions>
+                                                                <condition id="70" inverted="1" name="Is Empty" sid="118392309774577" type="ItemDB">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">ItemTag{###}&quot;Action&quot;{###}&quot;HealSoundSchedule&quot;{###}ItemDB.CurrentKey{###}&quot;Delay&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="772069013951554" type="System">
+                                                                    <param id="0" name="Variable">DelayTime</param>
+                                                                    <param id="1" name="Value">ItemDB.Value(0, ItemTag, &quot;Action&quot;, &quot;HealSoundSchedule&quot;, ItemDB.CurrentKey, &quot;Delay&quot;)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="144877360790232">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="404851358698798" type="System" />
+                                                                <condition id="70" inverted="1" name="Is Empty" sid="225900498428728" type="ItemDB">
+                                                                    <param id="0" name="Reference point">0</param>
+                                                                    <param id="1" name="Key {n}">ItemTag{###}&quot;Action&quot;{###}&quot;HealSoundSchedule&quot;{###}ItemDB.CurrentKey{###}&quot;Delay60Frame&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="127529685441607" type="System">
+                                                                    <param id="0" name="Variable">DelayTime</param>
+                                                                    <param id="1" name="Value">ItemDB.Value(0, ItemTag, &quot;Action&quot;, &quot;HealSoundSchedule&quot;, ItemDB.CurrentKey, &quot;Delay60Frame&quot;) / 60</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="856276154256439">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="443434567486626" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="559401968874781" type="System">
+                                                                    <param id="0" name="Variable">DelayTime</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="914376391824479">
+                                                            <conditions>
+                                                                <condition id="-1" name="Every tick" sid="836368907650277" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="34" name="Schedule next play" sid="723205789962447" type="Audio">
+                                                                    <param id="0" name="Time">Audio.CurrentTime + DelayTime</param>
+                                                                </action>
+                                                                <action id="7" name="Play (by name)" sid="359151836392500" type="Audio">
+                                                                    <param id="0" name="Folder">0</param>
+                                                                    <param id="1" name="Audio file name">AudioName</param>
+                                                                    <param id="3" name="Loop">0</param>
+                                                                    <param id="4" name="Volume">0</param>
+                                                                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="910195505541974">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="132726563450888" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="14" name="Log" sid="459404284726426" type="Browser">
+                                                            <param id="0" name="Type">2</param>
+                                                            <param id="1" name="Message">&quot;[Item] &quot; &amp; ItemTag &amp; &quot;.&quot; &amp; ItemDB.CurrentKey &amp; &quot; : オーディオ指定がありません&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>音声スケジュールの指定がなければ、通常の音声を再生</comment>
+                                <event-block sid="252632748378613">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="117855394437135" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="300728611312189" type="Audio">
+                                            <param id="0" name="Audio file">Swallow</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="34" name="Schedule next play" sid="974308187701677" type="Audio">
+                                            <param id="0" name="Time">Audio.CurrentTime + 20 / 60</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="931968175141269" type="Audio">
+                                            <param id="0" name="Audio file">PlayerHeal</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>武器</comment>
+                <event-block sid="719506810790089">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="737641141732010" type="System" />
+                        <condition id="-8" name="Compare two values" sid="470359589365944" type="System">
+                            <param id="0" name="First value">ItemType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Weapon&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="238073611954532" type="Audio">
+                            <param id="0" name="Audio file">ItemSet</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="382250721606091" type="Function">
+                            <param id="0" name="Name">&quot;ItemEquipWeapon&quot;</param>
+                            <param id="1" name="Parameter {n}">ItemSlot</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="718875108251533" type="System">
+                            <param id="0" name="Variable">ItemUseText</param>
+                            <param id="1" name="Value">ItemGetText &amp; &quot;&amp;^1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>防具</comment>
+                <event-block sid="436844377529796">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="457738671572021" type="System" />
+                        <condition id="-8" name="Compare two values" sid="182785581010596" type="System">
+                            <param id="0" name="First value">ItemType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Armor&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="254225583987029" type="Audio">
+                            <param id="0" name="Audio file">ItemSet</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="861640955118425" type="Function">
+                            <param id="0" name="Name">&quot;ItemEquipArmor&quot;</param>
+                            <param id="1" name="Parameter {n}">ItemSlot</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="925906486034472" type="System">
+                            <param id="0" name="Variable">ItemUseText</param>
+                            <param id="1" name="Value">ItemGetText &amp; &quot;&amp;^1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>カスタム関数</comment>
+                <event-block sid="567449787331312">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="102641840992163" type="System" />
+                        <condition id="-8" name="Compare two values" sid="704368569755206" type="System">
+                            <param id="0" name="First value">ItemType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Function&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="506318033402931" type="System">
+                            <param id="0" name="Variable">ItemUseText</param>
+                            <param id="1" name="Value">Function.Call(ItemDB.Value(0, ItemTag, &quot;Action&quot;, &quot;Func&quot;), ItemSlot)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="290663618174224">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="424589481408909" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="752124764726189" type="Function">
+                            <param id="0" name="Value">ItemUseText</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>PlayerInventory CleanUp</comment>
+        <event-block sid="413245910611017">
+            <conditions>
+                <condition id="0" name="On function" sid="788725297235091" type="Function">
+                    <param id="0" name="Name">&quot;ItemClear&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="575691227199317" type="PlayerItems">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Param 0: ItemTag</comment>
+        <event-block sid="560669160503928">
+            <conditions>
+                <condition id="0" name="On function" sid="459674626943483" type="Function">
+                    <param id="0" name="Name">&quot;ItemAdd&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Push" sid="733000146376655" type="PlayerItems">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Param 0: ItemSlot&#x0D;&#x0A;Return: ItemTag</comment>
+        <event-block sid="285735441965036">
+            <conditions>
+                <condition id="0" name="On function" sid="415146146126988" type="Function">
+                    <param id="0" name="Name">&quot;ItemGetTag&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="808084932089141" type="Function">
+                    <param id="0" name="Value">PlayerItems.At(Function.Param(0))</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Param 0: ItemTag&#x0D;&#x0A;Return: ItemName</comment>
+        <event-block sid="783166055091728">
+            <conditions>
+                <condition id="0" name="On function" sid="901338823388536" type="Function">
+                    <param id="0" name="Name">&quot;ItemGetName&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="390659335098531" type="Function">
+                    <param id="0" name="Value">ItemDB.Value(0, Function.Param(0), &quot;Name&quot;, Function.Param(1))</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Param 0: ItemSlot</comment>
+        <event-block sid="138214468413445">
+            <conditions>
+                <condition id="0" name="On function" sid="246659166916039" type="Function">
+                    <param id="0" name="Name">&quot;ItemRemove&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Delete" sid="291861762831695" type="PlayerItems">
+                    <param id="0" name="Index">Function.Param(0)</param>
+                    <param id="1" name="Axis">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Param 0: ItemSlot</comment>
+        <event-block sid="959595076116002">
+            <conditions>
+                <condition id="0" name="On function" sid="277300563176664" type="Function">
+                    <param id="0" name="Name">&quot;ItemEquipWeapon&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="ItemSwapTemp" sid="527468223123262" static="0" type="text"></variable>
+                <variable constant="0" name="ItemSlot" sid="469703536120784" static="0" type="number">0</variable>
+                <event-block sid="746248610767793">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="780864740189972" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="794103168342213" type="System">
+                            <param id="0" name="Variable">ItemSlot</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="769345247571090" type="System">
+                            <param id="0" name="Variable">ItemSwapTemp</param>
+                            <param id="1" name="Value">PlayerItems.At(ItemSlot)</param>
+                        </action>
+                        <action id="9" name="Delete" sid="464936130289305" type="PlayerItems">
+                            <param id="0" name="Index">ItemSlot</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="10" name="Insert" sid="393868093183733" type="PlayerItems">
+                            <param id="0" name="Value">Weapon</param>
+                            <param id="1" name="Index">ItemSlot</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="999038745103529" type="System">
+                            <param id="0" name="Variable">Weapon</param>
+                            <param id="1" name="Value">ItemSwapTemp</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Param 0: ItemSlot</comment>
+        <event-block sid="840319954782778">
+            <conditions>
+                <condition id="0" name="On function" sid="421838655758834" type="Function">
+                    <param id="0" name="Name">&quot;ItemEquipArmor&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="ItemSwapTemp" sid="197724377478180" static="0" type="text"></variable>
+                <variable constant="0" name="ItemSlot" sid="680473675411983" static="0" type="number">0</variable>
+                <event-block sid="142904011841339">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="287814700201039" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="884697290041325" type="System">
+                            <param id="0" name="Variable">ItemSlot</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="748044826050532" type="System">
+                            <param id="0" name="Variable">ItemSwapTemp</param>
+                            <param id="1" name="Value">PlayerItems.At(ItemSlot)</param>
+                        </action>
+                        <action id="9" name="Delete" sid="369700219407825" type="PlayerItems">
+                            <param id="0" name="Index">ItemSlot</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="10" name="Insert" sid="732765239524128" type="PlayerItems">
+                            <param id="0" name="Value">Armor</param>
+                            <param id="1" name="Index">ItemSlot</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="310941665805019" type="System">
+                            <param id="0" name="Variable">Armor</param>
+                            <param id="1" name="Value">ItemSwapTemp</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Param 0: DimensionalBox ID&#x0D;&#x0A;Param 1: ItemTag</comment>
+        <event-block sid="575285609981423">
+            <conditions>
+                <condition id="0" name="On function" sid="492970453971120" type="Function">
+                    <param id="0" name="Name">&quot;DBoxAddItem&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="596267296653789">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="542797884426680" type="DBoxList">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="662229131193827" type="DBoxList">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>DimensionalBox CleanUp&#x0D;&#x0A;Param 0: DimensionalBox ID</comment>
+        <event-block sid="329807957272777">
+            <conditions>
+                <condition id="0" name="On function" sid="452857758864265" type="Function">
+                    <param id="0" name="Name">&quot;DBoxClear&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="588458559802841">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="172433324902143" type="DBoxList">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="171210079940767" type="DBoxList">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

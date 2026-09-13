@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2layout>
+    <name>MainMenu</name>
+    <sid>4489433801173846</sid>
+    <event-sheet>MainMenu</event-sheet>
+    <size>
+        <width>960</width>
+        <height>540</height>
+    </size>
+    <margins>
+        <horizontal>500</horizontal>
+        <vertical>500</vertical>
+    </margins>
+    <unbounded-scrolling>1</unbounded-scrolling>
+    <layers>
+        <layer name="Background" sid="1385025260711742">
+            <initially-visible>1</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="VPad" uid="892">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Up>0</Up>
+                        <Down>0</Down>
+                        <Left>0</Left>
+                        <Right>0</Right>
+                        <Confirm>0</Confirm>
+                        <Cancel>0</Cancel>
+                        <Menu>0</Menu>
+                        <LastUp>0</LastUp>
+                        <LastDown>0</LastDown>
+                        <LastLeft>0</LastLeft>
+                        <LastRight>0</LastRight>
+                        <LastConfirm>0</LastConfirm>
+                        <LastCancel>0</LastCancel>
+                        <LastMenu>0</LastMenu>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>608</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MainMenuLogo" uid="11">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <T>0</T>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>320</x>
+                        <y>200</y>
+                        <z>0</z>
+                        <width>235</width>
+                        <height>86.5</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50289017</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Loading" sid="159869117764334">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Fader" sid="655647189527640">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Touch" sid="811191083613698">
+            <initially-visible>1</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Absolute" sid="907266786053512">
+            <initially-visible>1</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>0</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+    </layers>
+    <nonworld-instances>
+        <instance type="TW_CMD" uid="92">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="HexList" uid="95">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="L10N_Loading" uid="96">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Dictionary" uid="97" />
+        <instance type="L10N_Texts" uid="98" />
+        <instance type="Area_SystemVars" uid="113">
+            <instance-variables>
+                <PlayerMove>true</PlayerMove>
+                <PlayerSpeed>0</PlayerSpeed>
+                <PlayerScroll>false</PlayerScroll>
+                <EventsEnable>false</EventsEnable>
+                <PlayTimer>0</PlayTimer>
+                <BeforeSaveRoomName></BeforeSaveRoomName>
+                <BeforeSavePlayTime>0</BeforeSavePlayTime>
+                <NextRoomName>Last Corridor</NextRoomName>
+                <NextSummonID>-1</NextSummonID>
+                <AreaInitialized>false</AreaInitialized>
+                <ReturnAreaName></ReturnAreaName>
+                <ReturnPlayerX>0</ReturnPlayerX>
+                <ReturnPlayerY>0</ReturnPlayerY>
+                <ReturnFacing></ReturnFacing>
+                <ReturnScrollX>0</ReturnScrollX>
+                <ReturnScrollY>0</ReturnScrollY>
+                <ReturnFunc></ReturnFunc>
+                <StartFromArea>false</StartFromArea>
+                <SaveSlot>0</SaveSlot>
+                <SaveMessage>* Determination.</SaveMessage>
+            </instance-variables>
+        </instance>
+        <instance type="ItemDB" uid="111" />
+        <instance type="ItemLoader" uid="114">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="FaderManager" uid="142">
+            <instance-variables>
+                <Speed>1</Speed>
+                <Start>0</Start>
+                <Target>1</Target>
+                <Process>1</Process>
+                <TargetUID>0</TargetUID>
+                <FuncCall></FuncCall>
+            </instance-variables>
+        </instance>
+        <instance type="Date" uid="143" />
+        <instance type="Menu_Vars" uid="146">
+            <instance-variables>
+                <NextSelectSound>true</NextSelectSound>
+                <NextConfirmSound>true</NextConfirmSound>
+            </instance-variables>
+        </instance>
+        <instance type="AreaDialogStepSelect" uid="148">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="Phones" uid="150">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="PhoneDB" uid="151" />
+        <instance type="PhoneLoader" uid="153">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="DBoxList" uid="154">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+            <instance-variables>
+                <ID>-1</ID>
+            </instance-variables>
+        </instance>
+        <instance type="Area_UserVars" uid="161">
+            <instance-variables>
+                <SansFightStep>0</SansFightStep>
+                <SansFightProcess>0</SansFightProcess>
+            </instance-variables>
+        </instance>
+        <instance type="SaveDataDict" uid="163" />
+        <instance type="PlayerEXPTable" uid="147">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="PrepareCombatZone" uid="160" />
+        <instance type="PrepareCombatZone_Loading" uid="164">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
+    <effects />
+</c2layout>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PhoneManager</name>
+    <events>
+        <comment>電話リセット</comment>
+        <event-block sid="508921129639206">
+            <conditions>
+                <condition id="0" name="On function" sid="197035737868305" type="Function">
+                    <param id="0" name="Name">&quot;PhoneClear&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="707747590444247" type="Phones">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>電話新規登録&#x0D;&#x0A;Param 0: ItemTag</comment>
+        <event-block sid="781082628180383">
+            <conditions>
+                <condition id="0" name="On function" sid="848367400649028" type="Function">
+                    <param id="0" name="Name">&quot;PhoneAdd&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Push" sid="888774027590255" type="Phones">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

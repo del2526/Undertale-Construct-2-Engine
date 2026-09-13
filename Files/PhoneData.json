@@ -1,0 +1,24 @@
+{
+    "toriel" : {
+        "Name" : "area.player.phone.toriel.name",
+        "Message" : "area.player.phone.toriel.message"
+    },
+
+    "test1" : {
+        "Name" : "Test Phone (No Sound)",
+        "Message" : "* NoSound Test",
+        "Sound" : false
+    },
+
+    "box1" : {
+        "Name" : "area.player.phone.box1.name",
+        "Function" : "PhoneOpenD_Box1",
+        "Sound" : false
+    },
+
+    "box2" : {
+        "Name" : "area.player.phone.box2.name",
+        "Function" : "PhoneOpenD_Box2",
+        "Sound" : false
+    }
+}
