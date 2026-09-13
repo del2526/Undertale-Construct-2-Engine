@@ -1884,19 +1884,19 @@
                                     <param id="1" name="Height">178</param>
                                 </action>
                                 <action id="0" name="Call function" sid="902373655215134" type="Function">
-                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">134 + BORDER_LEFTTOP_X{###}140 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}PlayerName{###}2{###}&quot;SaveDialogName&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="282502563289250" type="Function">
-                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">302 + BORDER_LEFTTOP_X{###}140 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;LV &quot; &amp; LV{###}2{###}&quot;SaveDialogLV&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="891305858792297" type="Function">
-                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">500 + BORDER_LEFTTOP_X{###}140 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}floor(Area_SystemVars.BeforeSavePlayTime / 60) &amp; &quot;:&quot; &amp; zeropad(floor(Area_SystemVars.BeforeSavePlayTime % 60),2){###}2{###}&quot;SaveDialogTime&quot;{###}2</param>
                                 </action>
                                 <action id="0" name="Call function" sid="988724256171996" type="Function">
-                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">134 + BORDER_LEFTTOP_X{###}180 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Area_SystemVars.BeforeSaveRoomName{###}2{###}&quot;SaveDialogArea&quot;</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="517672101439854" type="Menu_Vars">
@@ -1930,7 +1930,7 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Call function" sid="214753283849675" type="Function">
-                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                             <param id="1" name="Parameter {n}">164 + BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;Saving...&quot;{###}2{###}&quot;SavingMessage&quot;</param>
                         </action>
                     </actions>
@@ -1991,7 +1991,7 @@
                                     <param id="2" name="Value">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="290169870776658" type="Function">
-                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">164 + BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;File saved.&quot;{###}2{###}&quot;SaveDialogEnd&quot;{###}0{###}0{###}1</param>
                                 </action>
                                 <action id="0" name="Play" sid="110833402456060" type="Audio">
@@ -2039,7 +2039,7 @@
                                             <actions>
                                                 <action id="-9" name="Destroy" sid="162262312876896" type="RPGText" />
                                                 <action id="0" name="Call function" sid="911665103069454" type="Function">
-                                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                     <param id="1" name="Parameter {n}">500 + BORDER_LEFTTOP_X{###}140 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}floor(Area_SystemVars.BeforeSavePlayTime / 60) &amp; &quot;:&quot; &amp; zeropad(floor(Area_SystemVars.BeforeSavePlayTime % 60),2){###}2{###}&quot;SaveDialogTime&quot;{###}2{###}0{###}1</param>
                                                 </action>
                                             </actions>
@@ -2056,7 +2056,7 @@
                                             <actions>
                                                 <action id="-9" name="Destroy" sid="238669197580295" type="RPGText" />
                                                 <action id="0" name="Call function" sid="786940332700886" type="Function">
-                                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                     <param id="1" name="Parameter {n}">134 + BORDER_LEFTTOP_X{###}180 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Area_SystemVars.BeforeSaveRoomName{###}2{###}&quot;SaveDialogArea&quot;{###}0{###}0{###}1</param>
                                                 </action>
                                             </actions>
@@ -2269,15 +2269,15 @@
                                                                     <param id="1" name="Parameter {n}">0</param>
                                                                 </action>
                                                                 <action id="0" name="Call function" sid="567215973913362" type="Function">
-                                                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                                     <param id="1" name="Parameter {n}">226 + BORDER_LEFTTOP_X{###}360 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;USE&quot;{###}2{###}&quot;MenuDialogItemText&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Call function" sid="963689255917215" type="Function">
-                                                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                                     <param id="1" name="Parameter {n}">322 + BORDER_LEFTTOP_X{###}360 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;INFO&quot;{###}2{###}&quot;MenuDialogItemText&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Call function" sid="159569487695472" type="Function">
-                                                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                                     <param id="1" name="Parameter {n}">436 + BORDER_LEFTTOP_X{###}360 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;DROP&quot;{###}2{###}&quot;MenuDialogItemText&quot;</param>
                                                                 </action>
                                                             </actions>
@@ -2332,35 +2332,35 @@
                                                             <param id="1" name="Value">&quot;MenuDialogStatBox&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="493852222057423" type="Function">
-                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                             <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}84 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;&quot;&quot;&quot; &amp; PlayerName &amp; &quot;&quot;&quot;&quot;{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="689953153416680" type="Function">
-                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                             <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}144 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;LV  &quot; &amp; LV{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="389075276051684" type="Function">
-                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                             <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}176 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;HP  &quot; &amp; HP &amp; &quot; / &quot; &amp; MaxHP{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="454316961673428" type="Function">
-                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                             <param id="1" name="Parameter {n}">378 + BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;EXP: &quot; &amp; PlayerEXP{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="554590782689557" type="Function">
-                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                             <param id="1" name="Parameter {n}">378 + BORDER_LEFTTOP_X{###}272 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;NEXT: &quot; &amp; Function.Call(&quot;GetNextNeedEXP&quot;){###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="582204616330538" type="Function">
-                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                             <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}332 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;WEAPON: &quot; &amp; Function.Call(&quot;GetL10NText&quot;, ItemDB.Value(0, Weapon, &quot;Name&quot;, &quot;OverWorld&quot;)){###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="319600252864914" type="Function">
-                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                             <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}364 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;ARMOR: &quot; &amp; Function.Call(&quot;GetL10NText&quot;, ItemDB.Value(0, Armor, &quot;Name&quot;, &quot;OverWorld&quot;)){###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="815429111874885" type="Function">
-                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                             <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}404 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;GOLD: &quot; &amp; Gold{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                     </actions>
@@ -2388,11 +2388,11 @@
                                                                     </conditions>
                                                                     <actions>
                                                                         <action id="0" name="Call function" sid="543435826204249" type="Function">
-                                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                                             <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;AT  &quot; &amp; PlayerATK &amp; &quot; (&quot; &amp; TotalEquipATK &amp; &quot;)&quot;{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                                         </action>
                                                                         <action id="0" name="Call function" sid="256852130495022" type="Function">
-                                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                                             <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}272 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;DF  &quot; &amp; PlayerDEF &amp; &quot; (&quot; &amp; TotalEquipDEF &amp; &quot;)&quot;{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                                         </action>
                                                                     </actions>
@@ -2412,7 +2412,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="0" name="Call function" sid="138292924898668" type="Function">
-                                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                             <param id="1" name="Parameter {n}">378 + BORDER_LEFTTOP_X{###}404 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;KILLS: &quot; &amp; KillCount{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                     </actions>
@@ -2456,7 +2456,7 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action id="0" name="Call function" sid="197205333168336" type="Function">
-                                                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                                                     <param id="1" name="Parameter {n}">226 + BORDER_LEFTTOP_X{###}80 + Phones.CurX * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, PhoneDB.Value(0, Phones.CurValue, &quot;Name&quot;), 0){###}2{###}&quot;MenuDialogPhoneText&quot;</param>
                                                                 </action>
                                                             </actions>
@@ -3452,7 +3452,7 @@
                             <param id="1" name="Height">152</param>
                         </action>
                         <action id="0" name="Call function" sid="900434381877665" type="Function">
-                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                             <param id="1" name="Parameter {n}">78 + BORDER_LEFTTOP_X{###}224 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;STAT&quot;{###}2{###}&quot;MenuDialogSTAT&quot;</param>
                         </action>
                     </actions>
@@ -3467,7 +3467,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="702979469339456" type="Function">
-                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">78 + BORDER_LEFTTOP_X{###}260 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;CELL&quot;{###}2{###}&quot;MenuDialogCELL&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="151083579752996" type="System">
@@ -3508,7 +3508,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="209805906930776" type="Function">
-                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">78 + BORDER_LEFTTOP_X{###}188 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;ITEM&quot;{###}2{###}&quot;MenuDialogITEM&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="751370682378139" type="Function">
@@ -3550,7 +3550,7 @@
                                     <param id="1" name="Height">114</param>
                                 </action>
                                 <action id="0" name="Call function" sid="490957830126617" type="Function">
-                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">40 + BORDER_LEFTTOP_X{###}MenuDialogPlayerInfoY - 47 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}PlayerName{###}2</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="351923042230961" type="System">
@@ -3680,7 +3680,7 @@
                                     <param id="1" name="Value">loopindex + Function.Param(0)</param>
                                 </action>
                                 <action id="0" name="Call function" sid="851910075462346" type="Function">
-                                    <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">226 + BORDER_LEFTTOP_X{###}80 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, Function.Call(&quot;ItemGetName&quot;, Function.Call(&quot;ItemGetTag&quot;, Index), &quot;OverWorld&quot;), Language){###}2{###}&quot;MenuDialogItemText&quot;</param>
                                 </action>
                             </actions>
@@ -4057,15 +4057,15 @@
                             <param id="1" name="Height">300</param>
                         </action>
                         <action id="0" name="Call function" sid="737816160537158" type="Function">
-                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                             <param id="1" name="Parameter {n}">194 + BORDER_LEFTTOP_X{###}406 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2</param>
                         </action>
                         <action id="0" name="Call function" sid="427431002508607" type="Function">
-                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                             <param id="1" name="Parameter {n}">94 + BORDER_LEFTTOP_X{###}406 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2</param>
                         </action>
                         <action id="0" name="Call function" sid="635230048713100" type="Function">
-                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                             <param id="1" name="Parameter {n}">194 + BORDER_LEFTTOP_X{###}406 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2</param>
                         </action>
                         <action id="0" name="Call function" sid="791825286914483" type="Function">
@@ -4159,7 +4159,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="953495499859364" type="Function">
-                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                             <param id="1" name="Parameter {n}">62 + BORDER_LEFTTOP_X{###}72 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, Function.Call(&quot;ItemGetName&quot;, Function.Call(&quot;ItemGetTag&quot;, loopindex), &quot;OverWorld&quot;), Language){###}2{###}&quot;DBoxItemText&quot;</param>
                                         </action>
                                     </actions>
@@ -4223,7 +4223,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="376118841925022" type="Function">
-                                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                             <param id="1" name="Parameter {n}">364 + BORDER_LEFTTOP_X{###}72 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, Function.Call(&quot;ItemGetName&quot;, DBoxList.At(loopindex), &quot;OverWorld&quot;), Language){###}2{###}&quot;DBoxItemText&quot;</param>
                                         </action>
                                     </actions>

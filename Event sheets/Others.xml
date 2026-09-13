@@ -1041,7 +1041,7 @@
                 <event-block sid="448847863923330">
                     <conditions>
                         <condition id="0" name="On function" sid="851817623022422" type="Function">
-                            <param id="0" name="Name">&quot;TextPut8JVE&quot;</param>
+                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
