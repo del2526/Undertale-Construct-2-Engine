@@ -4,6 +4,17 @@
     <name>Engine Prev</name>
     <events>
         <include>GlobalVars</include>
+        <event-block sid="713609831665949">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="797382488151596" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="936551467965871" type="System">
+                    <param id="0" name="Variable">Language</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <include>ControlManager</include>
         <include>FontsLoader</include>
         <include>Loader</include>
