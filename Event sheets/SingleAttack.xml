@@ -16,6 +16,10 @@
                     <param id="0" name="Name">&quot;SingleMA&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="-10" name="Set value" sid="241916944594087" type="Debug">
+                    <param id="0" name="Instance variable">CurrentLayout</param>
+                    <param id="1" name="Value">&quot;Other&quot;</param>
+                </action>
                 <action id="-16" name="Set opacity" sid="876200211047195" type="ScreenFader">
                     <param id="0" name="Opacity">0</param>
                 </action>

@@ -1521,6 +1521,14 @@
                 </object-type>
                 <object-type name="EnemyFont" sid="451709047989987">
                     <plugin id="Spritefont2" />
+                    <instance-variables>
+                        <instance-variable name="Name" sid="375758578454448" type="string" />
+                    </instance-variables>
+                    <effects>
+                        <effect-type name="RainbowShimmer">
+                            <effect id="mikal_rainbowshimmer" />
+                        </effect-type>
+                    </effects>
                     <texture original-source="D:\Users\keiichi\Downloads\DefaultFont.png" />
                 </object-type>
             </object-folder>
@@ -1905,6 +1913,13 @@
                         <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type global="1" name="Debug" sid="325736399434025">
+                <plugin id="Globals" />
+                <instance-variables>
+                    <instance-variable name="EnabledDebug" sid="970823077418560" type="number" />
+                    <instance-variable name="CurrentLayout" sid="276256252553295" type="string" />
+                </instance-variables>
             </object-type>
         </object-folder>
         <object-folder name="Souls">
@@ -3206,6 +3221,7 @@
             </event-folder>
             <event-sheet>BattleSystem.xml</event-sheet>
             <event-sheet>GameOver.xml</event-sheet>
+            <event-sheet>BattleCommon.xml</event-sheet>
         </event-folder>
         <event-folder name="System">
             <event-folder name="Loader">

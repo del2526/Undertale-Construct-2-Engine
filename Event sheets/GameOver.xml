@@ -81,6 +81,10 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
+                        <action id="-10" name="Set value" sid="284006618848734" type="Debug">
+                            <param id="0" name="Instance variable">CurrentLayout</param>
+                            <param id="1" name="Value">&quot;Other&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="662590497883097">

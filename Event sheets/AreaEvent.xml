@@ -51,6 +51,10 @@
                     <param id="0" name="Name">&quot;DialogBoxInit&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="-10" name="Set value" sid="845172439505567" type="Debug">
+                    <param id="0" name="Instance variable">CurrentLayout</param>
+                    <param id="1" name="Value">&quot;OW&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="797148559674433">

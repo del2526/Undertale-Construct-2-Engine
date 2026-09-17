@@ -2117,6 +2117,7 @@
                         <VY>0</VY>
                         <VT>0</VT>
                         <VDIR>0</VDIR>
+                        <Name></Name>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -2133,6 +2134,14 @@
                                 <blue>1</blue>
                                 <green>1</green>
                                 <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="RainbowShimmer">
+                            <parameters>
+                                <rainbow-ratio>0.0</rainbow-ratio>
+                                <screen-x>640.0</screen-x>
+                                <screen-y>480.0</screen-y>
+                                <time-scale>1.0</time-scale>
                             </parameters>
                         </effect-instance>
                     </effect-instances>

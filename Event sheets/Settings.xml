@@ -70,6 +70,10 @@
                             <param id="0" name="Name">&quot;SettingBackCreate&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-10" name="Set value" sid="633097853046105" type="Debug">
+                            <param id="0" name="Instance variable">CurrentLayout</param>
+                            <param id="1" name="Value">&quot;Other&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <variable constant="0" name="ShiftX" sid="468801469246715" static="0" type="number">0</variable>

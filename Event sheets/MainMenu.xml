@@ -105,6 +105,10 @@
                         <action id="-16" name="Set opacity" sid="944957355333963" type="ScreenFader">
                             <param id="0" name="Opacity">0</param>
                         </action>
+                        <action id="-10" name="Set value" sid="339038281123263" type="Debug">
+                            <param id="0" name="Instance variable">CurrentLayout</param>
+                            <param id="1" name="Value">&quot;Other&quot;</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="325606084487450" type="Area_SystemVars" />
                         <action id="-3" name="Create object" sid="475923773143770" type="System">
                             <param id="0" name="Object to create">Area_SystemVars</param>

@@ -295,6 +295,12 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="Debug" uid="87">
+            <instance-variables>
+                <EnabledDebug>0</EnabledDebug>
+                <CurrentLayout>Other</CurrentLayout>
+            </instance-variables>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>
