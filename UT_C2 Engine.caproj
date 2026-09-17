@@ -877,7 +877,7 @@
                             </effect-type>
                         </effects>
                         <animation-folder>
-                            <animation framecount="1" loop="0" name="Standing" pingpong="0" repeatcount="1" repeatto="0" sid="509850836687290" speed="5">
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509850836687290" speed="5">
                                 <frame duration="1" hotspotX="0.04" hotspotY="0.477273">
                                     <image-point name="Torso" x="0.96" y="0.477273" />
                                     <collision-poly>

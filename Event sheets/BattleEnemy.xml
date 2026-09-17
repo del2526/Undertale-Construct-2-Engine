@@ -445,7 +445,7 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="782131988076215" type="SansLegs">
-                                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
