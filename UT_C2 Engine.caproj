@@ -1922,7 +1922,7 @@
                 </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="708443434694108" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1.12" original-source="E:\各种合集\sans模拟器贴图\酷酷酷\Animations\MenuBoneLeft\Default\000.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1.18" original-source="E:\各种合集\sans模拟器贴图\酷酷酷\Animations\MenuBoneLeft\Default\000.png">
                             <collision-poly>
                                 <point x="0.181818" y="0.495" />
                                 <point x="0.181818" y="0.48" />
@@ -1932,7 +1932,7 @@
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="Touched" pingpong="0" repeatcount="1" repeatto="0" sid="893579416150462" speed="15">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1.12">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1.18">
                             <collision-poly>
                                 <point x="0.181818" y="0.495" />
                                 <point x="0.181818" y="0.48" />
@@ -1940,7 +1940,7 @@
                                 <point x="0.863636" y="0.495" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1.12">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1.18">
                             <collision-poly>
                                 <point x="0.181818" y="0.495" />
                                 <point x="0.181818" y="0.48" />
@@ -2988,14 +2988,6 @@
                 </instance-variables>
             </object-type>
         </object-folder>
-        <object-type name="Sprite" sid="838914226612781">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="515246345871826" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families>
         <family name="RPGText" plugin-id="Spritefont2" sid="8627438680975019">

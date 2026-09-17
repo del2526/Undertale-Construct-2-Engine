@@ -55,8 +55,8 @@
 
 
     "area.player.dbox.end" : "Press [X] to Finish",
-    "area.player.dbox.inv" : "Press [X] to Finish",
-    "area.player.dbox.box" : "Press [X] to Finish",
+    "area.player.dbox.inv" : "INVENTORY",
+    "area.player.dbox.box" : "BOX",
 
 
     "item.default.use.ateheal" : "* You ate the %.",

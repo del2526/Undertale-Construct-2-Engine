@@ -4056,17 +4056,17 @@
                             <param id="0" name="Width">1</param>
                             <param id="1" name="Height">300</param>
                         </action>
-                        <action id="0" name="Call function" sid="737816160537158" type="Function">
-                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">194 + BORDER_LEFTTOP_X{###}406 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2</param>
-                        </action>
                         <action id="0" name="Call function" sid="427431002508607" type="Function">
                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">94 + BORDER_LEFTTOP_X{###}406 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2</param>
-                        </action>
-                        <action id="0" name="Call function" sid="635230048713100" type="Function">
-                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                             <param id="1" name="Parameter {n}">194 + BORDER_LEFTTOP_X{###}406 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="246806424425485" type="Function">
+                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
+                            <param id="1" name="Parameter {n}">98 + BORDER_LEFTTOP_X{###}30 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.inv&quot;, Language){###}2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="800023580201720" type="Function">
+                            <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
+                            <param id="1" name="Parameter {n}">442+ BORDER_LEFTTOP_X{###}30 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.box&quot;, Language){###}2</param>
                         </action>
                         <action id="0" name="Call function" sid="791825286914483" type="Function">
                             <param id="0" name="Name">&quot;DimensionalBoxDialogUpdate&quot;</param>
