@@ -1540,7 +1540,7 @@
                             <effect id="betteroutline" />
                         </effect-type>
                     </effects>
-                    <texture original-source="D:\Users\keiichi\Downloads\DefaultFont.png" />
+                    <texture original-source="E:\Downloads\JF Dot Shinonome Gothic 14.png" />
                 </object-type>
                 <object-type name="JP_PapyrusFont" sid="813559515232915">
                     <plugin id="Spritefont2" />
@@ -3003,6 +3003,14 @@
                 </instance-variables>
             </object-type>
         </object-folder>
+        <object-type name="Sprite" sid="170839278545380">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505432437503257" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="RPGText" plugin-id="Spritefont2" sid="8627438680975019">

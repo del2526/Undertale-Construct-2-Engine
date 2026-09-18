@@ -41,31 +41,118 @@
 
     "battle.sans.dialog.act.acttest" : "＊ カスタム行動のテスト。^1&＊ <anim 3>あいうえお",
     
+    "area.player.cmenu.item" : "ITEM",
+    "area.player.cmenu.stat" : "STAT",
+    "area.player.cmenu.cell" : "PHONE",
 
-    "item.default.use.ateheal" : "＊ %を食べた。",
-    "item.default.use.hpheal" : "＊ %HP回復した！",
-    "item.default.use.hpmax" : "＊ HPが全回復した！",
-
-    "item.pie.lname" : "パイ",
-    "item.pie.sname" : "パイ",
-    "item.pie.use" : "{item.default.use.ateheal %}",
-
-    "item.noodles.lname" : "インスタントめん",
-    "item.noodles.sname" : "インスタントめん",
-    "item.noodles.use" : "＊ そのまま食べたほうが美味しい。",
-
-    "item.steak.lname" : "ステーキ",
-    "item.steak.sname" : "ステーキ",
-    "item.steak.use" : "{item.default.use.ateheal %}",
-
-    "item.lhero.lname" : "ヒーロー",
-    "item.lhero.sname" : "ヒーロー",
-    "item.lhero.use" : "{item.default.use.ateheal %}^1&＊ 攻撃力が4上昇した！",
-
-    "item.snowpiece.lname" : "雪だるまの欠片",
-    "item.snowpiece.sname" : "雪だるまの欠片",
-    "item.snowpiece.use" : "{item.default.use.ateheal %}",
+    "area.player.cmenu.stat.lv" : "LV   ",
+    "area.player.cmenu.stat.hp" : "HP   ",
+    "area.player.cmenu.stat.hps" : "/",
+    "area.player.cmenu.stat.exp" : "EXP   ",
+    "area.player.cmenu.stat.nxt" : "NEXT ",
+    "area.player.cmenu.stat.wpn" : "WPN  ",
+    "area.player.cmenu.stat.amr" : "AMR  ",
+    "area.player.cmenu.stat.gld" : "GOLD ",
+    "area.player.cmenu.stat.at" : "ATK ",
+    "area.player.cmenu.stat.df" : "DEF ",
 
 
-    "gameover.text" : "<lang 0>You cannot give up just yet.<pause><clear>Stay determined..."
+    "area.player.item.drop.default" : "* The % was&  thrown away.",
+    "area.player.item.drop.special.0" : "* You bid a quiet farewell&  to the %.",
+    "area.player.item.drop.special.1" : "* You put the %&  on the ground and gave it a&  little pat.",
+    "area.player.item.drop.special.2" : "* You threw the %&  on the ground like the piece&  of trash it is.",
+    "area.player.item.drop.special.3" : "* You abandoned the &  %.",
+
+    "area.player.phone.toriel.name" : "トリエルのでんわ",
+    "area.player.phone.toriel.message" : "* Dialing...<pause><clear>* ...<pause><clear>* But nobody came.",
+    "area.player.phone.box1.name" : "いじげんボックスA",
+    "area.player.phone.box2.name" : "いじげんボックスB",
+
+
+    "area.player.dbox.end" : "Press [X] to Finish",
+    "area.player.dbox.inv" : "INVENTORY",
+    "area.player.dbox.box" : "BOX",
+
+
+    "item.default.use.ateheal" : "＊ %を　たべた。",
+    "item.default.use.hpheal" : "＊ %HP　かいふくした！",
+    "item.default.use.hpmax" : "＊ HPが　ぜんかいふくした！",
+    "item.default.use.weapon" : "* You equipped the %.",
+    "item.default.use.armor" : "* You equipped the %.",
+
+    "item.default.desc.heal" : "* \"%\" - %HP　かいふく&",
+    "item.default.desc.heal.all" : "* \"%\" - All HP&",
+    "item.default.desc.weapon" : "* \"%\" - Weapon AT %&",
+    "item.default.desc.armor" : "* \"%\" - Armor DF %&",
+
+    "item.pie.name.ow" : "バタースコッチパイ",
+    "item.pie.name.battle" : "パイ",
+    "item.pie.name.boss" : "パイ",
+    "item.pie.desc" : "{item.default.desc.heal.all `%`}* Butterscotch-cinnamon&  pie, ^1one slice.",
+    "item.pie.use" : "{item.default.use.ateheal `%`}",
+
+    "item.noodles.name.ow" : "インスタントめん",
+    "item.noodles.name.battle" : "インスタントめん",
+    "item.noodles.name.boss" : "インスタントめん",
+    "item.noodles.desc" : "* \"%\" - HPかいふく&＊ たべたいときに　すぐ　たべられる& 　おてがるヌードル！",
+    "item.noodles.use" : "＊ そのまま　たべたほうが　おいしい。",
+
+    "item.steak.name.ow" : "フェイスステーキ",
+    "item.steak.name.battle" : "フェイスステーキ",
+    "item.steak.name.boss" : "ステーキ",
+    "item.steak.desc" : "{item.default.desc.heal `%` `%`}* Huge steak in the shape&  of Mettaton's face.<pause><clear>* (You don't feel like it's&  made of real meat...)",
+    "item.steak.use" : "{item.default.use.ateheal `%`}",
+
+    "item.lhero.name.ow" : "レジェンドヒーロー",
+    "item.lhero.name.battle" : "ヒーロー",
+    "item.lhero.name.boss" : "ヒーロー",
+    "item.lhero.desc" : "{item.default.desc.heal `%` `%`}* Sandwich shaped like a sword.&* Increases ATTACK when eaten.",
+    "item.lhero.use" : "{item.default.use.ateheal `%`}^1&* ATTACK increased by 4!",
+
+    "item.snowpiece.name.ow" : "ゆきだるまのかけら",
+    "item.snowpiece.name.battle" : "かけら",
+    "item.snowpiece.name.boss" : "かけら",
+    "item.snowpiece.desc" : "{item.default.desc.heal `%` `%`}* Please take this to the&  ends of the earth.",
+    "item.snowpiece.use" : "{item.default.use.ateheal `%`}",
+
+    "item.stick.name.ow" : "ぼうきれ",
+    "item.stick.name.battle" : "ぼうきれ",
+    "item.stick.name.boss" : "ぼうきれ",
+    "item.stick.desc" : "{item.default.desc.weapon `%` `%`}＊ さんぽちゅうの　いぬが　よく　ぶつかる。",
+    "item.stick.use" : "* You threw the stick away.&^1* Then picked it back up.",
+
+    "item.bandage.name.ow" : "ほうたい",
+    "item.bandage.name.battle" : "ほうたい",
+    "item.bandage.name.boss" : "ほうたい",
+    "item.bandage.desc" : "{item.default.desc.heal `%` `%`}＊ なんどか しようされた けいせきが ある。",
+    "item.bandage.use" : "* You re-applied the bandage.&* Still kind of gooey.",
+
+    "item.toughglove.name.ow" : "じょうぶなてぶくろ",
+    "item.toughglove.name.battle" : "てぶくろ",
+    "item.toughglove.name.boss" : "てぶくろ",
+    "item.toughglove.desc" : "{item.default.desc.weapon `%` `%`}＊ ピンクいろの　すりきれた　かわてぶくろ。&^1＊ 5ほんゆび用。",
+    "item.toughglove.use" : "{item.default.use.weapon `%`}",
+
+    "item.realknife.name.ow" : "ほんもののナイフ",
+    "item.realknife.name.battle" : "ナイフ",
+    "item.realknife.name.boss" : "ナイフ",
+    "item.realknife.desc" : "{item.default.desc.weapon `%` `%`}＊ ようやく　みつけた。",
+    "item.realknife.use" : "* About time.",
+
+    "item.rocket.name.ow" : "ロケット",
+    "item.rocket.name.battle" : "ロケット",
+    "item.rocket.name.boss" : "ロケット",
+    "item.rocket.desc" : "{item.default.desc.armor `%` `%`}＊ こどうが　かんじられる。.",
+    "item.rocket.use" : "* Right where it belongs.",
+
+    "item.punchcard.name.ow" : "パンチカード",
+    "item.punchcard.name.battle" : "パンチカード",
+    "item.punchcard.name.boss" : "パンチカード",
+    "item.punchcard.desc" : "* \"Punch Card\" - Battle Item&* Use to make punching attacks&  stronger in one battle.",
+    "item.punchcard.use.0" : "* OOOORAAAAA!!!&^1* You rip up the punch card!<pause><clear>",
+    "item.punchcard.use.1" : "* Your hands are burning!^1&* AT increased by %!",
+    "item.punchcard.use.2" : "* But nothing happened.",
+
+
+    "gameover.text" : "You cannot give up just yet.<pause><clear>Stay determined..."
 }

@@ -42,6 +42,22 @@
     "battle.sans.dialog.act.acttest" : "* Custom Act Test.^1&<font 1><voice SansSpeak>* <anim 3>er er er",
     
     
+    "area.player.cmenu.item" : "ITEM",
+    "area.player.cmenu.stat" : "STAT",
+    "area.player.cmenu.cell" : "CELL",
+    
+    "area.player.cmenu.stat.lv" : "LV  ",
+    "area.player.cmenu.stat.hp" : "HP  ",
+    "area.player.cmenu.stat.hps" : " / ",
+    "area.player.cmenu.stat.exp" : "EXP: ",
+    "area.player.cmenu.stat.nxt" : "NEXT: ",
+    "area.player.cmenu.stat.wpn" : "WEAPON: ",
+    "area.player.cmenu.stat.amr" : "ARMOR: ",
+    "area.player.cmenu.stat.gld" : "GOLD: ",
+    "area.player.cmenu.stat.at" : "AT ",
+    "area.player.cmenu.stat.df" : "DF ",
+
+
     "area.player.item.drop.default" : "* The % was&  thrown away.",
     "area.player.item.drop.special.0" : "* You bid a quiet farewell&  to the %.",
     "area.player.item.drop.special.1" : "* You put the %&  on the ground and gave it a&  little pat.",

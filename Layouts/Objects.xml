@@ -2267,8 +2267,8 @@
                         <x>719</x>
                         <y>59</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>23</height>
+                        <width>400</width>
+                        <height>100</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -2776,9 +2776,9 @@
                         </effect-instance>
                         <effect-instance type="Chroma2">
                             <parameters>
-                                <b-source>255</b-source>
-                                <g-source>255</g-source>
-                                <r-source>255</r-source>
+                                <b-source>0</b-source>
+                                <g-source>0</g-source>
+                                <r-source>0</r-source>
                                 <tolerance>0.01</tolerance>
                             </parameters>
                         </effect-instance>

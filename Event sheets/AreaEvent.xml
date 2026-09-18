@@ -1359,6 +1359,7 @@
                             <param id="0" name="Value">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="242388847341450" type="DefaultFont" />
+                        <action id="-9" name="Destroy" sid="112337288761853" type="JP_DefaultFont" />
                         <action id="-9" name="Destroy" sid="518632815918646" type="StatFont" />
                         <action id="-9" name="Destroy" sid="909977463506053" type="DialogueBox" />
                         <action id="-3" name="Create object" sid="624741232644574" type="System">
@@ -1994,6 +1995,11 @@
                                     <param id="1" name="Parameter index">2</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
+                                <action id="-28" name="Set effect parameter" sid="122780661533302" type="JP_DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
                                 <action id="0" name="Call function" sid="290169870776658" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
                                     <param id="1" name="Parameter {n}">164 + BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;File saved.&quot;{###}2{###}&quot;SaveDialogEnd&quot;{###}0{###}0{###}1</param>
@@ -2274,15 +2280,15 @@
                                                                 </action>
                                                                 <action id="0" name="Call function" sid="567215973913362" type="Function">
                                                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">226 + BORDER_LEFTTOP_X{###}360 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;USE&quot;{###}2{###}&quot;MenuDialogItemText&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">(Language = 0 ? 226 : 228)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 360 : 348)+ BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;USE&quot;{###}2{###}&quot;MenuDialogItemText&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Call function" sid="963689255917215" type="Function">
                                                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">322 + BORDER_LEFTTOP_X{###}360 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;INFO&quot;{###}2{###}&quot;MenuDialogItemText&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">(Language = 0 ? 322 : 328) + BORDER_LEFTTOP_X{###}(Language = 0 ? 360 : 348) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;INFO&quot;{###}2{###}&quot;MenuDialogItemText&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Call function" sid="159569487695472" type="Function">
                                                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">436 + BORDER_LEFTTOP_X{###}360 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;DROP&quot;{###}2{###}&quot;MenuDialogItemText&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">(Language = 0 ? 436 : 438) + BORDER_LEFTTOP_X{###}(Language = 0 ? 360 : 348) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;DROP&quot;{###}2{###}&quot;MenuDialogItemText&quot;</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -2337,35 +2343,35 @@
                                                         </action>
                                                         <action id="0" name="Call function" sid="493852222057423" type="Function">
                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                            <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}84 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;&quot;&quot;&quot; &amp; PlayerName &amp; &quot;&quot;&quot;&quot;{###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 210 : 208)  + BORDER_LEFTTOP_X{###}(Language = 0 ? 84 : 72) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;&quot;&quot;&quot; &amp; PlayerName &amp; &quot;&quot;&quot;&quot;{###}2{###}&quot;MenuDialogStatText&quot;{###}0{###}0{###}-1</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="689953153416680" type="Function">
                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                            <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}144 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;LV  &quot; &amp; LV{###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 210:206)  + BORDER_LEFTTOP_X{###}(Language = 0 ?144 : 132)  + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.lv&quot;, Language)&amp; LV{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="389075276051684" type="Function">
                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                            <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}176 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;HP  &quot; &amp; HP &amp; &quot; / &quot; &amp; MaxHP{###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 210:206)  + BORDER_LEFTTOP_X{###}(Language = 0 ?176 : 164) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.hp&quot;, Language) &amp; HP &amp; Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.hps&quot;, Language) &amp; MaxHP{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="454316961673428" type="Function">
                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                            <param id="1" name="Parameter {n}">378 + BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;EXP: &quot; &amp; PlayerEXP{###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 378:374) + BORDER_LEFTTOP_X{###}(Language = 0 ? 240:228) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.exp&quot;, Language) &amp; PlayerEXP{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="554590782689557" type="Function">
                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                            <param id="1" name="Parameter {n}">378 + BORDER_LEFTTOP_X{###}272 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;NEXT: &quot; &amp; Function.Call(&quot;GetNextNeedEXP&quot;){###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 378:374)  + BORDER_LEFTTOP_X{###}(Language = 0 ? 272:260) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.nxt&quot;, Language)&amp; Function.Call(&quot;GetNextNeedEXP&quot;){###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="582204616330538" type="Function">
                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                            <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}332 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;WEAPON: &quot; &amp; Function.Call(&quot;GetL10NText&quot;, ItemDB.Value(0, Weapon, &quot;Name&quot;, &quot;OverWorld&quot;)){###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 210:208)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 332:316)+ BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.wpn&quot;, Language)&amp; Function.Call(&quot;GetL10NText&quot;, ItemDB.Value(0, Weapon, &quot;Name&quot;, &quot;OverWorld&quot;)){###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="319600252864914" type="Function">
                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                            <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}364 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;ARMOR: &quot; &amp; Function.Call(&quot;GetL10NText&quot;, ItemDB.Value(0, Armor, &quot;Name&quot;, &quot;OverWorld&quot;)){###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 210:206)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 364:352) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.amr&quot;, Language) &amp; Function.Call(&quot;GetL10NText&quot;, ItemDB.Value(0, Armor, &quot;Name&quot;, &quot;OverWorld&quot;)){###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                         <action id="0" name="Call function" sid="815429111874885" type="Function">
                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                            <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}404 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;GOLD: &quot; &amp; Gold{###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 210:206)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 404:396) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.gld&quot;, Language) &amp; Gold{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                         </action>
                                                     </actions>
                                                     <sub-events>
@@ -2393,11 +2399,11 @@
                                                                     <actions>
                                                                         <action id="0" name="Call function" sid="543435826204249" type="Function">
                                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                                            <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;AT  &quot; &amp; PlayerATK &amp; &quot; (&quot; &amp; TotalEquipATK &amp; &quot;)&quot;{###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 210:206)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 240:228) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.at&quot;, Language) &amp; PlayerATK &amp; &quot; (&quot; &amp; TotalEquipATK &amp; &quot;)&quot;{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                                         </action>
                                                                         <action id="0" name="Call function" sid="256852130495022" type="Function">
                                                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                                            <param id="1" name="Parameter {n}">210 + BORDER_LEFTTOP_X{###}272 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;DF  &quot; &amp; PlayerDEF &amp; &quot; (&quot; &amp; TotalEquipDEF &amp; &quot;)&quot;{###}2{###}&quot;MenuDialogStatText&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">(Language = 0 ? 210:206) + BORDER_LEFTTOP_X{###}(Language = 0 ? 272:260)+ BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat.df&quot;, Language) &amp; PlayerDEF &amp; &quot; (&quot; &amp; TotalEquipDEF &amp; &quot;)&quot;{###}2{###}&quot;MenuDialogStatText&quot;</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
@@ -2551,6 +2557,18 @@
                                                                 <action id="-9" name="Destroy" sid="536339929759445" type="DefaultFont" />
                                                             </actions>
                                                         </event-block>
+                                                        <event-block sid="261296096012677">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="885544741831713" type="JP_DefaultFont">
+                                                                    <param id="0" name="Instance variable">Name</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;MenuDialogPhoneText&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Destroy" sid="544223916861396" type="JP_DefaultFont" />
+                                                            </actions>
+                                                        </event-block>
                                                         <variable constant="0" name="SelectPhoneTag" sid="982005730065431" static="0" type="text"></variable>
                                                         <event-block sid="665723085161215">
                                                             <conditions>
@@ -2698,6 +2716,18 @@
                                                             </conditions>
                                                             <actions>
                                                                 <action id="-9" name="Destroy" sid="241278411937876" type="DefaultFont" />
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="519130732242956">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="204398116551560" type="JP_DefaultFont">
+                                                                    <param id="0" name="Instance variable">Name</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;MenuDialogItemText&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Destroy" sid="277993402440589" type="JP_DefaultFont" />
                                                             </actions>
                                                         </event-block>
                                                         <variable constant="0" name="ItemSlot" sid="637862848767531" static="0" type="number">0</variable>
@@ -3111,6 +3141,18 @@
                                                                         <action id="-9" name="Destroy" sid="940826819382068" type="DefaultFont" />
                                                                     </actions>
                                                                 </event-block>
+                                                                <event-block sid="843916925937603">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="911666970639997" type="JP_DefaultFont">
+                                                                            <param id="0" name="Instance variable">Name</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;MenuDialogItemText&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Destroy" sid="310558733438645" type="JP_DefaultFont" />
+                                                                    </actions>
+                                                                </event-block>
                                                             </sub-events>
                                                         </event-block>
                                                         <comment>STAT</comment>
@@ -3153,6 +3195,18 @@
                                                                         <action id="-9" name="Destroy" sid="439446297572153" type="DefaultFont" />
                                                                     </actions>
                                                                 </event-block>
+                                                                <event-block sid="248542624109629">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="613482298101817" type="JP_DefaultFont">
+                                                                            <param id="0" name="Instance variable">Name</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;MenuDialogStatText&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Destroy" sid="784843662258771" type="JP_DefaultFont" />
+                                                                    </actions>
+                                                                </event-block>
                                                             </sub-events>
                                                         </event-block>
                                                         <comment>CELL</comment>
@@ -3189,6 +3243,18 @@
                                                                     </conditions>
                                                                     <actions>
                                                                         <action id="-9" name="Destroy" sid="731856651041713" type="DefaultFont" />
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="744111507782619">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="578528234969486" type="JP_DefaultFont">
+                                                                            <param id="0" name="Instance variable">Name</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;MenuDialogPhoneText&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Destroy" sid="824142544741615" type="JP_DefaultFont" />
                                                                     </actions>
                                                                 </event-block>
                                                             </sub-events>
@@ -3457,7 +3523,7 @@
                         </action>
                         <action id="0" name="Call function" sid="900434381877665" type="Function">
                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">78 + BORDER_LEFTTOP_X{###}224 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;STAT&quot;{###}2{###}&quot;MenuDialogSTAT&quot;</param>
+                            <param id="1" name="Parameter {n}">(Language = 0 ? 78 : 80) + BORDER_LEFTTOP_X{###}(Language = 0 ? 224 : 212)+ BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.stat&quot;, Language){###}2{###}&quot;MenuDialogSTAT&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -3472,7 +3538,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="702979469339456" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">78 + BORDER_LEFTTOP_X{###}260 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;CELL&quot;{###}2{###}&quot;MenuDialogCELL&quot;</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 78 : 80)  + BORDER_LEFTTOP_X{###}(Language = 0 ? 260 : 248) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.cell&quot;, Language){###}2{###}&quot;MenuDialogCELL&quot;</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="151083579752996" type="System">
                                     <param id="0" name="Variable">AreaDialogSelectCount</param>
@@ -3513,7 +3579,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="209805906930776" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">78 + BORDER_LEFTTOP_X{###}188 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;ITEM&quot;{###}2{###}&quot;MenuDialogITEM&quot;</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 78 : 80) + BORDER_LEFTTOP_X{###}(Language = 0 ? 188 : 176) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.cmenu.item&quot;, Language){###}2{###}&quot;MenuDialogITEM&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="751370682378139" type="Function">
                                     <param id="0" name="Name">&quot;TextPutSetColor&quot;</param>
@@ -3554,8 +3620,8 @@
                                     <param id="1" name="Height">114</param>
                                 </action>
                                 <action id="0" name="Call function" sid="490957830126617" type="Function">
-                                    <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">40 + BORDER_LEFTTOP_X{###}MenuDialogPlayerInfoY - 47 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}PlayerName{###}2</param>
+                                    <param id="0" name="Name">&quot;TextPutDefaultCmenuPlayer&quot;</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 40 : 43) + BORDER_LEFTTOP_X{###}MenuDialogPlayerInfoY - (Language = 0 ? 47 : 42) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}PlayerName{###}2</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="351923042230961" type="System">
                                     <param id="0" name="Object to create">StatFont</param>
@@ -3669,6 +3735,18 @@
                                 <action id="-9" name="Destroy" sid="111463892798402" type="DefaultFont" />
                             </actions>
                         </event-block>
+                        <event-block sid="153865289950430">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="396124405951420" type="JP_DefaultFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;MenuDialogItemText&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="671803202864580" type="JP_DefaultFont" />
+                            </actions>
+                        </event-block>
                         <variable constant="0" name="Index" sid="420566960780872" static="0" type="number">0</variable>
                         <event-block sid="118817536260351">
                             <conditions>
@@ -3685,7 +3763,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="851910075462346" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">226 + BORDER_LEFTTOP_X{###}80 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, Function.Call(&quot;ItemGetName&quot;, Function.Call(&quot;ItemGetTag&quot;, Index), &quot;OverWorld&quot;), Language){###}2{###}&quot;MenuDialogItemText&quot;</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 226 : 230)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 80 : 68)+ loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, Function.Call(&quot;ItemGetName&quot;, Function.Call(&quot;ItemGetTag&quot;, Index), &quot;OverWorld&quot;), Language){###}2{###}&quot;MenuDialogItemText&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3731,22 +3809,75 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="743869709348224">
+                        <event-block sid="805426071970555">
                             <conditions>
-                                <condition id="-22" name="Else" sid="166544890635928" type="System" />
+                                <condition id="-22" name="Else" sid="127861315775594" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-28" name="Set effect parameter" sid="402929318873530" type="DefaultFont">
+                                <action id="-28" name="Set effect parameter" sid="859757924009088" type="DefaultFont">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">100</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="766531230092973" type="DefaultFont">
+                                <action id="-28" name="Set effect parameter" sid="399220130357334" type="DefaultFont">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">1</param>
                                     <param id="2" name="Value">100</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="345513398383592" type="DefaultFont">
+                                <action id="-28" name="Set effect parameter" sid="156172457292612" type="DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="434097311059194">
+                            <conditions>
+                                <condition id="7" name="Compare size" sid="418446546389817" type="PlayerItems">
+                                    <param id="0" name="Axis">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="907402340323971" type="JP_DefaultFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;MenuDialogITEM&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="928396428599990" type="JP_DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="701900800304279" type="JP_DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="482070188947237" type="JP_DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="293687535678309">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="355935643834826" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-28" name="Set effect parameter" sid="218777042312903" type="JP_DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="476402452203968" type="JP_DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="605862306238645" type="JP_DefaultFont">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">2</param>
                                     <param id="2" name="Value">100</param>
@@ -4130,6 +4261,18 @@
                                 <action id="-9" name="Destroy" sid="312029948376034" type="DefaultFont" />
                             </actions>
                         </event-block>
+                        <event-block sid="577937994298294">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="916465144511479" type="JP_DefaultFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;DBoxItemText&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="543708505990115" type="JP_DefaultFont" />
+                            </actions>
+                        </event-block>
                         <event-block sid="169028063529326">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="972428078501025" type="Pixel">
@@ -4335,6 +4478,8 @@
                         </action>
                         <action id="-9" name="Destroy" sid="974317199577474" type="TypeWriter" />
                         <action id="-9" name="Destroy" sid="556238864589056" type="DefaultFont" />
+                        <action id="-9" name="Destroy" sid="137969223581756" type="JP_DefaultFont" />
+                        <action id="-9" name="Destroy" sid="192087185642186" type="JP_BattleFont" />
                         <action id="-9" name="Destroy" sid="480850973107371" type="StatFont" />
                         <action id="-9" name="Destroy" sid="609496546118158" type="DialogueBox" />
                         <action id="0" name="Call function" sid="157202362520269" type="Function">

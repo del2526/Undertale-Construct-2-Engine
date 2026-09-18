@@ -117,12 +117,12 @@
                                     <param id="0" name="Width">DefaultFont.TextWidth</param>
                                     <param id="1" name="Height">DefaultFont.TextHeight</param>
                                 </action>
+                                <action id="3" name="Set character spacing" sid="709868485392707" type="DefaultFont">
+                                    <param id="0" name="Character spacing">-6</param>
+                                </action>
                                 <action id="5" name="Set character width" sid="623022119875956" type="DefaultFont">
                                     <param id="0" name="Character">&quot; &quot;</param>
                                     <param id="1" name="Width">6</param>
-                                </action>
-                                <action id="3" name="Set character spacing" sid="709868485392707" type="DefaultFont">
-                                    <param id="0" name="Character spacing">-6</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="371803382596689" type="DefaultFont">
                                     <param id="0" name="Instance variable">Name</param>
@@ -253,16 +253,16 @@
                                 <action id="2" name="Set scale" sid="466514822138789" type="JP_DefaultFont">
                                     <param id="0" name="Scale">Function.Param(4)</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="584657330251741" type="JP_DefaultFont">
-                                    <param id="0" name="Width">JP_DefaultFont.TextWidth</param>
-                                    <param id="1" name="Height">JP_DefaultFont.TextHeight</param>
+                                <action id="3" name="Set character spacing" sid="683038653395738" type="JP_DefaultFont">
+                                    <param id="0" name="Character spacing">-2</param>
                                 </action>
                                 <action id="5" name="Set character width" sid="912781262999323" type="JP_DefaultFont">
                                     <param id="0" name="Character">&quot; &quot;</param>
                                     <param id="1" name="Width">6</param>
                                 </action>
-                                <action id="3" name="Set character spacing" sid="683038653395738" type="JP_DefaultFont">
-                                    <param id="0" name="Character spacing">-6</param>
+                                <action id="-7" name="Set size" sid="584657330251741" type="JP_DefaultFont">
+                                    <param id="0" name="Width">JP_DefaultFont.TextWidth</param>
+                                    <param id="1" name="Height">JP_DefaultFont.TextHeight</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="345892780870607" type="JP_DefaultFont">
                                     <param id="0" name="Instance variable">Name</param>
@@ -313,7 +313,7 @@
                                             <param id="0" name="Horizontal alignment">1</param>
                                         </action>
                                         <action id="-1" name="Set X" sid="283051189931591" type="JP_DefaultFont">
-                                            <param id="0" name="X">Self.X - DefaultFont.Width / 2</param>
+                                            <param id="0" name="X">Self.X - JP_DefaultFont.Width / 2</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -331,7 +331,7 @@
                                             <param id="0" name="Horizontal alignment">2</param>
                                         </action>
                                         <action id="-1" name="Set X" sid="731080526686066" type="JP_DefaultFont">
-                                            <param id="0" name="X">Self.X - DefaultFont.Width</param>
+                                            <param id="0" name="X">Self.X - JP_DefaultFont.Width</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -348,7 +348,7 @@
                                             <param id="0" name="Vertical alignment">1</param>
                                         </action>
                                         <action id="-2" name="Set Y" sid="508038074576005" type="JP_DefaultFont">
-                                            <param id="0" name="Y">Self.Y - DefaultFont.Height / 2</param>
+                                            <param id="0" name="Y">Self.Y - JP_DefaultFont.Height / 2</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -366,7 +366,319 @@
                                             <param id="0" name="Vertical alignment">2</param>
                                         </action>
                                         <action id="-2" name="Set Y" sid="707713312927737" type="JP_DefaultFont">
+                                            <param id="0" name="Y">Self.Y - JP_DefaultFont.Height</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="141825984538022">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="225836271549100" type="Function">
+                                            <param id="0" name="Index">8</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set character spacing" sid="305214601025449" type="JP_DefaultFont">
+                                            <param id="0" name="Character spacing">int(Function.Param(8))</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="855370368743036" type="JP_DefaultFont">
+                                            <param id="0" name="Width">JP_DefaultFont.TextWidth</param>
+                                            <param id="1" name="Height">JP_DefaultFont.TextHeight</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="770893020840035">
+                    <conditions>
+                        <condition id="0" name="On function" sid="336823169391166" type="Function">
+                            <param id="0" name="Name">&quot;TextPutDefaultCmenuPlayer&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="599338778234010">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="520563312481228" type="System">
+                                    <param id="0" name="Variable">Language</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="588408178607251" type="System">
+                                    <param id="0" name="Object to create">DefaultFont</param>
+                                    <param id="1" name="Layer">Function.Param(2)</param>
+                                    <param id="2" name="X">Function.Param(0)</param>
+                                    <param id="3" name="Y">Function.Param(1)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="693225802157575" type="DefaultFont">
+                                    <param id="0" name="Text">Function.Param(3)</param>
+                                </action>
+                                <action id="2" name="Set scale" sid="382949986112451" type="DefaultFont">
+                                    <param id="0" name="Scale">Function.Param(4)</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="569343983341341" type="DefaultFont">
+                                    <param id="0" name="Width">DefaultFont.TextWidth</param>
+                                    <param id="1" name="Height">DefaultFont.TextHeight</param>
+                                </action>
+                                <action id="5" name="Set character width" sid="606906690405056" type="DefaultFont">
+                                    <param id="0" name="Character">&quot; &quot;</param>
+                                    <param id="1" name="Width">6</param>
+                                </action>
+                                <action id="3" name="Set character spacing" sid="795626547353239" type="DefaultFont">
+                                    <param id="0" name="Character spacing">-6</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="761111182196950" type="DefaultFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Value">&quot;TEST&quot;</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="285110085480338" type="DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">TextPutColorR</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="506538549849885" type="DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">TextPutColorG</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="888875752556717" type="DefaultFont">
+                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">TextPutColorB</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="509961721573403">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="909153734354275" type="Function">
+                                            <param id="0" name="Index">5</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="169478921873070" type="DefaultFont">
+                                            <param id="0" name="Instance variable">Name</param>
+                                            <param id="1" name="Value">Function.Param(5)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="675278706784016">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="549148614241986" type="Function">
+                                            <param id="0" name="Index">6</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set horizontal alignment" sid="784266101431484" type="DefaultFont">
+                                            <param id="0" name="Horizontal alignment">1</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="337706308879544" type="DefaultFont">
+                                            <param id="0" name="X">Self.X - DefaultFont.Width / 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="817795561360240">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="483398687331566" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="642452754938542" type="Function">
+                                            <param id="0" name="Index">6</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set horizontal alignment" sid="314973589926532" type="DefaultFont">
+                                            <param id="0" name="Horizontal alignment">2</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="240864260218252" type="DefaultFont">
+                                            <param id="0" name="X">Self.X - DefaultFont.Width</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="311529310159653">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="755282710196383" type="Function">
+                                            <param id="0" name="Index">7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set vertical alignment" sid="622937759282963" type="DefaultFont">
+                                            <param id="0" name="Vertical alignment">1</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="557931763309599" type="DefaultFont">
+                                            <param id="0" name="Y">Self.Y - DefaultFont.Height / 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="395554902729264">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="414709776363765" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="595799239775607" type="Function">
+                                            <param id="0" name="Index">7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set vertical alignment" sid="207908795177029" type="DefaultFont">
+                                            <param id="0" name="Vertical alignment">2</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="862789792305496" type="DefaultFont">
                                             <param id="0" name="Y">Self.Y - DefaultFont.Height</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="414838359213105">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="976405175272144" type="System">
+                                    <param id="0" name="Variable">Language</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="719216000106488" type="System">
+                                    <param id="0" name="Object to create">JP_BattleFont</param>
+                                    <param id="1" name="Layer">Function.Param(2)</param>
+                                    <param id="2" name="X">Function.Param(0)</param>
+                                    <param id="3" name="Y">Function.Param(1)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="424057393938747" type="JP_BattleFont">
+                                    <param id="0" name="Text">Function.Param(3)</param>
+                                </action>
+                                <action id="2" name="Set scale" sid="126328797481260" type="JP_BattleFont">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="126592503619110" type="JP_BattleFont">
+                                    <param id="0" name="Width">JP_BattleFont.TextWidth</param>
+                                    <param id="1" name="Height">JP_BattleFont.TextHeight</param>
+                                </action>
+                                <action id="5" name="Set character width" sid="649611380919263" type="JP_BattleFont">
+                                    <param id="0" name="Character">&quot; &quot;</param>
+                                    <param id="1" name="Width">6</param>
+                                </action>
+                                <action id="3" name="Set character spacing" sid="625293088558281" type="JP_BattleFont">
+                                    <param id="0" name="Character spacing">-2</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="388800759370533" type="JP_BattleFont">
+                                    <param id="0" name="Instance variable">Name</param>
+                                    <param id="1" name="Value">&quot;TEST&quot;</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="606577806549593" type="JP_BattleFont">
+                                    <param id="0" name="Effect">&quot;Tint2&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">TextPutColorR</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="489851906797314" type="JP_BattleFont">
+                                    <param id="0" name="Effect">&quot;Tint2&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">TextPutColorG</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="671891221917956" type="JP_BattleFont">
+                                    <param id="0" name="Effect">&quot;Tint2&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">TextPutColorB</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="922406164072926" type="JP_BattleFont">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;Chroma2&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="694492783738472">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="518530878005900" type="Function">
+                                            <param id="0" name="Index">5</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="499868971369628" type="JP_BattleFont">
+                                            <param id="0" name="Instance variable">Name</param>
+                                            <param id="1" name="Value">Function.Param(5)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="932037499939389">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="640507342539058" type="Function">
+                                            <param id="0" name="Index">6</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set horizontal alignment" sid="113297239542898" type="JP_BattleFont">
+                                            <param id="0" name="Horizontal alignment">1</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="440045306029076" type="JP_BattleFont">
+                                            <param id="0" name="X">Self.X - JP_BattleFont.Width / 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="579376654604473">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="175630183298775" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="755686615379362" type="Function">
+                                            <param id="0" name="Index">6</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set horizontal alignment" sid="541858769804913" type="JP_BattleFont">
+                                            <param id="0" name="Horizontal alignment">2</param>
+                                        </action>
+                                        <action id="-1" name="Set X" sid="366042969801016" type="JP_BattleFont">
+                                            <param id="0" name="X">Self.X - JP_BattleFont.Width</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="263403245171494">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="826524131578042" type="Function">
+                                            <param id="0" name="Index">7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set vertical alignment" sid="203746066480037" type="JP_BattleFont">
+                                            <param id="0" name="Vertical alignment">1</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="117147870066806" type="JP_BattleFont">
+                                            <param id="0" name="Y">Self.Y - JP_BattleFont.Height / 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="533321773839486">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="732190580051887" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="539574555409021" type="Function">
+                                            <param id="0" name="Index">7</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set vertical alignment" sid="902721831084323" type="JP_BattleFont">
+                                            <param id="0" name="Vertical alignment">2</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="365621978462967" type="JP_BattleFont">
+                                            <param id="0" name="Y">Self.Y - JP_BattleFont.Height</param>
                                         </action>
                                     </actions>
                                 </event-block>
