@@ -69,9 +69,9 @@
     "area.player.phone.box2.name" : "いじげんボックスB",
 
 
-    "area.player.dbox.end" : "Press [X] to Finish",
-    "area.player.dbox.inv" : "INVENTORY",
-    "area.player.dbox.box" : "BOX",
+    "area.player.dbox.end" : "[X]で　しゅうりょう",
+    "area.player.dbox.inv" : "もちもの",
+    "area.player.dbox.box" : "ボックス",
 
 
     "item.default.use.ateheal" : "＊ %を　たべた。",
@@ -80,10 +80,10 @@
     "item.default.use.weapon" : "* You equipped the %.",
     "item.default.use.armor" : "* You equipped the %.",
 
-    "item.default.desc.heal" : "* \"%\" - %HP　かいふく&",
-    "item.default.desc.heal.all" : "* \"%\" - All HP&",
-    "item.default.desc.weapon" : "* \"%\" - Weapon AT %&",
-    "item.default.desc.armor" : "* \"%\" - Armor DF %&",
+    "item.default.desc.heal" : "＊ \"%\" - %HPかいふく&",
+    "item.default.desc.heal.all" : "＊ \"%\" - HPぜんかいふく&",
+    "item.default.desc.weapon" : "＊ \"%\" - ぶきAT%&",
+    "item.default.desc.armor" : "＊ \"%\" - アーマーDF%&",
 
     "item.pie.name.ow" : "バタースコッチパイ",
     "item.pie.name.battle" : "パイ",
@@ -94,7 +94,7 @@
     "item.noodles.name.ow" : "インスタントめん",
     "item.noodles.name.battle" : "インスタントめん",
     "item.noodles.name.boss" : "インスタントめん",
-    "item.noodles.desc" : "* \"%\" - HPかいふく&＊ たべたいときに　すぐ　たべられる& 　おてがるヌードル！",
+    "item.noodles.desc" : "＊ \"%\" - HPかいふく&＊ たべたいときに　すぐ　たべられる& 　おてがるヌードル！",
     "item.noodles.use" : "＊ そのまま　たべたほうが　おいしい。",
 
     "item.steak.name.ow" : "フェイスステーキ",
