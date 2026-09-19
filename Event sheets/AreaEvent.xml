@@ -2467,7 +2467,7 @@
                                                             <actions>
                                                                 <action id="0" name="Call function" sid="197205333168336" type="Function">
                                                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                                    <param id="1" name="Parameter {n}">226 + BORDER_LEFTTOP_X{###}80 + Phones.CurX * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, PhoneDB.Value(0, Phones.CurValue, &quot;Name&quot;), 0){###}2{###}&quot;MenuDialogPhoneText&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">(Language = 0 ? 226 : 238) + BORDER_LEFTTOP_X{###}(Language = 0 ? 80 : 68) + Phones.CurX * (Language = 0 ? 32 : 33) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, PhoneDB.Value(0, Phones.CurValue, &quot;Name&quot;), Language){###}2{###}&quot;MenuDialogPhoneText&quot;{###}0{###}0{###}Language = 0 ? 0 : 1</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -2622,7 +2622,7 @@
                                                                     <actions>
                                                                         <action id="0" name="Call function" sid="621850494452400" type="Function">
                                                                             <param id="0" name="Name">&quot;Dialogue&quot;</param>
-                                                                            <param id="1" name="Parameter {n}">Function.Call(&quot;GetL10NText&quot;, PhoneDB.Value(0, SelectPhoneTag, &quot;Message&quot;), 0){###}&quot;CloseMenuDialog&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">Function.Call(&quot;GetL10NText&quot;, PhoneDB.Value(0, SelectPhoneTag, &quot;Message&quot;), Language){###}&quot;CloseMenuDialog&quot;</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
@@ -4100,7 +4100,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="917692673187648" type="AreaHeart">
-                                    <param id="0" name="X">50 + BORDER_LEFTTOP_X</param>
+                                    <param id="0" name="X">(Language = 0 ? 50 : 42) + BORDER_LEFTTOP_X</param>
                                     <param id="1" name="Y">92 + AreaDialogSelect * 32 + BORDER_LEFTTOP_Y</param>
                                 </action>
                             </actions>
@@ -4116,7 +4116,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="854159712567035" type="AreaHeart">
-                                    <param id="0" name="X">352 + BORDER_LEFTTOP_X</param>
+                                    <param id="0" name="X">(Language = 0 ? 352 : 344)+ BORDER_LEFTTOP_X</param>
                                     <param id="1" name="Y">92 + AreaDialogSelect * 32 + BORDER_LEFTTOP_Y</param>
                                 </action>
                             </actions>
@@ -4193,15 +4193,15 @@
                         </action>
                         <action id="0" name="Call function" sid="427431002508607" type="Function">
                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">Language = 0 ? 194 : 206+ BORDER_LEFTTOP_X{###}Language = 0 ? 406 : 394+ loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
+                            <param id="1" name="Parameter {n}">(Language = 0 ? 194 : 206)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 406 : 394)+ loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
                         </action>
                         <action id="0" name="Call function" sid="246806424425485" type="Function">
                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">Language = 0 ? 98 : 100 + BORDER_LEFTTOP_X{###}Language = 0 ? 30 : 18 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.inv&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
+                            <param id="1" name="Parameter {n}">(Language = 0 ? 98 : 100) + BORDER_LEFTTOP_X{###}(Language = 0 ? 30 : 18) + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.inv&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
                         </action>
                         <action id="0" name="Call function" sid="800023580201720" type="Function">
                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">Language = 0 ? 442 : 406+ BORDER_LEFTTOP_X{###}Language = 0 ? 30 : 18+ loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.box&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
+                            <param id="1" name="Parameter {n}">(Language = 0 ? 442 : 410)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 30 : 18)+ loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.box&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
                         </action>
                         <action id="0" name="Call function" sid="791825286914483" type="Function">
                             <param id="0" name="Name">&quot;DimensionalBoxDialogUpdate&quot;</param>
@@ -4307,7 +4307,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="953495499859364" type="Function">
                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                            <param id="1" name="Parameter {n}">62 + BORDER_LEFTTOP_X{###}72 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, Function.Call(&quot;ItemGetName&quot;, Function.Call(&quot;ItemGetTag&quot;, loopindex), &quot;OverWorld&quot;), Language){###}2{###}&quot;DBoxItemText&quot;</param>
+                                            <param id="1" name="Parameter {n}">(Language = 0 ? 62 : 54 )+ BORDER_LEFTTOP_X{###}(Language = 0 ? 72 : 60 )+ loopindex * (Language = 0 ? 32 : 33) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, Function.Call(&quot;ItemGetName&quot;, Function.Call(&quot;ItemGetTag&quot;, loopindex), &quot;OverWorld&quot;), Language){###}2{###}&quot;DBoxItemText&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -4371,7 +4371,7 @@
                                     <actions>
                                         <action id="0" name="Call function" sid="376118841925022" type="Function">
                                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                            <param id="1" name="Parameter {n}">364 + BORDER_LEFTTOP_X{###}72 + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, Function.Call(&quot;ItemGetName&quot;, DBoxList.At(loopindex), &quot;OverWorld&quot;), Language){###}2{###}&quot;DBoxItemText&quot;</param>
+                                            <param id="1" name="Parameter {n}">(Language = 0 ? 364 : 362)  + BORDER_LEFTTOP_X{###}(Language = 0 ? 72 : 60 ) + loopindex * (Language = 0 ? 32 : 33 )+ BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, Function.Call(&quot;ItemGetName&quot;, DBoxList.At(loopindex), &quot;OverWorld&quot;), Language){###}2{###}&quot;DBoxItemText&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

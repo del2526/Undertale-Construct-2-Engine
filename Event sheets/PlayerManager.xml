@@ -87,7 +87,7 @@
                     <param id="0" name="Name">&quot;PhoneAdd&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;toriel&quot;</param>
                 </action>
-                <action id="0" name="Call function" sid="335029738677135" type="Function">
+                <action disabled="1" id="0" name="Call function" sid="335029738677135" type="Function">
                     <param id="0" name="Name">&quot;PhoneAdd&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;test1&quot;</param>
                 </action>
