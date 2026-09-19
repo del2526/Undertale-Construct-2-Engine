@@ -57,6 +57,11 @@
     "area.player.cmenu.stat.df" : "DEF ",
 
 
+    "area.current.room.lastcorridor" : "さいごのかいろう",
+
+    "area.player.save.text.determination" : "＊ ケツイ。",
+
+
     "area.player.item.drop.default" : "* The % was&  thrown away.",
     "area.player.item.drop.special.0" : "* You bid a quiet farewell&  to the %.",
     "area.player.item.drop.special.1" : "* You put the %&  on the ground and gave it a&  little pat.",
@@ -80,21 +85,21 @@
     "item.default.use.weapon" : "* You equipped the %.",
     "item.default.use.armor" : "* You equipped the %.",
 
-    "item.default.desc.heal" : "＊ \"%\" - %HPかいふく&",
-    "item.default.desc.heal.all" : "＊ \"%\" - HPぜんかいふく&",
-    "item.default.desc.weapon" : "＊ \"%\" - ぶきAT%&",
-    "item.default.desc.armor" : "＊ \"%\" - アーマーDF%&",
+    "item.default.desc.heal" : "<textspacing -1>＊ % - %HPかいふく&",
+    "item.default.desc.heal.all" : "<textspacing -1>＊ % - HPぜんかいふく&",
+    "item.default.desc.weapon" : "<textspacing -1>＊ % - ぶきAT%&",
+    "item.default.desc.armor" : "<textspacing -1>＊ % - アーマーDF%&",
 
     "item.pie.name.ow" : "バタースコッチパイ",
     "item.pie.name.battle" : "パイ",
     "item.pie.name.boss" : "パイ",
-    "item.pie.desc" : "{item.default.desc.heal.all `%`}* Butterscotch-cinnamon&  pie, ^1one slice.",
+    "item.pie.desc" : "{item.default.desc.heal.all `%`}＊ バタースコッチシナモンパイ。^1& 　(1スライス)",
     "item.pie.use" : "{item.default.use.ateheal `%`}",
 
     "item.noodles.name.ow" : "インスタントめん",
     "item.noodles.name.battle" : "インスタントめん",
     "item.noodles.name.boss" : "インスタントめん",
-    "item.noodles.desc" : "＊ \"%\" - HPかいふく&＊ たべたいときに　すぐ　たべられる& 　おてがるヌードル！",
+    "item.noodles.desc" : "＊ % - HPかいふく&＊ たべたいときに　すぐ　たべられる& 　おてがるヌードル！",
     "item.noodles.use" : "＊ そのまま　たべたほうが　おいしい。",
 
     "item.steak.name.ow" : "フェイスステーキ",

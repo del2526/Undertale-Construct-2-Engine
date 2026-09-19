@@ -1284,7 +1284,7 @@
                         </action>
                         <action id="0" name="Call function" sid="410625684603682" type="Function">
                             <param id="0" name="Name">&quot;Dialogue&quot;</param>
-                            <param id="1" name="Parameter {n}">Area_SystemVars.SaveMessage{###}&quot;OpenSaveDialog&quot;</param>
+                            <param id="1" name="Parameter {n}">Function.Call(&quot;GetSaveText&quot;, LayoutName){###}&quot;OpenSaveDialog&quot;</param>
                         </action>
                         <action id="0" name="Play" sid="574986687096332" type="Audio">
                             <param id="0" name="Audio file">PlayerHeal</param>
@@ -1890,19 +1890,19 @@
                                 </action>
                                 <action id="0" name="Call function" sid="902373655215134" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">134 + BORDER_LEFTTOP_X{###}140 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}PlayerName{###}2{###}&quot;SaveDialogName&quot;</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 134 : 124)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 140 : 128) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}PlayerName{###}2{###}&quot;SaveDialogName&quot;{###}0{###}0{###}Language = 0 ? 0 : 1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="282502563289250" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">302 + BORDER_LEFTTOP_X{###}140 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;LV &quot; &amp; LV{###}2{###}&quot;SaveDialogLV&quot;</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 302 : 280) + BORDER_LEFTTOP_X{###}(Language = 0 ? 140 : 128) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Language = 0 ? &quot;LV &quot; :  &quot;LV  &quot; &amp; LV{###}2{###}&quot;SaveDialogLV&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="891305858792297" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">500 + BORDER_LEFTTOP_X{###}140 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}floor(Area_SystemVars.BeforeSavePlayTime / 60) &amp; &quot;:&quot; &amp; zeropad(floor(Area_SystemVars.BeforeSavePlayTime % 60),2){###}2{###}&quot;SaveDialogTime&quot;{###}2</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 500 : 502) + BORDER_LEFTTOP_X{###}(Language = 0 ? 140 : 128) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}floor(Area_SystemVars.BeforeSavePlayTime / 60) &amp; &quot;:&quot; &amp; zeropad(floor(Area_SystemVars.BeforeSavePlayTime % 60),2){###}2{###}&quot;SaveDialogTime&quot;{###}2</param>
                                 </action>
                                 <action id="0" name="Call function" sid="988724256171996" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">134 + BORDER_LEFTTOP_X{###}180 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Area_SystemVars.BeforeSaveRoomName{###}2{###}&quot;SaveDialogArea&quot;</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 134 : 220)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 180 : 170) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Area_SystemVars.BeforeSaveRoomName{###}2{###}&quot;SaveDialogArea&quot;</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="517672101439854" type="Menu_Vars">
                                     <param id="0" name="Instance variable">NextConfirmSound</param>
@@ -1910,11 +1910,11 @@
                                 </action>
                                 <action id="0" name="Call function" sid="253428181660839" type="Function">
                                     <param id="0" name="Name">&quot;CreateMenuItem&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;DialogueBox&quot;{###}132+BORDER_LEFTTOP_X{###}245+BORDER_LEFTTOP_Y{###}0{###}&quot;&lt;skip&gt;&lt;textspacing -2&gt;Save&quot;{###}&quot;SavedSection&quot;{###}0{###}0{###}1</param>
+                                    <param id="1" name="Parameter {n}">&quot;DialogueBox&quot;{###}(Language = 0 ? 132 : 153) +BORDER_LEFTTOP_X{###}245+BORDER_LEFTTOP_Y{###}0{###}Language = 0 ? &quot;&lt;skip&gt;&lt;textspacing -2&gt;Save&quot; : &quot;&lt;skip&gt;&lt;textspacing -2&gt;セーブ&quot;{###}&quot;SavedSection&quot;{###}0{###}0{###}1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="172995921344225" type="Function">
                                     <param id="0" name="Name">&quot;CreateMenuItem&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;DialogueBox&quot;{###}312+BORDER_LEFTTOP_X{###}245+BORDER_LEFTTOP_Y{###}1{###}&quot;&lt;skip&gt;&lt;textspacing -2&gt;Return&quot;{###}&quot;DialogFinished&quot;{###}0{###}0{###}1</param>
+                                    <param id="1" name="Parameter {n}">&quot;DialogueBox&quot;{###}(Language = 0 ? 312 : 343)+BORDER_LEFTTOP_X{###}245+BORDER_LEFTTOP_Y{###}1{###}Language = 0 ? &quot;&lt;skip&gt;&lt;textspacing -2&gt;Return&quot; : &quot;&lt;skip&gt;&lt;textspacing -2&gt;もどる&quot;{###}&quot;DialogFinished&quot;{###}0{###}0{###}1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1936,7 +1936,7 @@
                         </action>
                         <action id="0" name="Call function" sid="214753283849675" type="Function">
                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">164 + BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;Saving...&quot;{###}2{###}&quot;SavingMessage&quot;</param>
+                            <param id="1" name="Parameter {n}">(Language = 0 ? 164 : 130)+ BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Language = 0 ? &quot;Saving...&quot; : &quot;セーブ中…&quot;{###}2{###}&quot;SavingMessage&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -2002,7 +2002,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="290169870776658" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">164 + BORDER_LEFTTOP_X{###}240 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}&quot;File saved.&quot;{###}2{###}&quot;SaveDialogEnd&quot;{###}0{###}0{###}1</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 164 : 170) + BORDER_LEFTTOP_X{###}(Language = 0 ? 240 : 228) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Language = 0 ? &quot;File saved.&quot; : &quot;セーブしました。&quot;{###}2{###}&quot;SaveDialogEnd&quot;{###}0{###}0{###}1</param>
                                 </action>
                                 <action id="0" name="Play" sid="110833402456060" type="Audio">
                                     <param id="0" name="Audio file">Save</param>
@@ -2018,7 +2018,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="386075681918027" type="Area_SystemVars">
                                     <param id="0" name="Instance variable">BeforeSaveRoomName</param>
-                                    <param id="1" name="Value">Area_SystemVars.NextRoomName</param>
+                                    <param id="1" name="Value">Function.Call(&quot;GetRoomName&quot;, LayoutName)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="638487523242346" type="Area_SystemVars">
                                     <param id="0" name="Instance variable">BeforeSavePlayTime</param>
@@ -2050,7 +2050,7 @@
                                                 <action id="-9" name="Destroy" sid="162262312876896" type="RPGText" />
                                                 <action id="0" name="Call function" sid="911665103069454" type="Function">
                                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                    <param id="1" name="Parameter {n}">500 + BORDER_LEFTTOP_X{###}140 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}floor(Area_SystemVars.BeforeSavePlayTime / 60) &amp; &quot;:&quot; &amp; zeropad(floor(Area_SystemVars.BeforeSavePlayTime % 60),2){###}2{###}&quot;SaveDialogTime&quot;{###}2{###}0{###}1</param>
+                                                    <param id="1" name="Parameter {n}">(Language = 0 ? 500 : 502) + BORDER_LEFTTOP_X{###}(Language = 0 ? 140 : 128) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}floor(Area_SystemVars.BeforeSavePlayTime / 60) &amp; &quot;:&quot; &amp; zeropad(floor(Area_SystemVars.BeforeSavePlayTime % 60),2){###}2{###}&quot;SaveDialogTime&quot;{###}2{###}0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2067,7 +2067,7 @@
                                                 <action id="-9" name="Destroy" sid="238669197580295" type="RPGText" />
                                                 <action id="0" name="Call function" sid="786940332700886" type="Function">
                                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                                    <param id="1" name="Parameter {n}">134 + BORDER_LEFTTOP_X{###}180 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Area_SystemVars.BeforeSaveRoomName{###}2{###}&quot;SaveDialogArea&quot;{###}0{###}0{###}1</param>
+                                                    <param id="1" name="Parameter {n}">(Language = 0 ? 134 : 220)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 180 : 170) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetRoomName&quot;, LayoutName){###}2{###}&quot;SaveDialogArea&quot;{###}0{###}0{###}1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -4193,15 +4193,15 @@
                         </action>
                         <action id="0" name="Call function" sid="427431002508607" type="Function">
                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">(Language = 0 ? 194 : 206)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 406 : 394)+ loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
+                            <param id="1" name="Parameter {n}">(Language = 0 ? 194 : 206)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 406 : 394)+ BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.end&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
                         </action>
                         <action id="0" name="Call function" sid="246806424425485" type="Function">
                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">(Language = 0 ? 98 : 100) + BORDER_LEFTTOP_X{###}(Language = 0 ? 30 : 18) + loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.inv&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
+                            <param id="1" name="Parameter {n}">(Language = 0 ? 98 : 100) + BORDER_LEFTTOP_X{###}(Language = 0 ? 30 : 18) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.inv&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
                         </action>
                         <action id="0" name="Call function" sid="800023580201720" type="Function">
                             <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                            <param id="1" name="Parameter {n}">(Language = 0 ? 442 : 410)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 30 : 18)+ loopindex * 32 + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.box&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
+                            <param id="1" name="Parameter {n}">(Language = 0 ? 442 : 410)+ BORDER_LEFTTOP_X{###}(Language = 0 ? 30 : 18) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Function.Call(&quot;GetL10NText&quot;, &quot;area.player.dbox.box&quot;, Language){###}2{###}0{###}0{###}0{###}1</param>
                         </action>
                         <action id="0" name="Call function" sid="791825286914483" type="Function">
                             <param id="0" name="Name">&quot;DimensionalBoxDialogUpdate&quot;</param>
@@ -4640,6 +4640,54 @@
                             <param id="1" name="Parameter {n}">ScreenFader.Opacity{###}100{###}0.2{###}&quot;Area_Goto&quot;</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="539502288917706">
+                    <conditions>
+                        <condition id="0" name="On function" sid="811111198798912" type="Function">
+                            <param id="0" name="Name">&quot;GetRoomName&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="882169542153128">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="153339697532329" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Last Corridor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="944060461936152" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;GetL10NText&quot;, &quot;area.current.room.lastcorridor&quot;, Language)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="639683343937227">
+                    <conditions>
+                        <condition id="0" name="On function" sid="388913463351668" type="Function">
+                            <param id="0" name="Name">&quot;GetSaveText&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="647951949509182">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="842054596232736" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Last Corridor&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="655208849199090" type="Function">
+                                    <param id="0" name="Value">Function.Call(&quot;GetL10NText&quot;, &quot;area.player.save.text.determination&quot;, Language)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="670237942748380">
                     <conditions>

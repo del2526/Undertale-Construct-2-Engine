@@ -41,7 +41,14 @@
 
     "battle.sans.dialog.act.acttest" : "* Custom Act Test.^1&<font 1><voice SansSpeak>* <anim 3>er er er",
     
+
+    "area.current.room.lastcorridor" : "Last Corridor",
+
+
+   "area.player.save.text.determination" : "* Determination.",
+
     
+
     "area.player.cmenu.item" : "ITEM",
     "area.player.cmenu.stat" : "STAT",
     "area.player.cmenu.cell" : "CELL",

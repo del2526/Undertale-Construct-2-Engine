@@ -4,15 +4,21 @@
     <name>LastCorridorEvent</name>
     <events>
         <include>AreaEvent</include>
-        <comment>================&#x0D;&#x0A;Warp&#x0D;&#x0A;================</comment>
-        <event-block sid="350335022100979">
+        <event-block sid="578905338231708">
             <conditions>
-                <condition id="0" name="On function" sid="570607649376268" type="Function">
+                <condition id="-2" name="On start of layout" sid="198000974292437" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <comment>================&#x0D;&#x0A;Warp&#x0D;&#x0A;================</comment>
+        <event-block sid="225468858539471">
+            <conditions>
+                <condition id="0" name="On function" sid="423492861157365" type="Function">
                     <param id="0" name="Name">&quot;Area_LastCorridor_LeftDoor&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="841955183567088" type="Function">
+                <action id="0" name="Call function" sid="277978760730456" type="Function">
                     <param id="0" name="Name">&quot;Area_GotoReady&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Last Corridor&quot;{###}1</param>
                 </action>

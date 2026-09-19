@@ -4,7 +4,7 @@
     <name>Engine Prev</name>
     <events>
         <include>GlobalVars</include>
-        <event-block disabled="1" sid="713609831665949">
+        <event-block sid="713609831665949">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="797382488151596" type="System" />
             </conditions>
