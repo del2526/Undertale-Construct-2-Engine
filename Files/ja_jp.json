@@ -69,7 +69,7 @@
     "area.player.item.drop.special.3" : "* You abandoned the &  %.",
 
     "area.player.phone.toriel.name" : "トリエルのでんわ",
-    "area.player.phone.toriel.message" : "＊ プルルルル…<pause><clear>＊ …<pause><clear>＊ だれも　でない。",
+    "area.player.phone.toriel.message" : "<voice>＊ プルルルル…<pause><clear><voice BattleText2>＊ …<pause><clear>＊ だれも　でない。",
     "area.player.phone.box1.name" : "いじげんボックスA",
     "area.player.phone.box2.name" : "いじげんボックスB",
 

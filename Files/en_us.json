@@ -72,7 +72,7 @@
     "area.player.item.drop.special.3" : "* You abandoned the &  %.",
 
     "area.player.phone.toriel.name" : "Toriel's Phone",
-    "area.player.phone.toriel.message" : "* Dialing...<pause><clear>* ...<pause><clear>* But nobody came.",
+    "area.player.phone.toriel.message" : "<voice>* Dialing...<pause><clear><voice BattleText2>* ...<pause><clear>* But nobody came.",
     "area.player.phone.box1.name" : "Dimensional Box A",
     "area.player.phone.box2.name" : "Dimensional Box B",
 
