@@ -1894,7 +1894,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="282502563289250" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
-                                    <param id="1" name="Parameter {n}">(Language = 0 ? 302 : 280) + BORDER_LEFTTOP_X{###}(Language = 0 ? 140 : 128) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}Language = 0 ? &quot;LV &quot; :  &quot;LV  &quot; &amp; LV{###}2{###}&quot;SaveDialogLV&quot;</param>
+                                    <param id="1" name="Parameter {n}">(Language = 0 ? 302 : 280) + BORDER_LEFTTOP_X{###}(Language = 0 ? 140 : 128) + BORDER_LEFTTOP_Y{###}&quot;DialogueBox&quot;{###}(Language = 0 ? &quot;LV  &quot; :  &quot;LV  &quot;) &amp; LV{###}2{###}&quot;SaveDialogLV&quot;</param>
                                 </action>
                                 <action id="0" name="Call function" sid="891305858792297" type="Function">
                                     <param id="0" name="Name">&quot;TextPutDefault&quot;</param>
